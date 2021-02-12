@@ -3,14 +3,18 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
+.main-section {
+    display: flex;
+}
+
 .navigation {
-    background-color: rgb(30, 49, 144); 
-    width: 10%; 
-    height: 100%; 
-    display: flex; 
-    flex-direction: column; 
+    margin-bottom: -90;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
+    background-color: rgb(30, 49, 144);
+    width: 13%;
 }
 
 .logo-picture {
@@ -22,9 +26,10 @@ body {
 .navigation-bar {
     display: flex; 
     flex-direction: column; 
-    margin-top: -500px;
+    margin-top: -200px;
     line-height: 2.2; 
-    font-size: 15px; 
+    font-size: 17px; 
+    margin-bottom: 10px;
 }
 
 .navigation-bar a {
@@ -38,6 +43,12 @@ body {
     transform: scale(1.1);
     font-weight: bold; 
     opacity: 1; 
+    border-left: solid 4px white; 
+    padding-left: 10px;
+}
+
+.hover-line {
+    padding-left: 10px;
 }
 
 .user-pic {
@@ -55,13 +66,6 @@ body {
     transform: scale(1.2);
 }
 
-.hover-line {
-    border-left: solid 5px white; 
-    color: white; 
-    height: 20px; 
-}
-
 .d-flex {
-    display: flex; 
-    flex-direction: row !important; 
+    display: flex;
 }
