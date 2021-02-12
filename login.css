@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+}
+
+.main-section {
+    display: flex;
+    height: 100%;
+}
+
+.navigation {
+    margin-bottom: -90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(30, 49, 144);
+    width: 13%;
+}
+
+.navigation-bar {
+    display: flex; 
+    flex-direction: column; 
+    margin-top: -200px;
+    line-height: 2.2; 
+    font-size: 17px; 
+    margin-bottom: 10px;
+}
+
+.navigation-bar a {
+    color: white; 
+    text-decoration: none; 
+    transition: all 225ms ease-in-out; 
+    opacity: 0.9;
+}
+
+.navigation-bar a:hover {
+    transform: scale(1.1);
+    font-weight: bold; 
+    opacity: 1; 
+    border-left: solid 4px white; 
+    padding-left: 10px;
+}
+
+.logo-picture {
+    width: 50px; 
+    height: 50px; 
+    margin-top: 35px; 
+}
+
+.logo-pic {
+    width: 50px; 
+    height: 50px; 
+    margin-top: 35px;
+    background-color: rgb(30, 49, 144);
+    padding: 20px;
+    border-radius: 10%;
+    box-shadow: 6px 6px 6px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hover-line {
+    padding-left: 10px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.login-section {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 250px;
+    align-items: center;
+}
+
+.login-mask {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(232, 230, 247);
+    box-shadow: 6px 6px 6px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 3%;
+    animation: 1s flyIn ease-out;
+}
+
+
+@keyframes flyIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 2;
+        transform: translateY(0px);
+    }
+}
+
+.inputstyle {
+    border: #999 solid 1px;
+    margin-bottom: 10px;
+    box-shadow: -6px 6px 6px 5px rgba(0, 0, 0, 0.2);
+    border-right: none;
+    border-top: none;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 25px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    transition: all ease-in-out 1s;
+    text-shadow:
+    0 0 10px #FFFFFF,
+    0 0 20px #FFFFFF,
+    0 0 30px #FFFFFF,
+    0 0 40px white,
+    0 0 70px rgb(107,141,188),
+    0 0 80px rgb(107,141,188),
+    0 0 100px white,
+    0 0 150px white;
+}
+
+.login-btn {
+    justify-content: center;
+    display: flex;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16;
+    cursor: pointer;
+    border: none;
+    transition: all ease-in-out 225ms;
+    padding: 10px;
+    width: 80px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    color: rgb(30, 49, 144);
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    border-color: rgb(30, 49, 144);
+    padding: 11px;
+    width: 100px;
+}
+
+
+
+
+
+.horizontal-line {
+    position: absolute;
+    background-color: teal;
+    height: 10px;
+    width: 400px;
+    transform: scaleX(0.0);
+    transform: scaleY(0.0);
+    transition: transform 225ms ease-in-out;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
