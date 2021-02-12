@@ -5,6 +5,7 @@ body {
 
 .main-section {
     display: flex;
+    height: 100%;
 }
 
 .navigation {
