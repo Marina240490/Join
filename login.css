@@ -153,21 +153,3 @@ body {
     padding: 11px;
     width: 100px;
 }
-
-
-
-
-
-.horizontal-line {
-    position: absolute;
-    background-color: teal;
-    height: 10px;
-    width: 400px;
-    transform: scaleX(0.0);
-    transform: scaleY(0.0);
-    transition: transform 225ms ease-in-out;
-}
-
-.make-vertical {
-    transform: rotate(90deg) scaleX(0.0);
-}
