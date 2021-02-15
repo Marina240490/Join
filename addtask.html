@@ -1,7 +1,6 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="addtask.css">
 
     <script src="script.js"></script>
@@ -22,23 +21,128 @@
 </head>
 
 <body>
-    <div class="main-section">
-        <div class="navigation">
-            <div class="logo">
-                <img class="logo-picture" src="img/logo.png">
+    <div class="page">
+        <div class="main-section">
+            <div class="navigation">
+                <div class="logo">
+                    <img class="logo-picture" src="img/logo.png">
+                </div>
+                <div class="navigation-bar">
+                    <div class="d-flex">
+                        <a href="#">
+                            <div class="hover-line"></div>Board
+                        </a>
+                    </div>
+
+
+
+                    <a href="#">
+                        <div class="hover-line"></div>Backlog
+                    </a>
+                    <a href="#">
+                        <div class="hover-line"></div>Add Task
+                    </a>
+                    <a href="#">
+                        <div class="hover-line"></div>FAQs
+                    </a>
+                    <a href="#">
+                        <div class="hover-line"></div>Impressum
+                    </a>
+                </div>
+                <div class="user-pic-section">
+                    <img class="user-pic" id="user-pic" src="img/grüner-smiley.jpg">
+                </div>
             </div>
-            <div class="navigation-bar">
-                <div class="d-flex"><a href="#"><div class="hover-line"></div>Board</a></div>
+        </div>
 
-
-
-                <a href="#"><div class="hover-line"></div>Add Task</a>
-                <a href="#"><div class="hover-line"></div>Help</a>
-                <a href="#"><div class="hover-line"></div>Backlog</a>
-                <a href="#"><div class="hover-line"></div>Impressum</a>
+        <div class="add-task-section">
+            <div>
+                <div class="headline">Add Task</div>
+                <div class="headline2">Learning Management System Project</div>
             </div>
-            <div class="user-pic-section">
-                <img class="user-pic" id="user-pic" src="img/grüner-smiley.jpg">
+
+            <div class="input-section">
+                <div class="fd-row">
+                    <div>
+                        <div class="headline3">
+                            TITLE
+                        </div>
+                        <div>
+                            <input class="input"></input>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="headline3">
+                            DUE DATE
+                        </div>
+                        <div class="due-date">
+                            <input type="date" class="input-due-date"></input>
+                            <div class="size-pic-due-date">
+                                <img class="pic-due-date" src="img/icons8-calendar-150.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fd-row">
+                    <div>
+                        <div class="headline3">
+                            CATEGORY
+                        </div>
+                        <div class="category">
+                            <select name="Category" size="1" class="input-category">
+                                <option>Test</option>
+                                <option>Test</option>
+                            </select>
+                            <div class="size-pic-category">
+                                <img class="pic-category" src="img/chevron .png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="headline3">
+                            URGENCY
+                        </div>
+                        <div class="urgency">
+                            <select name="Urgency" size="1" class="input-urgency">
+                                <option>Test</option>
+                                <option>Test</option>
+                            </select>
+                            <div class="size-pic-urgency">
+                                <img class="pic-urgency" src="img/chevron .png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fd-row">
+                    <div>
+                        <div class="headline3">
+                            DESCRIPTION
+                        </div>
+                        <div>
+                            <textarea placeholder="Lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." class="input-description"></textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="headline3 assigned-to">
+                            ASSIGNED TO
+                        </div>
+                        <div class="assigned-to">
+                            <img class="user-pic-add-task" src="img/roter-smiley.jpg">
+                            <img class="add" src="img/icon plus.png">
+                        </div>
+                        <div>
+                            <button class="mdl-button mdl-js-button mdl-button--primary cancel">CANCEL</button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-task">
+                                CREATE TASK
+                              </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
