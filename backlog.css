@@ -1,5 +1,12 @@
 
 
+   .size {
+    width: 1777px;
+    height: 659px
+}
+
+
+
 .backlog-overall-section {
     margin-left: 10px;
     margin-right: 10px;
@@ -13,6 +20,7 @@
 padding: 20px;
     margin-left: 30px;
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .title-backlog {
@@ -39,7 +47,7 @@ padding: 20px;
 .p-headings {
 
     display: flex;
-    margin-right: 380px;
+    margin-right: 300px;
     margin-left: 10px;
     font-family: 'PT Sans', sans-serif;
     font-weight: bold;
@@ -49,7 +57,7 @@ padding: 20px;
 
 
 .category {
-    margin-left: -175px;
+    margin-left: -99px;
 }
 
 .backlog-div {
@@ -85,7 +93,7 @@ padding: 20px;
     font-family: 'PT Sans', sans-serif;
     display: flex;
     align-items: center;
-    margin-left: 270px;
+    margin-left: 200px;
     padding-top: 10px;
   
 }
