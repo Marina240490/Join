@@ -98,3 +98,62 @@ body {
     margin-top: -5px;
 }
 
+@media (max-width: 1000px) {
+    .navigation-bar {
+        font-size: 14;
+        margin-left: 80px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 950px) {
+    .second-section {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 870px) {
+    .second-section {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 840px) {
+    .second-section {
+        margin-left: 5px;
+    }
+
+    .navigation-bar {
+        margin-left: 90px;
+    }
+}
+
+@media (max-width: 835px) {
+    .pushboard {
+        width: 130px;
+    }
+
+    .second-section {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 790px) {
+    .second-section {
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 760px) {
+    .navigation-bar {
+        margin-left: 100px;
+    }
+
+    .navigation {
+        width: 110px;
+    }
+
+    .second-section {
+        margin-left: 15px;
+    }
+}
