@@ -95,3 +95,28 @@ padding: 20px;
     padding-top: 10px;
   
 }
+
+
+/* Responsive Menue */
+
+@media (max-width: 360px) {
+
+    .size {
+        display: none;
+    }
+   
+    .navigation {
+        display: none;
+    }
+
+
+    .headings-backlog {
+        margin-left: -649px;
+    }
+
+    .p-headings {
+        margin-right: 0px;
+        margin-left: 0px;
+
+    }
+}
