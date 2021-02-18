@@ -2,8 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="backlog.css">
-    <link rel="stylesheet" href="board.css">
-
+   
     <script src="addtask.js"></script>
     <script src="backlog.js"></script>
     <script src="board.js"></script>
@@ -28,7 +27,19 @@
 </head>
 
 <body>
+
+     <div class="dialog-bg d-none-details" id="openDetails">
+        <div class="dialog" id="detailsContent">
+            <h1> Details</h1>
+            <p> Informationen </p>
+            <button class="btn-dialog" onclick="closeDetails()">X</button>
+        </div>
+    </div>
+
+
+
     <div class="main-section size">
+
         <div class="navigation">
             <div class="logo">
                 <img class="logo-picture" src="img/logo.png">
@@ -44,6 +55,7 @@
                 <img class="user-pic" id="user-pic" src="img/user-pic.jpg">
             </div>
         </div>
+   
 
 
         <div class="backlog-overall-section">
@@ -74,8 +86,9 @@
                 <div class="name-backlog"> Darin S. Jones <br> Darin@gmail.com </div>
                 <div class="category-backlog"> Marketing</div>
                 <div class="details-backlog">
-                    <p> Lorem ipsum dolor sit amet consectetur, x xxxxadipisicing elit. 
+                    <p class="details-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                          Veritatis, provident obcaecati quas ipsa veniam nulla temporibus.</p>
+                         <p class="d-none-text" onclick="showDetails()">  Click here for more details!</p>
                 </div>
             </div>
         </div>
