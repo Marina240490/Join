@@ -1,29 +1,26 @@
 let mytasks = [];
-
 /**
  * name value of input fields
  */
-function addtask() {
-    let title = document.getElementById('title').value;
-    let date = document.getElementById('date').value;
-    let category = document.getElementById('category').value;
-    let urgency = document.getElementById('urgency').value;
-    let description = document.getElementById('description').value;
-    let user = document.getElementById('user').value;
-    let plususer = document.getElementById('plususer').value; 
-}
+let title = document.getElementById('title').value;
+let date = document.getElementById('date').value;
+let category = document.getElementById('category').value;
+let urgency = document.getElementById('urgency').value;
+let description = document.getElementById('description').value;
+let user = document.getElementById('user').value;
+let plususer = document.getElementById('plususer').value; 
 
 /**
  * delete text from all input fields
  */
 function cancelTask() {
-    document.getElementById('title').value = '';
-    document.getElementById('date').value = '';
-    document.getElementById('category').value = '';
-    document.getElementById('urgency').value = '';
-    document.getElementById('description').value = '';
-    document.getElementById('user').value = '';
-    document.getElementById('plususer').value = '';
+    title.value = '';
+    date.value = '';
+    category.value = '';
+    urgency.value = '';
+    description.value = '';
+    user.value = '';
+    plususer.value = '';
 }
 
 /**
@@ -38,6 +35,8 @@ function pushBoard() {
         ${urgency}<br>
         ${user}
     </div>`;
+
+    mytasks.push(newTask);
 }
 
 /**
