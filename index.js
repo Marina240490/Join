@@ -8,7 +8,7 @@ let user = [
     {
         'name': 'Marina',
         'password': 'Marina123!',
-        'image': 'img/marina.jpg',
+        'image': 'img/arina.jpg',
         'e-mail': 'marina@join.de',
     },
     {

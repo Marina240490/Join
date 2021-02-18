@@ -272,3 +272,10 @@ body {
     padding-bottom: 8px !important;
     height: 50px !important;
 }
+
+@media (max-width: 1000px) {
+    .fd-row {
+        display: flex; 
+        flex-direction: column; 
+    }
+}
