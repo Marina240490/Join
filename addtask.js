@@ -7,7 +7,7 @@ let date = document.getElementById('date').value;
 let category = document.getElementById('category').value;
 let urgency = document.getElementById('urgency').value;
 let description = document.getElementById('description').value;
-let user = document.getElementById('user').value;
+let author = document.getElementById('user').value;
 let plususer = document.getElementById('plususer').value; 
 
 /**
@@ -19,7 +19,7 @@ function cancelTask() {
     category.value = '';
     urgency.value = '';
     description.value = '';
-    user.value = '';
+    author.value = '';
     plususer.value = '';
 }
 

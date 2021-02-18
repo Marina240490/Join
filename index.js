@@ -56,7 +56,7 @@ function init() {
 /**
  * let open pages just for current User
  */
-//function loadMyUser() {
-//    let myUser = JSON.parse(localStorage.getItem('currentUser'));
-//    document.getElementById('user-pic').src = myUser.image;
-//}
+/*function loadMyUser() {
+   let myUser = JSON.parse(localStorage.getItem('currentUser'));
+   document.getElementById('user-pic').src = myUser.image;
+}*/
