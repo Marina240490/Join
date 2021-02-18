@@ -6,7 +6,6 @@
     <script src="addtask.js"></script>
     <script src="backlog.js"></script>
     <script src="board.js"></script>
-    <script src="index.js"></script>
     <script src="login.js"></script>
     <script src="impressum.js"></script>
     <script src="faq.js"></script>
@@ -28,38 +27,35 @@
 
 <body>
     <div class="page">
-        <div class="main-section">
-            <div class="navigation">
-                <div class="logo">
-                    <img class="logo-picture" src="img/logo.png">
-                </div>
-                <div class="navigation-bar">
-                    <div class="d-flex">
-                        <a href="#">
-                            <div class="hover-line"></div>Board
-                        </a>
-                    </div>
-
-
-
-                    <a href="#">
-                        <div class="hover-line"></div>Backlog
-                    </a>
-                    <a href="#">
-                        <div class="hover-line"></div>Add Task
-                    </a>
-                    <a href="#">
-                        <div class="hover-line"></div>FAQs
-                    </a>
-                    <a href="#">
-                        <div class="hover-line"></div>Impressum
-                    </a>
-                </div>
-                <div class="user-pic-section">
-                    <img class="user-pic" id="user-pic" src="img/user-pic.jpg">
+            <div class="responsive-menu">
+                <button onclick="showMenu()" class="menu-button">Menu</button>
+        
+                <div class="mobilemenu" id="res-menu">
+                <a href="board.html">Board</a>
+                <a href="addtask.html">Add Task</a>
+                <a href="backlog.html">Backlog</a>
+                <a href="faq.html">FAQs</a>
+                <a href="impressum.html">Impressum</a>
                 </div>
             </div>
-        </div>
+        
+            <div class="main-section">
+                <div class="navigation">
+                    <div class="logo">
+                        <img class="logo-picture" src="img/logo.png">
+                    </div>
+                    <div class="navigation-bar">
+                        <div class="hover-line"><a href="board.html">Board</a></div>
+                        <div class="hover-line"><a href="addtask.html">Add Task</a></div>
+                        <div class="hover-line"><a href="backlog.html">Backlog</a></div>
+                        <div class="hover-line"><a href="faq.html">FAQs</a></div>
+                        <div class="hover-line"><a href="impressum.html">Impressum</a></div>
+                    </div>
+                    <div class="user-pic-section">
+                        <img class="user-pic" id="user-pic" src="img/user-pic.jpg">
+                    </div>
+                </div>
+        
 
         <div class="add-task-section">
             <div>
