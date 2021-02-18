@@ -7,6 +7,14 @@ body {
     display: flex;
 }
 
+.mobilemenu {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+}
+
 .navigation {
     margin-bottom: -90;
     display: flex;
@@ -201,6 +209,56 @@ body {
 }
 
 @media (max-width: 640px) {
+    .mobilemenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: 'Viga', sans-serif;
+        overflow: hidden;
+        height: 0px;
+        width: 70%;
+        transition: all 500ms ease-in-out;
+    }
+
+    .mobilemenu a {
+        display: flex;
+        justify-content: center;
+        padding-top: 20;
+        color: white;
+        text-decoration: none;
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    .show-mobilemenu {
+        height: 220px;
+        border-top: 1px solid white;
+    }
+    
+    .responsive-menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        background-color: rgb(30, 49, 144);
+    }
+
+    .menu-button {
+        display: flex;
+        background-color: white;
+        font-weight: bold;
+        width: 80;
+        height: 30;
+        margin-bottom: 20px;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
     .pushboard {
         height: 300px;
         width: 200px;
