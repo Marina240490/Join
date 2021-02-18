@@ -10,3 +10,4 @@ function showDetails() {
         document.getElementById('openDetails').classList.add('d-none-details'); 
     
     }
+

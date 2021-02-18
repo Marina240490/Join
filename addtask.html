@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body onload="loadMyUser()">
     <div class="page">
             <div class="responsive-menu">
                 <button onclick="showMenu()" class="menu-button">Menu</button>
@@ -70,7 +70,7 @@
                             TITLE
                         </div>
                         <div>
-                            <input class="input"></input>
+                            <input id="title" class="input"></input>
                         </div>
                     </div>
 
@@ -79,7 +79,7 @@
                             DUE DATE
                         </div>
                         <div class="due-date">
-                            <input type="date" class="input-due-date"></input>
+                            <input id="date" type="date" class="input-due-date"></input>
                             <div class="size-pic-due-date">
                                 <img class="pic-due-date" src="img/icons8-calendar-150.png">
                             </div>
@@ -93,9 +93,11 @@
                             CATEGORY
                         </div>
                         <div class="category">
-                            <select name="Category" size="1" class="input-category">
-                                <option>Test</option>
-                                <option>Test</option>
+                            <select id="category" name="Category" size="1" class="input-category">
+                                <option>Marketing</option>
+                                <option>Product</option>
+                                <option>Sale</option>
+                                <option>Controlling</option>
                             </select>
                             <div class="size-pic-category">
                                 <img class="pic-category" src="img/chevron .png">
@@ -108,9 +110,10 @@
                             URGENCY
                         </div>
                         <div class="urgency">
-                            <select name="Urgency" size="1" class="input-urgency">
-                                <option>Test</option>
-                                <option>Test</option>
+                            <select id="urgency" name="Urgency" size="1" class="input-urgency">
+                                <option>High</option>
+                                <option>Semi</option>
+                                <option>Low</option>
                             </select>
                             <div class="size-pic-urgency">
                                 <img class="pic-urgency" src="img/chevron .png">
@@ -125,7 +128,7 @@
                             DESCRIPTION
                         </div>
                         <div>
-                            <textarea placeholder="Lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." class="input-description"></textarea>
+                            <textarea id="description" placeholder="Lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." class="input-description"></textarea>
                         </div>
                     </div>
 
@@ -134,12 +137,12 @@
                             ASSIGNED TO
                         </div>
                         <div class="assigned-to">
-                            <img class="user-pic-add-task" src="img/user-pic.jpg">
-                            <img class="add" src="img/icon plus.png">
+                            <img id="user" class="user-pic-add-task" src="img/user-pic.jpg">
+                            <img id="plususer"class="add" src="img/icon plus.png">
                         </div>
                         <div>
-                            <button class="mdl-button mdl-js-button mdl-button--primary cancel">CANCEL</button>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-task">
+                            <button onclick="cancelTask()" class="mdl-button mdl-js-button mdl-button--primary cancel">CANCEL</button>
+                            <button onclick="pushBoard(); pushBacklog()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-task">
                                 CREATE TASK
                               </button>
                         </div>

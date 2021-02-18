@@ -34,7 +34,6 @@ function login(i) {
     for (let i = 0; i < user.length; i++) { 
         if (username.value == user[i]['name'] && (password.value) == user[i]['password']) { //Wenn Wert des Inputs Name und Inputs Passwort passend, dann....
             loginSuccessful = true; //Loginverfahren als erfolgreich deklarieren
-            alert('Login erfolgreich!');
         } 
     }
     if(loginSuccessful) { //Loginverfahren erfolgreich deklariert
@@ -54,12 +53,10 @@ function init() {
     }
     });
 }
-/*
-function loadMyUser() {
-    let myUser = JSON.parse(localStorage.getItem('currentUser'));
-    document.getElementById('user-pic').src = myUser.image;
-}
-
-
-sha256
-*/
+/**
+ * let open pages just for current User
+ */
+//function loadMyUser() {
+//    let myUser = JSON.parse(localStorage.getItem('currentUser'));
+//    document.getElementById('user-pic').src = myUser.image;
+//}
