@@ -43,12 +43,18 @@ function pushBoard() {
  * Push the task to Backlog
  */
 function pushBacklog() {
-    let newTask = document.getElementById('????').innerHTML += `
+    let newTask = document.getElementById('push-to-backlog').innerHTML += `
     <div class="pin">
-        ${title}<br>
-        ${date}<br>
+        ${plususer}<br>
+        ${author}<br>
         ${category}<br>
-        ${urgency}<br>
-        ${user}
+        ${details}<br>
     </div>`;
+
+    {/* <div class="img-backlog"> ${plususer} </div>
+    <div class="name-backlog"> ${author} <br> </div>
+    <div class="category-backlog"> ${category} </div>
+    <div class="details-backlog">
+        <p class="details-text"> ${details}</p>
+             <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p> */}
 }
