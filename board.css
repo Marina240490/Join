@@ -11,7 +11,7 @@ body {
     display: none;
 }
 
-.menu-button {
+.menu-pic-area {
     display: none;
 }
 
@@ -242,6 +242,7 @@ body {
     .show-mobilemenu {
         height: 200px;
         border-top: 1px solid white;
+        width: 580px;
     }
     
     .responsive-menu {
@@ -257,10 +258,17 @@ body {
         width: 40px;
         padding-bottom: 20px;
         transition: all 225ms ease-in-out;
+        cursor: pointer;
     }
 
     .menu-pic:hover {
         transform: scale(1.2);
+    }
+
+    .logo-pic {        
+        display: flex;
+        margin-right: 450px;
+        height: 45px;
     }
 
     .menu-pic-area {
@@ -288,44 +296,112 @@ body {
     }
 }
 
+@media (max-width: 610px) {
+    .show-mobilemenu {
+        height: 200px;
+        border-top: 1px solid white;
+        width: 500px;
+    }
+
+    .second-section {
+        margin-left: 120px;
+    }
+}
+
+
 @media (max-width: 560px) {
     .second-section {
         margin-left: 40px;
+    }
+
+    .logo-pic {
+        margin-right: 380px;
+        height: 40px;
+    }
+
+    .second-section {
+        margin-left: 100px;
+    }
+
+    .show-mobilemenu {
+        width: 450px;
     }
 }
 
 @media (max-width: 480px) {
     .second-section {
-        margin-left: 10px;
+        margin-left: 60px;
+    }
+
+    .logo-pic {
+        margin-right: 300px;
+    }
+
+    .show-mobilemenu {
+        width: 350px;
     }
 }
 
 @media (max-width: 430px) {
     .second-section {
-        margin-left: -15px;
+        margin-left: 40px;
+    }
+
+    .logo-pic {
+        margin-right: 280px;
     }
 }
 
 @media (max-width: 412px) {
     .second-section {
-        margin-left: -30px;
+        margin-left: 30px;
+    }
+
+    .logo-pic {
+        margin-right: 250px;
+    }
+
+    .show-mobilemenu {
+        width: 300px;
     }
 }
 
 @media (max-width: 380px) {
     .second-section {
-        margin-left: -40px;
+        margin-left: 20px;
+    }
+
+    .logo-pic {
+        margin-right: 200px;
     }
 }
 
 @media (max-width: 376px) {
     .second-section {
-        margin-left: -35px;
+        margin-left: 12px;
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 321px) {
     .second-section {
-        margin-left: -30px;
+        margin-left: -5px;
+    }
+
+    .show-mobilemenu {
+        width: 250px;
+    }
+}
+
+@media (max-width: 281px) {
+    .second-section {
+        margin-left: -25px;
+    }
+
+    .logo-pic {
+        margin-right: 150px;
+    }
+
+    .show-mobilemenu {
+        width: 200px;
     }
 }
