@@ -11,19 +11,6 @@ let author = document.getElementById('user').value;
 let plususer = document.getElementById('plususer').value; 
 
 /**
- * delete text from all input fields
- */
-function cancelTask() {
-    title.value = '';
-    date.value = '';
-    category.value = '';
-    urgency.value = '';
-    description.value = '';
-    author.value = '';
-    plususer.value = '';
-}
-
-/**
  * Push the task to "To Do" Area of the board
  */
 function pushBoard() {

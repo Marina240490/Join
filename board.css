@@ -23,6 +23,7 @@ body {
     justify-content: space-between;
     background-color: rgb(30, 49, 144);
     width: 13%;
+    height: 100vh;
 }
 
 .logo-picture {
@@ -226,15 +227,20 @@ body {
     .mobilemenu a {
         display: flex;
         justify-content: center;
-        padding-top: 20;
+        padding-top: 15;
         color: white;
         text-decoration: none;
         flex-direction: column;
         z-index: 1;
+        transition: all 225ms ease-in-out;
+    }
+
+    .mobilemenu a:hover {
+        transform: scale(1.1);
     }
 
     .show-mobilemenu {
-        height: 220px;
+        height: 200px;
         border-top: 1px solid white;
     }
     
@@ -247,16 +253,19 @@ body {
         background-color: rgb(30, 49, 144);
     }
 
-    .menu-button {
+    .menu-pic {
+        width: 40px;
+        padding-bottom: 20px;
+        transition: all 225ms ease-in-out;
+    }
+
+    .menu-pic:hover {
+        transform: scale(1.2);
+    }
+
+    .menu-pic-area {
         display: flex;
-        background-color: white;
-        font-weight: bold;
-        width: 80;
-        height: 30;
-        margin-bottom: 20px;
-        z-index: 1;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
     }
 
     .pushboard {
@@ -275,11 +284,7 @@ body {
     }
 
     .navigation {
-        margin-bottom: 0px;
-    }
-
-    .navigation-bar {
-        margin-bottom: 700px;
+        display: none;
     }
 }
 
