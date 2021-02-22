@@ -15,6 +15,10 @@ body {
     display: none;
 }
 
+.d-none {
+    display: none;
+}
+
 .navigation {
     margin-bottom: -90;
     display: flex;
@@ -105,6 +109,83 @@ body {
     background-color: rgb(244,243,251);
     height: 600px;
     margin-top: -5px;
+}
+
+.pin {
+    border: solid 3px black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.first-row-pin {
+    display: flex;
+}
+
+.p-header {
+    font-weight: bolder;
+    font-size: 17;
+}
+
+.x-pin {
+    width: 20px;
+    height: 20px;
+    margin-left: 75px;
+    cursor: pointer;
+    transition: all ease-in-out 225ms;
+}
+
+.x-pin:hover {
+    transform: scale(1.1);
+}
+
+.second-row-pin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-pin {
+    margin-bottom: 5px;
+    margin-top: -8px;
+}
+
+.user-pic-pin {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    border-color: black;
+    border: 3px solid;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.arrow-pin-left {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: all ease-in-out 225ms;
+}
+
+.arrow-pin-left:hover {
+    transform: rotate(100deg);
+}
+
+.arrow-pin-right {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    transform: rotate(-90deg);
+    margin-left: 30px;
+    cursor: pointer;
+    transition: all ease-in-out 225ms;
+}
+
+.arrow-pin-right:hover {
+    transform: rotate(-100deg);
 }
 
 @media (max-width: 1000px) {
