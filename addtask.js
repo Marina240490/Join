@@ -1,4 +1,4 @@
-setURL('http://marina-schwab.developerakademie.com/smallest_backend_ever-master/save_json.php');
+setURL('http://marina-schwab.developerakademie.com/smallest_backend_ever-master');
 
 let mytasks = [];
 /**
@@ -12,21 +12,39 @@ let description = document.getElementById('description').value;
 let author = document.getElementById('user').value;
 let plususer = document.getElementById('plususer').value; 
 
+
+
+async function createTask(){
+    await pushBoard(); 
+    
+    await pushBacklog()
+}
+
+
 /**
  * Push the task to "To Do" Area of the board
  */
-function pushBoard() {
-    let newTask = document.getElementById('to-do-area').innerHTML += `
-    <div class="pin">
-        ${title}<br>
-        ${date}<br>
-        ${category}<br>
-        ${urgency}<br>
-        ${author}
-    </div>`;
+async function pushBoard() {
+    // 1. JSON erstellen; 2. JSON lokal speichen (array.push(...)); 3. Auf dem Server speichern; 4. HTML anzeigen (mit for-Schleife)
+    let newTask = {
+        'title': title.value,
+        'date': date.value,
+        'category': category.value,
+        'urgency': urgency.value,
+        'plususer': plususer.value
+    };
+
+    // let newTask = document.getElementById('to-do-area').innerHTML += `
+    // <div class="pin">
+    //     ${title}<br>
+    //     ${date}<br>
+    //     ${category}<br>
+    //     ${urgency}<br>
+    //     ${author}
+    // </div>`;
 
     mytasks.push(newTask);
-    backend.setItem(myTasks, JSON.stringify(newTask));
+    await backend.setItem(myTasks, JSON.stringify(newTask));
 
     //window.location.href = 'board.html'; //Weiterleitung auf die gewünschte Seite (mittels Link)
 }
@@ -34,7 +52,7 @@ function pushBoard() {
 /**
  * Push the task to Backlog
  */
-function pushBacklog() {
+async function pushBacklog() {
     let newTask = document.getElementById('push-to-backlog').innerHTML += `
 
     <div class="img-backlog"> ${plususer} </div>

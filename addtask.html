@@ -20,138 +20,142 @@
 
 <body onload="init()">
     <div class="page">
-            <div class="responsive-menu">
-                <button onclick="showMenu()" class="menu-button">Menu</button>
-        
-                <div class="mobilemenu" id="res-menu">
+        <div class="responsive-menu">
+            <button onclick="showMenu()" class="menu-button">Menu</button>
+
+            <div class="mobilemenu" id="res-menu">
                 <a href="board.html">Board</a>
                 <a href="addtask.html">Add Task</a>
                 <a href="backlog.html">Backlog</a>
                 <a href="faq.html">FAQs</a>
                 <a href="impressum.html">Impressum</a>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="navigation">
+                <div class="logo">
+                    <img class="logo-picture" src="img/logo.png">
+                </div>
+                <div class="navigation-bar">
+                    <div class="hover-line"><a href="board.html">Board</a></div>
+                    <div class="hover-line"><a href="addtask.html">Add Task</a></div>
+                    <div class="hover-line"><a href="backlog.html">Backlog</a></div>
+                    <div class="hover-line"><a href="faq.html">FAQs</a></div>
+                    <div class="hover-line"><a href="impressum.html">Impressum</a></div>
+                </div>
+                <div class="user-pic-section">
+                    <img class="user-pic" id="user-pic" src="img/user-pic.jpg">
                 </div>
             </div>
-        
-            <div class="main-section">
-                <div class="navigation">
-                    <div class="logo">
-                        <img class="logo-picture" src="img/logo.png">
-                    </div>
-                    <div class="navigation-bar">
-                        <div class="hover-line"><a href="board.html">Board</a></div>
-                        <div class="hover-line"><a href="addtask.html">Add Task</a></div>
-                        <div class="hover-line"><a href="backlog.html">Backlog</a></div>
-                        <div class="hover-line"><a href="faq.html">FAQs</a></div>
-                        <div class="hover-line"><a href="impressum.html">Impressum</a></div>
-                    </div>
-                    <div class="user-pic-section">
-                        <img class="user-pic" id="user-pic" src="img/user-pic.jpg">
-                    </div>
+
+
+            <div class="add-task-section">
+                <div>
+                    <div class="headline">Add Task</div>
+                    <div class="headline2">Learning Management System Project</div>
                 </div>
-        
 
-        <div class="add-task-section">
-            <div>
-                <div class="headline">Add Task</div>
-                <div class="headline2">Learning Management System Project</div>
-            </div>
-
-            <div class="input-section">
-                <div class="fd-row">
-                    <div>
-                        <div class="headline3">
-                            TITLE
-                        </div>
+                <div class="input-section">
+                    <div class="fd-row">
                         <div>
-                            <input id="title" class="input"></input>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="headline3">
-                            DUE DATE
-                        </div>
-                        <div class="due-date">
-                            <input id="date" type="date" class="input-due-date"></input>
-                            <div class="size-pic-due-date">
-                                <img class="pic-due-date" src="img/icons8-calendar-150.png">
+                            <div class="headline3">
+                                TITLE
+                            </div>
+                            <div>
+                                <input id="title" class="input"></input>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="fd-row">
-                    <div>
-                        <div class="headline3">
-                            CATEGORY
-                        </div>
-                        <div class="category">
-                            <select id="category" name="Category" size="1" class="input-category">
-                                <option>Marketing</option>
-                                <option>Product</option>
-                                <option>Sale</option>
-                                <option>Controlling</option>
-                            </select>
-                            <div class="size-pic-category">
-                                <img class="pic-category" src="img/chevron .png">
+                        <div>
+                            <div class="headline3">
+                                DUE DATE
+                            </div>
+                            <div class="due-date">
+                                <input id="date" type="date" class="input-due-date"></input>
+                                <div class="size-pic-due-date">
+                                    <img class="pic-due-date" src="img/icons8-calendar-150.png">
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div>
-                        <div class="headline3">
-                            URGENCY
+                    <div class="fd-row">
+                        <div>
+                            <div class="headline3">
+                                CATEGORY
+                            </div>
+                            <div class="category">
+                                <select id="category" name="Category" size="1" class="input-category">
+                                    <option>Marketing</option>
+                                    <option>Product</option>
+                                    <option>Sale</option>
+                                    <option>Controlling</option>
+                                </select>
+                                <div class="size-pic-category">
+                                    <img class="pic-category" src="img/chevron .png">
+                                </div>
+                            </div>
                         </div>
-                        <div class="urgency">
-                            <select id="urgency" name="Urgency" size="1" class="input-urgency">
-                                <option>High</option>
-                                <option>Semi</option>
-                                <option>Low</option>
-                            </select>
-                            <div class="size-pic-urgency">
-                                <img class="pic-urgency" src="img/chevron .png">
+
+                        <div>
+                            <div class="headline3">
+                                URGENCY
+                            </div>
+                            <div class="urgency">
+                                <select id="urgency" name="Urgency" size="1" class="input-urgency">
+                                    <option>High</option>
+                                    <option>Semi</option>
+                                    <option>Low</option>
+                                </select>
+                                <div class="size-pic-urgency">
+                                    <img class="pic-urgency" src="img/chevron .png">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="fd-row">
-                    <div>
-                        <div class="headline3">
-                            DESCRIPTION
-                        </div>
+                    <div class="fd-row">
                         <div>
-                            <textarea id="description" placeholder="Lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." class="input-description"></textarea>
+                            <div class="headline3">
+                                DESCRIPTION
+                            </div>
+                            <div>
+                                <textarea id="description"
+                                    placeholder="Lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                                    class="input-description"></textarea>
+                            </div>
                         </div>
-                    </div>
 
-                    <div>
-                        <div class="headline3 assigned-to">
-                            ASSIGNED TO
-                        </div>
-                        <div class="assigned-to">
-                            <img id="user" class="user-pic-add-task" src="img/user-pic.jpg">
-                            <img id="plususer"class="add" src="img/icon plus.png">
-                        </div>
                         <div>
-                            <button type="reset" class="mdl-button mdl-js-button mdl-button--primary cancel">CANCEL</button>
-                            <button type="reset" onclick="pushBoard(); pushBacklog()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-task">
-                                CREATE TASK
-                              </button>
+                            <div class="headline3 assigned-to">
+                                ASSIGNED TO
+                            </div>
+                            <div class="assigned-to">
+                                <img id="user" class="user-pic-add-task" src="img/user-pic.jpg">
+                                <img id="plususer" class="add" src="img/icon plus.png">
+                            </div>
+                            <div>
+                                <button type="reset"
+                                    class="mdl-button mdl-js-button mdl-button--primary cancel">CANCEL</button>
+                                <button type="reset" onclick="createTask()"
+                                    class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-task">
+                                    CREATE TASK
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <script src="./mini_backend.js"></script>
+        <script src="addtask.js"></script>
+        <script src="backlog.js"></script>
+        <script src="board.js"></script>
+        <script src="index.js"></script>
+        <script src="impressum.js"></script>
+        <script src="faq.js"></script>
 
-<script src="addtask.js"></script>
-<script src="backlog.js"></script>
-<script src="board.js"></script>
-<script src="index.js"></script>
-<script src="impressum.js"></script>
-<script src="faq.js"></script>
-<script src="./mini_backend.js"></script>
 </body>
 
 </html>
