@@ -64,7 +64,25 @@
         <div class="second-section">
                 <div class="pushboard-section">
                     <h3 class="header-board">TO-DO</h3>
-                    <div id="to-do-area" class="pushboard"></div>
+                    <div id="to-do-area" class="pushboard">
+                        <div class="pin" id="pin">
+                            <div class="first-row-pin">
+                                <p class="p-header">Title</p>
+                                <img src="img/X.svg" class="X-pin" onclick="deletePin()">
+                            </div>
+                            
+                            <div class="second-row-pin">
+                                <p class="p-pin">23.02.2021</p>
+                                <p class="p-pin">Category</p>
+                                <p class="p-pin">Urgency</p>
+                                <img src="img/user-pic.jpg" class="user-pic-pin">
+                                <div class="arrows-pin">
+                                    <img src="img/arrow.svg" class="arrow-pin-left">
+                                    <img src="img/arrow.svg" class="arrow-pin-right" onclick="pushRight()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="pushboard-section">
