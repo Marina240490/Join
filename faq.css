@@ -107,7 +107,7 @@ body {
     margin-left: 30px; 
 }
 
-@media (max-width: 100px) {
+@media (max-width: 1000px) {
     .mobilemenu {
         display: flex;
         flex-direction: column;
@@ -130,6 +130,10 @@ body {
         text-decoration: none;
         flex-direction: column;
         z-index: 1;
+    }
+
+    .navigation {
+        display: none; 
     }
 
     .show-mobilemenu {

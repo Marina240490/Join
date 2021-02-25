@@ -15,13 +15,13 @@ let user = [
         'name': 'Yvonne',
         'password': 'Yvonne123!',
         'image': 'img/yvonne.jpg',
-        'e-mail': 'Yvonne@join.de',
+        'e-mail': 'yvonne@join.de',
     },
     {
         'name': 'Steffi',
         'password': 'Steffi123!',
         'image': 'img/steffi.jpg',
-        'e-mail': 'Steffi@join.de',
+        'e-mail': 'steffi@join.de',
     }
 ];
 

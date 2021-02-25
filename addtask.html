@@ -20,25 +20,18 @@
 
 <body onload="init()">
     <div class="page">
-<<<<<<< HEAD
         <div class="responsive-menu">
-            <button onclick="showMenu()" class="menu-button">Menu</button>
-
+            <div class="menu-pic-area">
+                <img src="img/logo.png" class="logo-pic">
+                <img src="img/menu.svg" onclick="showMenu()" class="menu-pic">
+            </div>
+    
             <div class="mobilemenu" id="res-menu">
-=======
-            <div class="responsive-menu">
-                <div class="menu-pic-area">
-                    <img src="img/logo.png" class="logo-pic">
-                    <img src="img/menu.svg" onclick="showMenu()" class="menu-pic">
-                </div>
-        
-                <div class="mobilemenu" id="res-menu">
->>>>>>> 4b51d2a92704d3afdfcf666411b723b7d762715e
-                <a href="board.html">Board</a>
-                <a href="addtask.html">Add Task</a>
-                <a href="backlog.html">Backlog</a>
-                <a href="faq.html">FAQs</a>
-                <a href="impressum.html">Impressum</a>
+            <a href="board.html">Board</a>
+            <a href="addtask.html">Add Task</a>
+            <a href="backlog.html">Backlog</a>
+            <a href="faq.html">FAQs</a>
+            <a href="impressum.html">Impressum</a>
             </div>
         </div>
 
@@ -65,7 +58,8 @@
                     <div class="headline">Add Task</div>
                     <div class="headline2">Learning Management System Project</div>
                 </div>
-
+                
+                <form>
                 <div class="input-section">
                     <div class="fd-row">
                         <div>
@@ -82,10 +76,7 @@
                                 DUE DATE
                             </div>
                             <div class="due-date">
-                                <input id="date" type="date" class="input-due-date"></input>
-                                <div class="size-pic-due-date">
-                                    <img class="pic-due-date" src="img/icons8-calendar-150.png">
-                                </div>
+                                <input id="date" type="date" class="input"></input>
                             </div>
                         </div>
                     </div>
@@ -96,15 +87,12 @@
                                 CATEGORY
                             </div>
                             <div class="category">
-                                <select id="category" name="Category" size="1" class="input-category">
+                                <select id="category" name="Category" size="1" class="input">
                                     <option>Marketing</option>
                                     <option>Product</option>
                                     <option>Sale</option>
                                     <option>Controlling</option>
                                 </select>
-                                <div class="size-pic-category">
-                                    <img class="pic-category" src="img/chevron .png">
-                                </div>
                             </div>
                         </div>
 
@@ -113,14 +101,11 @@
                                 URGENCY
                             </div>
                             <div class="urgency">
-                                <select id="urgency" name="Urgency" size="1" class="input-urgency">
+                                <select id="urgency" name="Urgency" size="1" class="input">
                                     <option>High</option>
                                     <option>Semi</option>
                                     <option>Low</option>
                                 </select>
-                                <div class="size-pic-urgency">
-                                    <img class="pic-urgency" src="img/chevron .png">
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -156,6 +141,7 @@
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
         <script src="./mini_backend.js"></script>

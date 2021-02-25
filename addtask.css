@@ -76,6 +76,9 @@ body {
 .user-pic:hover {
     transform: scale(1.2);
 }
+
+
+
 /** Add Task Section */
 
 .add-task-section {
@@ -129,6 +132,7 @@ body {
     margin-bottom: 30px; 
     font-size: 14px; 
     padding: 8px; 
+    font-family: 'PT Sans', sans-serif;
 }
 
 .input-description {
@@ -142,38 +146,14 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
-.input-due-date {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 14px;  
-    padding: 8px; 
-    border-radius: 5px; 
-    width: 330px; 
-    height: 60px; 
-    border: 1px solid #efefef; 
-    margin-bottom: 30px; 
-}
-
 .due-date {
     display: flex; 
     flex-direction: row; 
     height: 60px; 
     border-radius: 5px; 
-    border: 1px solid #efefef; 
-}
-
-.pic-due-date {
-    width: 30px; 
-    height: 30px; 
-    padding: 8px; 
-}
-
-.size-pic-due-date {
-    width: 70px; 
-    height: 60px; 
-    background-color: white; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
+    border: 1px solid #efefef;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;   
 }
 
 .category {
@@ -185,32 +165,6 @@ body {
     margin-bottom: 30px; 
 }
 
-.input-category {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 14px;  
-    padding: 8px; 
-    border-radius: 5px; 
-    width: 330px; 
-    height: 60px; 
-    border: 1px solid #efefef; 
-}
-
-.size-pic-category {
-    width: 70px; 
-    height: 60px; 
-    object-fit: cover; 
-    background-color: white; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-}
-
-.pic-category {
-    width: 30px; 
-    height: 20px; 
-    padding: 8px; 
-}
-
 .urgency {
     display: flex; 
     flex-direction: row; 
@@ -218,32 +172,6 @@ body {
     border-radius: 5px; 
     border: 1px solid #efefef; 
     margin-bottom: 30px; 
-}
-
-.input-urgency {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 14px;  
-    padding: 8px; 
-    border-radius: 5px; 
-    width: 330px; 
-    height: 60px; 
-    border: 1px solid #efefef; 
-}
-
-.size-pic-urgency {
-    width: 70px; 
-    height: 60px; 
-    object-fit: cover; 
-    background-color: white; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-}
-
-.pic-urgency {
-    width: 30px; 
-    height: 20px; 
-    padding: 8px; 
 }
 
 .user-pic-add-task {
@@ -287,6 +215,10 @@ body {
     .fd-row {
         display: flex; 
         flex-direction: column; 
+    }
+
+    .navigation {
+        display: none; 
     }
 
     .mobilemenu {
