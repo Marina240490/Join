@@ -52,10 +52,7 @@ async function pushBoard() {
                 <p class="p-pin">${newTask[category]}</p>
                 <p class="p-pin">${newTask[urgency]}</p>
                 <img src=src="${newTask['author']}"  class="user-pic-pin">
-                <div class="arrows-pin">
-                    <img src="img/arrow.svg" class="arrow-pin-left">
-                    <img src="img/arrow.svg" class="arrow-pin-right" onclick="pushRight()">
-                </div>
+                <img src="img/arrows.svg" class="arrow-pin">
             </div>
             </div>
             `
