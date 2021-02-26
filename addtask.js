@@ -4,13 +4,13 @@ let mytasks = [];
 /**
  * name value of input fields
  */
-let title = document.getElementById('title').value;
-let date = document.getElementById('date').value;
-let category = document.getElementById('category').value;
-let urgency = document.getElementById('urgency').value;
-let description = document.getElementById('description').value;
-let author = document.getElementById('user').value;
-let plususer = document.getElementById('plususer').value; 
+let title = document.getElementById('title');
+let date = document.getElementById('date');
+let category = document.getElementById('category');
+let urgency = document.getElementById('urgency');
+let description = document.getElementById('description');
+let author = document.getElementById('user');
+let plususer = document.getElementById('plususer'); 
 
 /**
  * Creating the tasks to push to Board and Backlog
