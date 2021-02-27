@@ -19,7 +19,7 @@
 
 </head>
 
-<body onload="init()">
+<body onload="loadAllTasks()">
 
     <div class="responsive-menu">
         <div class="menu-pic-area">
@@ -57,20 +57,7 @@
                 <div class="pushboard-section">
                     <h3 class="header-board">TO-DO</h3>
                     <div id="to-do-area" class="pushboard">
-                            <div class="pin" id="dragelement" ondragstart="dragStart(event)">
-                                <div class="first-row-pin">
-                                    <p class="p-header">Title</p>
-                                    <img src="img/X.svg" class="X-pin" onclick="deletePin()">
-                                </div>
-                                
-                                <div class="second-row-pin">
-                                    <p class="p-pin">23.02.2021</p>
-                                    <p class="p-pin">Category</p>
-                                    <p class="p-pin">Urgency</p>
-                                    <img src="img/user-pic.jpg" class="user-pic-pin">
-                                    <img src="img/arrows.svg" class="arrow-pin">
-                                </div>
-                            </div>
+                            
                     </div>
                 </div>
 
@@ -81,7 +68,22 @@
 
                 <div class="pushboard-section">
                     <h3 class="header-board">TESTING</h3>
-                    <div id="testing-area" class="pushboard"></div>
+                    <div id="testing-area" class="pushboard">
+                        <div class="pin" id="dragelement" ondragstart="dragStart(event)">
+                            <div class="first-row-pin">
+                                <p class="p-header">Title</p>
+                                <img src="img/X.svg" class="X-pin" onclick="deletePin()">
+                            </div>
+                            
+                            <div class="second-row-pin">
+                                <p class="p-pin">23.02.2021</p>
+                                <p class="p-pin">Category</p>
+                                <p class="p-pin">Urgency</p>
+                                <img src="img/user-pic.jpg" class="user-pic-pin">
+                                <img src="img/arrows.svg" class="arrow-pin">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="pushboard-section">
