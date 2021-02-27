@@ -57,18 +57,6 @@
                 <div class="pushboard-section">
                     <h3 class="header-board">TO-DO</h3>
                     <div id="to-do-area" class="pushboard">
-                            
-                    </div>
-                </div>
-
-                <div class="pushboard-section">
-                    <h3 class="header-board">IN PROGRESS</h3>
-                    <div id="progress-area" class="pushboard" ondragover="dropPin(event)" ondrop="drop(event)"></div>
-                </div>
-
-                <div class="pushboard-section">
-                    <h3 class="header-board">TESTING</h3>
-                    <div id="testing-area" class="pushboard">
                         <div class="pin" id="dragelement" ondragstart="dragStart(event)">
                             <div class="first-row-pin">
                                 <p class="p-header">Title</p>
@@ -82,8 +70,18 @@
                                 <img src="img/user-pic.jpg" class="user-pic-pin">
                                 <img src="img/arrows.svg" class="arrow-pin">
                             </div>
-                        </div>
+                        </div>    
                     </div>
+                </div>
+
+                <div class="pushboard-section">
+                    <h3 class="header-board">IN PROGRESS</h3>
+                    <div id="progress-area" class="pushboard" ondragover="dropPin(event)" ondrop="drop(event)"></div>
+                </div>
+
+                <div class="pushboard-section">
+                    <h3 class="header-board">TESTING</h3>
+                    <div id="testing-area" class="pushboard"></div>
                 </div>
 
                 <div class="pushboard-section">
