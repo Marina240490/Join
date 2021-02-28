@@ -29,8 +29,28 @@ async function pushBoard() {
 
     let allTasksAsString = JSON.stringify(allTasks);
     await backend.setItem('allTasks', allTasksAsString);
-}
 
+    
+    /*for (let i = 0; i < allTasks.length; i++) {
+        const inputValue = allTasks[i];
+
+        document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="dragelement" ondragstart="dragStart(event)">
+        <div class="first-row-pin">
+            <p class="p-header">${inputValue[title]}</p>
+            <img src="img/X.svg" class="X-pin" onclick="deletePin()">
+        </div>
+        
+        <div class="second-row-pin">
+            <p class="p-pin">${inputValue[date]}</p>
+            <p class="p-pin">${inputValue[category]}</p>
+            <p class="p-pin">${inputValue[urgency]}</p>
+            <img src=src="${inputValue['author']}"  class="user-pic-pin">
+            <img src="img/arrows.svg" class="arrow-pin">
+        </div>
+        </div>
+        `
+    }   */
+}
 
 async function loadAllTasks() {
     await downloadFromServer(); // 1. Function downloadFromServer() -> mini_backend.js / 2. Waiting for server response in order to let the function continue
@@ -39,27 +59,6 @@ async function loadAllTasks() {
 }
 
 /*
- { for (let i = 0; i < alltasks.length; i++) {
-            const newTask = alltasks[i];
-
-            document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="pin">
-            <div class="first-row-pin">
-                <p class="p-header">${newTask[title]}</p>
-                <img src="img/X.svg" class="X-pin" onclick="deletePin()">
-            </div>
-            
-            <div class="second-row-pin">
-                <p class="p-pin">${newTask[date]}</p>
-                <p class="p-pin">${newTask[category]}</p>
-                <p class="p-pin">${newTask[urgency]}</p>
-                <img src=src="${newTask['author']}"  class="user-pic-pin">
-                <img src="img/arrows.svg" class="arrow-pin">
-            </div>
-            </div>
-            `
-        }
-}
-
 async function pushBacklog() {
     let newTask = document.getElementById('push-to-backlog').innerHTML += `
 
