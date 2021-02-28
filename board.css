@@ -112,11 +112,13 @@ body {
 }
 
 .pin {
-    border: solid 3px black;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    z-index: 1;
+    background-color: rgb(213, 219, 247);
+    box-shadow: 6px 6px 6px 5px rgba(0, 0, 0, 0.2);
+    border-style: ridge;
+    margin: 10px;
 }
 
 .first-row-pin {
@@ -126,12 +128,13 @@ body {
 .p-header {
     font-weight: bolder;
     font-size: 17;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .x-pin {
     width: 20px;
     height: 20px;
-    margin-left: 75px;
+    margin-left: 60px;
     cursor: pointer;
     transition: all ease-in-out 225ms;
 }
@@ -149,6 +152,8 @@ body {
 .p-pin {
     margin-bottom: 5px;
     margin-top: -8px;
+    font-family: 'Caveat', cursive;
+    font-size: 20;
 }
 
 .user-pic-pin {
@@ -212,6 +217,10 @@ body {
     .second-section {
         margin-left: 50px;
     }
+
+    .x-pin {
+        margin-left: 30px;
+    }
 }
 
 @media (max-width: 790px) {
@@ -251,6 +260,10 @@ body {
 
     .second-section {
         margin-left: 45px;
+    }
+
+    .x-pin {
+        margin-left: 15px;
     }
 }
 
@@ -360,6 +373,10 @@ body {
 
     .navigation {
         display: none;
+    }
+
+    .x-pin {
+        margin-left: 95px;
     }
 }
 

@@ -34,8 +34,8 @@ async function pushBoard() {
 
 async function loadAllTasks() {
     await downloadFromServer(); // 1. Function downloadFromServer() -> mini_backend.js / 2. Waiting for server response in order to let the function continue
-    let allTasksAsString = backend.getItem('allTasks') || []; 
-    JSON.parse(allTasksAsString);
+    let allTasksAsString = await backend.getItem('allTasks') || []; 
+    allTasks = JSON.parse(allTasksAsString);
 }
 
 /*
