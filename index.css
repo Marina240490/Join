@@ -41,16 +41,55 @@ body {
     padding-left: 10px;
 }
 
+.overlay {
+    display: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.d-none {
+    display: none;
+}
+
+.check {
+    width: 50px;
+    height: 50px;
+}
+
+.header-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: -50px;
+}
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    display: flex;
+    font-size: 18;
+}
+
+.header-logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 25;
+}
+
 .logo-picture {
     width: 50px; 
     height: 50px; 
-    margin-top: 35px; 
+    margin-top: 20px;
 }
 
 .logo-pic {
-    width: 50px; 
-    height: 50px; 
-    margin-top: 35px;
+    width: 40px; 
+    height: 40px; 
+    margin-top: 45px;
+    margin-bottom: -10px;
     background-color: rgb(30, 49, 144);
     padding: 20px;
     border-radius: 10%;
@@ -78,7 +117,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 500px;
-    height: 500px;
+    height: 530px;
     background-color: rgb(232, 230, 247);
     box-shadow: 6px 6px 3px 1px rgb(0 0 0 / 50%);
     border-style: ridge;
@@ -86,6 +125,16 @@ body {
     animation: 1s flyIn ease-out;
 }
 
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+}
+
+::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
 
 @keyframes flyIn {
     from {
@@ -109,12 +158,6 @@ body {
     margin-bottom: 25px;
 }
 
-.inputs {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-}
-
 .h1 {
     font-family: 'PT Sans', sans-serif;
     font-weight: bold;
@@ -128,6 +171,14 @@ body {
     0 0 80px rgb(107,141,188),
     0 0 100px white,
     0 0 150px white;
+    font-size: 18;
+}
+
+.currentUserPic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .login-btn {
@@ -145,6 +196,8 @@ body {
     text-decoration: none;
     color: rgb(30, 49, 144);
     font-weight: bold;
+    height: 30px;
+    align-items: center;
 }
 
 .login-btn:hover {
@@ -152,7 +205,25 @@ body {
     border-bottom: solid 1px black;
     border-color: rgb(30, 49, 144);
     padding: 11px;
-    width: 100px;
+    width: 90px;
+}
+
+.guest-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 13;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 225ms;
+    text-decoration: none;
+    color: black;
+}
+
+.guest-link:hover {
+    color: rgb(30, 49, 144);
+    font-weight: bold;
+    transform: scale(1.1);
 }
 
 @media (max-width: 1025px) {

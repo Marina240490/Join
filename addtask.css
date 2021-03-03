@@ -37,7 +37,6 @@ body {
 .navigation-bar {
     display: flex; 
     flex-direction: column; 
-    margin-top: -200px;
     line-height: 2.2; 
     font-size: 17px; 
     margin-bottom: 10px;
@@ -69,7 +68,6 @@ body {
     border-radius: 50%; 
     border-color: black; 
     border: 3px solid; 
-    margin-bottom: 40px; 
     transition: all 225ms ease-in-out; 
 }
 
@@ -77,7 +75,25 @@ body {
     transform: scale(1.2);
 }
 
+.logout-btn {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgb(142,158,232); 
+    width: 80px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6%;
+    color: black;
+    text-decoration: none;
+    transition: all ease-in-out 225ms;
+}
 
+.logout-btn:hover {
+    color: white;
+    transition: scale(1.2);
+    font-weight: bold;
+}
 
 /** Add Task Section */
 
@@ -85,6 +101,18 @@ body {
     display: flex;
     flex-direction: column; 
     width: 1000px; 
+    animation: 1s flyIn ease-out;
+}
+
+@keyframes flyIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 2;
+        transform: translateY(0px);
+    }
 }
 
 .fd-row {

@@ -33,13 +33,33 @@ function showBoard(){
     }  
 }
 
-/**
- * Delete Pin with X
- */
-function deletePin(i) {
-        allTasks.splice(i, 1);
-        showBoard();
+/*
+function openDeleteWindow(taskId) {
+    document.getElementById("delete-container-overlay").classList.remove("d-none");
+    document.getElementById("delete-container").classList.remove("d-none");
+    document.getElementById("delete-container").innerHTML = `
+    <div class="delete-window">
+        <span>Möchtest du diesen Pin wirklich löschen?</span>
+            <div class="button-order">
+                <button onclick="deleteTask(${taskId})" class="btn btn-primary">Yes</button>
+                <button onclick="closeDeleteWindow()" class="btn btn-primary">No</button>
+            </div>
+    </div>`;
 }
+
+function closeDeleteWindow() {
+    document.getElementById("delete-container-overlay").classList.add("d-none");
+
+    document.getElementById("delete-container").classList.add("d-none");
+}
+
+
+function deleteTask(taskId) {
+    allTasks = allTasks.filter((t) => t["id"] != taskId);
+    backend.setItem("allTasks", JSON.stringify(allTasks));
+    closeDeleteWindow();
+    updateHTML();
+}*/
 
 /**
  * Drag and Drop Function

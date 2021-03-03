@@ -55,6 +55,8 @@
             <div class="user-pic-section">
                 <img class="user-pic" id="user-pic" src="img/user-pic.jpg">
             </div>
+
+            <a class="logout-btn" href="index.html">Logout</a>
         </div>
 
         <div class="second-section">
@@ -64,7 +66,7 @@
                         <div class="pin" id="dragelement" ondragstart="dragStart(event)">
                             <div class="first-row-pin">
                                 <p class="p-header">Title</p>
-                                <img src="img/X.svg" class="X-pin" onclick="deletePin()">
+                                <img src="img/X.svg" class="X-pin" onclick="openDeleteWindow(taskId)">
                             </div>
                             
                             <div class="second-row-pin">
