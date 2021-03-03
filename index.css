@@ -80,8 +80,9 @@ body {
     width: 500px;
     height: 500px;
     background-color: rgb(232, 230, 247);
-    box-shadow: 6px 6px 6px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 3%;
+    box-shadow: 6px 6px 3px 1px rgb(0 0 0 / 50%);
+    border-style: ridge;
+    border-radius: 10px;
     animation: 1s flyIn ease-out;
 }
 
