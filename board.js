@@ -1,23 +1,32 @@
-/**
- * Function for responsive Menu for all pages! (Never delete!!!!!!)
- */
-let show; show = false ;
 
-function showMenu() {
-
-
-    if (show == false) {
-      
-        document.getElementById('res-menu').classList.add('show-mobilemenu');
-      
-        show = !show
-        
-    }
-    else {
-        document.getElementById('res-menu').classList.remove('show-mobilemenu');
-        show = !show
-    }
+async function initBoard(){
+    await loadAllTasks();
+    showBoard();
 }
+
+function showBoard(){
+    for (let i = 0; i < allTasks.length; i++) {
+        const element = allTasks[i];
+
+        document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="dragelement" ondragstart="dragStart(event)">
+        <div class="first-row-pin">
+            <p class="p-header">${element['title']}</p>
+            <img src="img/X.svg" class="X-pin" onclick="deletePin()">
+        </div>
+        
+        <div class="second-row-pin">
+            <p class="p-pin">${element['date']}</p>
+            <p class="p-pin">${element['category']}</p>
+            <p class="p-pin">${element['urgency']}</p>
+            <img src=src="${element['author']}"  class="user-pic-pin">
+            <img src="img/arrows.svg" class="arrow-pin">
+        </div>
+        </div>
+        `
+    }  
+}
+
+
 
 let id;
 
