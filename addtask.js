@@ -2,7 +2,8 @@
 /*async function createTask(){ // Waiting for server response
    await pushBoard(); // await = very important, otherwise just the second function will be implemented 
     
-    /*await pushBacklog();*/
+await pushBacklog();
+
 
 
 async function pushBoard() {
@@ -33,12 +34,23 @@ async function pushBoard() {
 async function initAddTasks(){
     await loadAllTasks();
 }
+*/
 
+let title = document.getElementById('title');
+    let date = document.getElementById('date');
+    let category = document.getElementById('category');
+    let urgency = document.getElementById('urgency');
+    let author = document.getElementById('user');
+    
+    let newTask =
+        {
+        'title': title.value,
+        'date': date.value,
+        'category': category.value,
+        'urgency': urgency.value,
+        'author': author.value
+        };
 
-
-
-
-/*
 async function pushBacklog() {
     let newTask = document.getElementById('push-to-backlog').innerHTML += `
 
@@ -56,4 +68,4 @@ async function pushBacklog() {
 
 function deleteTask(newTask) {
     backend.deleteItem(myTasks);
-}}*/
+}

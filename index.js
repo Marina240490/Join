@@ -2,7 +2,7 @@ let user = [
     {
         'name': 'Marina',
         'password': 'Marina123!',
-        'image': 'img/arina.jpg',
+        'image': 'img/marina.jpg',
         'e-mail': 'marina@join.de',
     },
     {
