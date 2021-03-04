@@ -18,12 +18,12 @@
 
     let newTask =
         {
-        'title': title,
-        'date': date,
-        'category': category,
-        'urgency': urgency,
-        'author': author,
-        'description': description
+        'title': title.value,
+        'date': date.value,
+        'category': category.value,
+        'urgency': urgency.value,
+        'author': author.value,
+        'description': description.value
         };
 
 /**
