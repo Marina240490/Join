@@ -1,3 +1,6 @@
+/**
+ * userinformation 
+ */
 let user = [
     {
         'name': 'Marina',

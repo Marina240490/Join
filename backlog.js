@@ -1,13 +1,26 @@
+/**
+ * Overlay function for details
+ */
 
-//Overlay for details
+ /**
+  * show the Details
+  */
+ 
 function showDetails() {
     document.getElementById('openDetails').classList.remove('d-none-details');
 }
+
+/**
+ * close details
+ */
 
 function closeDetails() {
     document.getElementById('openDetails').classList.add('d-none-details');
 }
 
+/**
+ * loading the added tasks from Backend to Backlog
+ */
 
 async function initBacklog(){
     await loadAllTasks();
@@ -15,28 +28,22 @@ async function initBacklog(){
 }
 
 /**
- * Posting pin at board
+ * Posting in backlog 
  */
+
 function showBacklog(){
     for (let i = 0; i < allTasks.length; i++) {
         const element = allTasks[i];
 
-        document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="dragelement[i]" ondragstart="dragStart(event)">
-            <div class="first-row-pin">
-                <p class="p-header">${element['title']}</p>
-                <img src="img/X.svg" class="X-pin" onclick="deletePin()">
-            </div>
-            
-            <div class="second-row-pin">
-                <p class="p-pin">${element['date']}</p>
-                <p class="p-pin">${element['urgency']}</p>
-                <div class="picrow-pin">
-                    <img src="${element['author']}" class="user-pic-pin">
-                    <p class="p-category">${element['category']}</p>
-                </div>
-            </div>
-            <div class="pin-color" id="pin-color"></div>
-        </div> 
-        `
+        document.getElementById('push-to-backlog').innerHTML += `
+
+       <div class="img-backlog"> ${element['plususer']} </div>
+        <div class="name-backlog"> ${element['author']} <br> </div>
+        <div class="category-backlog"> ${element['category']} </div>
+        <div class="details-backlog"> 
+            <p class="details-text"> ${element['details']}</p>
+            <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p> </div>
+        `;
+        
     }  
 }
