@@ -222,6 +222,12 @@ body {
     transform: scale(1.1);
 }
 
+@media (max-width: 1150px) {
+    .main-section {
+        padding-left: 0px;
+    }
+}
+
 @media (max-width: 1025px) {
     .login-section {
         margin-left: 200px;
@@ -252,28 +258,18 @@ body {
     }
 }
 
-@media (max-width: 720px) {
-    .login-section {
-        margin-left: 100px;
+@media (max-width: 730px) {
+    .main-section {
+        justify-content: center;
+        padding-left: 0px;
     }
-}
 
-@media (max-width: 650px) {
     .login-section {
-        margin-left: 80px;
-    }
-}
-
-@media (max-width: 608px) {
-    .login-section {
-        margin-left: 50px;
+        margin-left: 0px;
     }
 }
 
 @media (max-width: 570px) {
-    .login-section {
-        margin-left: 70px;
-    }
 
     .login-mask {
         width: 400px;
@@ -281,32 +277,13 @@ body {
 }
 
 @media (max-width: 495px) {
-    .login-section {
-        margin-left: 80px;
-    }
 
     .login-mask {
         width: 300px;
     }
 }
 
-@media (max-width: 415px) {
-    .login-section {
-        margin-left: 60px;
-    }
-}
-
-@media (max-width: 412px) { 
-    .login-section {
-        margin-left: 55px;
-    }
-}
-
 @media (max-width: 380px) {
-    .login-section {
-        margin-left: 70px;
-    }
-
     .login-mask {
         width: 250px;
     }
@@ -315,53 +292,41 @@ body {
         height: 30px;
         width: 160px;
     }
-}
 
-@media (max-width: 376px) {
-    .login-section {
-        margin-left: 65px;
+    .login-header {
+        font-size: 50;
     }
-}
-
-@media (max-width: 361px) {
-    .login-section {
-        margin-left: 60px;
+    
+    .login-text {
+        font-size: 30;
     }
 }
 
 @media (max-width: 355px) {
     .login-mask {
-        height: 450px;
-    }
-
-    .login-section {
-        margin-left: 55px;
+        height: 600px;
+        width: 300;
     }
 
     .logo-pic {
         margin-top: 0px;
     }
-}
 
-@media (max-width: 336px) {
-    .login-section {
-        margin-left: 40px;
+    .header-div {
+        margin-bottom: 5px;
+    }
+
+    .header {
+        margin-top: 50px;
     }
 }
 
 @media (max-width: 320px) {
-    .login-section {
-        margin-left: 50px;
-    }
-
     .login-mask {
         width: 210px;
     }
-}
 
-@media (max-width: 290px) {
-    .login-section {
-        margin-left: 40px;
+    .header {
+        margin-top: 0px;
     }
 }
-
