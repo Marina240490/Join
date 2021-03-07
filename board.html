@@ -25,6 +25,11 @@
 
 <body onload="initBoard()">
 
+    <script src="./mini_backend.js"></script>
+    <script src="board.js"></script>
+    <script src="index.js"></script>
+    <script src="overallApp.js"></script>
+
     <div class="responsive-menu">
         <div class="menu-pic-area">
             <img src="img/logo.png" class="logo-pic">
@@ -37,6 +42,7 @@
         <a href="backlog.html">Backlog</a>
         <a href="faq.html">FAQs</a>
         <a href="impressum.html">Impressum</a>
+        <a class="logout-btn" href="index.html">Logout</a>
         </div>
     </div>
 
@@ -66,7 +72,7 @@
                         <div class="pin" id="dragelement" ondragstart="dragStart(event)">
                             <div class="first-row-pin">
                                 <p class="p-header">Title</p>
-                                <img src="img/X.svg" class="X-pin" onclick="openDeleteWindow(taskId)">
+                                <img src="img/X.svg" class="X-pin" onclick="deleteTask(dragelement)">
                             </div>
                             
                             <div class="second-row-pin">
@@ -74,7 +80,7 @@
                                 <p class="p-pin">Urgency</p>
                                 <div class="picrow-pin">
                                     <img src="img/user-pic.jpg" class="user-pic-pin">
-                                    <p class="p-category">Category</p>
+                                    <p class="p-category" id="category">Category</p>
                                 </div>
                             </div>
                             <div class="pin-color" id="pin-color"></div>
@@ -99,11 +105,6 @@
         
         </div>
     </div>
-
-    <script src="./mini_backend.js"></script>
-    <script src="board.js"></script>
-    <script src="index.js"></script>
-    <script src="overallApp.js"></script>
 </body>
 
 </html>

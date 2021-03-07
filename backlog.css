@@ -295,6 +295,11 @@ padding: 20px;
         height: 220px;
         border-top: 1px solid white;
     }
+
+    .logout-btn {
+        height: 10px;
+        padding-bottom: 15px;
+    }
     
     .responsive-menu {
         display: flex;

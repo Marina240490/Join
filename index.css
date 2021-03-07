@@ -17,15 +17,43 @@ body {
     align-items: center;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    background-image: url(img/teamwork.jpeg);
+}
+
+.login-header {
+    display: fixed;
+    padding-top: 100px;
+    font-size: 70;
+    text-shadow:
+     0 0 10px #FFFFFF,
+     0 0 20px #FFFFFF,
+     0 0 30px #FFFFFF,
+     0 0 40px rgb(143,218,208),
+     0 0 70px rgb(143,218,208),
+     0 0 80px rgb(143,218,208),
+     0 0 100px rgb(143,218,208)
+}
+
+.login-text {
+    display: fixed;
+    font-size: 50;
+    text-shadow:
+     0 0 10px #FFFFFF,
+     0 0 20px #FFFFFF,
+     0 0 30px #FFFFFF,
+     0 0 40px rgb(143,218,208),
+     0 0 70px rgb(143,218,208),
+     0 0 80px rgb(143,218,208),
+     0 0 100px rgb(143,218,208)
+}
+
+.check {
+    width: 70px;
+    height: 70px;
 }
 
 .d-none {
     display: none;
-}
-
-.check {
-    width: 50px;
-    height: 50px;
 }
 
 .header-div {

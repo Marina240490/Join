@@ -69,3 +69,44 @@ async function pushBacklog() {
     let allTasksAsString = JSON.stringify(allTasks);
     await backend.setItem('allTasks', allTasksAsString);
 }
+
+/**
+ * Defining backgroundcolor of Category
+ */
+ function coloredCategory() {
+    if(category = 'Marketing'){
+        document.getElementById('category').style.backgroundColor = "blue";
+    };
+
+    if(category = 'Product'){
+        document.getElementById('category').style.backgroundColor = "green";
+    };
+
+    if(category = 'Sale'){
+        document.getElementById('category').style.backgroundColor = "yellow";
+    };
+
+    if(category = 'Controlling'){
+        document.getElementById('category').style.backgroundColor = "red";
+    };
+}
+
+/**
+ * Loading the data of all signed up users from the local storage and saves them in the users array when the page is loaded.
+ *
+ */
+ async function loadAllUsers() {
+    await downloadFromServer();
+    users = JSON.parse(backend.getItem('users')) || [];
+}
+
+/**
+ * Loading the currently logged in user.
+ */
+function loadCurrentUser() {
+    let currentUserAsString = localStorage.getItem("currentUser");
+
+    if (currentUserAsString) {
+        currentUser = JSON.parse(currentUserAsString);
+    }
+}
