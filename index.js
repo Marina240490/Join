@@ -66,7 +66,7 @@ function init() {
  * Show picture of currentUser
  */
 function currentUser() {
-    if (document.getElementById('username').value = ''); {
+    if (document.getElementById('username').value == ''); {
         document.getElementById('currentUserpic').innerHTML = ``;
     }
 

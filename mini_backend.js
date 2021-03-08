@@ -23,7 +23,8 @@ const backend = {
 
 async function downloadFromServer() {
     let result = await loadJSONFromServer();
-    jsonFromServer = JSON.parse(result);
+    console.log(result);
+    jsonFromServer =  result? JSON.parse(result) : {};
     console.log('Loaded', result);
 }
 
@@ -70,6 +71,7 @@ function saveJSONToServer() {
 
 async function loadJSONFromServer() {
     let response = await fetch(BASE_SERVER_URL + '/nocors.php?json=database&noache=' + (new Date().getTime()));
+    console.log("Response text", response);
     return await response.text();
 
 }

@@ -24,7 +24,7 @@ function showMenu() {
 async function loadAllTasks() {
     await downloadFromServer(); // 1. Function downloadFromServer() -> mini_backend.js / 2. Waiting for server response in order to let the function continue
     //let allTasksAsString = await backend.getItem('allTasks');
-    allTasks = JSON.parse(jsonFromServer['allTasks']);
+    allTasks = jsonFromServer['allTasks']? JSON.parse(jsonFromServer['allTasks']) : [];
     console.log(allTasks);
     //allTasks = allTasksAsString?  JSON.parse(allTasksAsString) : [];
     //console.log(allTasks);
