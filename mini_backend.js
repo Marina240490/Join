@@ -4,6 +4,7 @@ let BASE_SERVER_URL;
 const backend = {
     setItem: function(key, item) {
         jsonFromServer[key] = item;
+        console.log(jsonFromServer[key]);
         return saveJSONToServer();
     },
     getItem: function(key) {
@@ -55,7 +56,6 @@ function saveJSONToServer() {
         console.log('Posten', jsonFromServer);
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhttp.send(JSON.stringify(jsonFromServer));
-
     });
 }
 

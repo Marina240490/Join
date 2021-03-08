@@ -25,10 +25,10 @@
 
 <body onload="initBoard()">
 
-    <script src="./mini_backend.js"></script>
-    <script src="board.js"></script>
-    <script src="index.js"></script>
-    <script src="overallApp.js"></script>
+    <script async src="./mini_backend.js"></script>
+    <script async defer  src="board.js"></script>
+    <!-- <script  src="index.js"></script> -->
+    <script  src="overallApp.js"></script>
 
     <div class="responsive-menu">
         <div class="menu-pic-area">
@@ -69,7 +69,7 @@
                 <div class="pushboard-section">
                     <h3 class="header-board">TO-DO</h3>
                     <div id="to-do-area" class="pushboard">
-                        <div class="pin" id="dragelement" ondragstart="dragStart(event)">
+                        <!-- <div class="pin" id="dragelement" ondragstart="dragStart(event)">
                             <div class="first-row-pin">
                                 <p class="p-header">Title</p>
                                 <img src="img/X.svg" class="X-pin" onclick="deleteTask(dragelement)">
@@ -84,7 +84,7 @@
                                 </div>
                             </div>
                             <div class="pin-color" id="pin-color"></div>
-                        </div>    
+                        </div>     -->
                     </div>
                 </div>
 

@@ -212,6 +212,12 @@ padding: 20px;
     padding-top: 16px;
 }
 
+.img-backlog img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
 .name-backlog {
     font-family: 'PT Sans', sans-serif;
     display: flex;

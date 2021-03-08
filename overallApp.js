@@ -30,3 +30,24 @@ async function loadAllTasks() {
     //console.log(allTasks);
     //await pushBoard();
 }
+
+/**
+ * Defining backgroundcolor of Category
+ */
+ function coloredCategory(category, index) {
+    if(category == 'Marketing'){
+        document.getElementById(`category${index}`).style.backgroundColor = "blue";
+    };
+
+    if(category == 'Product'){
+        document.getElementById(`category${index}`).style.backgroundColor = "green";
+    };
+
+    if(category == 'Sale'){
+        document.getElementById(`category${index}`).style.backgroundColor = "yellow";
+    };
+
+    if(category == 'Controlling'){
+        document.getElementById(`category${index}`).style.backgroundColor = "red";
+    };
+}

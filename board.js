@@ -10,13 +10,14 @@ async function initBoard(){
  * Posting pin at board
  */
 function showBoard(){
+    console.log(allTasks);
+    document.getElementById('to-do-area').innerHTML = '';
     for (let i = 0; i < allTasks.length; i++) {
         const element = allTasks[i];
-
-        document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="dragelement[i]" ondragstart="dragStart(event)">
+        document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="dragelement${i}" ondragstart="dragStart(event)">
             <div class="first-row-pin">
                 <p class="p-header">${element['title']}</p>
-                <img src="img/X.svg" class="X-pin" onclick="deleteTask(dragelement)">
+                <img src="img/X.svg" class="X-pin" onclick="deleteTask(${i})">
             </div>
             
             <div class="second-row-pin">
@@ -24,25 +25,24 @@ function showBoard(){
                 <p class="p-pin">${element['urgency']}</p>
                 <div class="picrow-pin">
                     <img src="${element['author']}" class="user-pic-pin">
-                    <p class="p-category" id="category">${element['category']}</p>
+                    <p class="p-category" id="category${i}">${element['category']}</p>
                 </div>
             </div>
             <div class="pin-color" id="pin-color"></div>
         </div> 
-        `
+        `;
+        coloredCategory(element['category'], i);
     }  
 }
 
 /**
  * deleting task
  */
-function deleteTask(dragelement) {
-    allTasks = allTasks.splice(dragelement);
-    backend.setItem("allTasks", JSON.stringify(allTasks));
+async function deleteTask(taskIndex) {
+    allTasks.splice(taskIndex, 1);
+    await backend.setItem("allTasks", JSON.stringify(allTasks));
     showBoard();
 }
-
-
 
 /**
  * Open current User Window

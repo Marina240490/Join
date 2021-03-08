@@ -2,10 +2,10 @@
  * Overlay function for details
  */
 
- /**
-  * show the Details
-  */
- 
+/**
+ * show the Details
+ */
+
 function showDetails() {
     document.getElementById('openDetails').classList.remove('d-none-details');
 }
@@ -22,7 +22,7 @@ function closeDetails() {
  * loading the added tasks from Backend to Backlog
  */
 
-async function initBacklog(){
+async function initBacklog() {
     await loadAllTasks();
     showBacklog();
 }
@@ -31,23 +31,29 @@ async function initBacklog(){
  * Posting in backlog 
  */
 
-function showBacklog(){
+function showBacklog() {
+    document.getElementById('push-to-backlog').innerHTML = '';
     for (let i = 0; i < allTasks.length; i++) {
         const element = allTasks[i];
-
+        if(!(element['plususer'] && element['author'])){
+            element['plususer'] = 'img/marina.jpg';
+            element['author'] = 'img/marina.jpg';
+        }
         document.getElementById('push-to-backlog').innerHTML += `
         <div class="assigned-backlog">
-        <div class="assigned-person">
-       <div class="img-backlog"> ${element['plususer']} </div>
-        <div class="name-backlog"> ${element['author']} <br> </div>
-        </div> 
+            <div class="assigned-person">
+                <div class="img-backlog"> 
+                    <img src="${element['plususer']}">
+                </div>
+                <div class="name-backlog"> ${element['author']} <br> </div>
+            </div> 
         </div>
-        <div class="category-backlog"> ${element['category']} </div>
+        <div id="category${i}" class="category-backlog"> ${element['category']} </div>
         <div class="details-backlog"> 
             <p class="details-text"> ${element['details']}</p>
-            <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p> </div>
-        `;
-        
-    }  
+            <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p>
+        </div>`;
+        coloredCategory(element['category'], i);
+    }
 }
 

@@ -10,41 +10,40 @@
     let urgency = document.getElementById('urgency');
     let author = document.getElementById('user');
     let description = document.getElementById('description');
+    let plususer = document.getElementById('plususer');
     
-
-    /**
-     * JSON for inputfields
-     */
-
-    let newTask =
-        {
-        'title': title.value,
-        'date': date.value,
-        'category': category.value,
-        'urgency': urgency.value,
-        'author': author.value,
-        'description': description.value
-        };
 
 /**
  * Overall function in order to push to board and to backlog; WORK BITCH
  */
 
 async function createTask(){ // Waiting for server response
-    await pushBoard(); // await = very important, otherwise just the second function will be implemented 
+     /**
+     * JSON for inputfields
+     */
+
+      let newTask =
+      {
+      'title': title.value,
+      'date': date.value,
+      'category': category.value,
+      'urgency': urgency.value,
+      'author': author.src,
+      'description': description.value,
+      'plususer' : plususer.src
+      };
+    await saveTask(newTask); // await = very important, otherwise just the second function will be implemented 
     
-    await pushBacklog();
+    //await pushBacklog();
 }
 
 /**
  * push tasks to backend for board WORK ALSO BITCH
  */
 
-async function pushBoard() {
-    
-    allTasks.push(newTask);
-    console.log(allTasks);
-
+async function saveTask(task) {
+    allTasks.push(task);
+    //console.log(allTasks);
     let allTasksAsString = JSON.stringify(allTasks);
     await backend.setItem('allTasks', allTasksAsString);
 }
@@ -61,35 +60,14 @@ async function initAddTasks(){
  * push tasks to backend for backlog
  */
 
-async function pushBacklog() {
+// async function pushBacklog() {
   
-    allTasks.push(newTask);
-    console.log(allTasks);
+//     allTasks.push(newTask);
+//     console.log(allTasks);
 
-    let allTasksAsString = JSON.stringify(allTasks);
-    await backend.setItem('allTasks', allTasksAsString);
-}
-
-/**
- * Defining backgroundcolor of Category
- */
- function coloredCategory() {
-    if(category = 'Marketing'){
-        document.getElementById('category').style.backgroundColor = "blue";
-    };
-
-    if(category = 'Product'){
-        document.getElementById('category').style.backgroundColor = "green";
-    };
-
-    if(category = 'Sale'){
-        document.getElementById('category').style.backgroundColor = "yellow";
-    };
-
-    if(category = 'Controlling'){
-        document.getElementById('category').style.backgroundColor = "red";
-    };
-}
+//     let allTasksAsString = JSON.stringify(allTasks);
+//     await backend.setItem('allTasks', allTasksAsString);
+// }
 
 /**
  * Loading the data of all signed up users from the local storage and saves them in the users array when the page is loaded.
