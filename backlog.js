@@ -36,9 +36,12 @@ function showBacklog(){
         const element = allTasks[i];
 
         document.getElementById('push-to-backlog').innerHTML += `
-
+        <div class="assigned-backlog">
+        <div class="assigned-person">
        <div class="img-backlog"> ${element['plususer']} </div>
         <div class="name-backlog"> ${element['author']} <br> </div>
+        </div> 
+        </div>
         <div class="category-backlog"> ${element['category']} </div>
         <div class="details-backlog"> 
             <p class="details-text"> ${element['details']}</p>
@@ -47,3 +50,4 @@ function showBacklog(){
         
     }  
 }
+
