@@ -110,3 +110,20 @@ function loadCurrentUser() {
         currentUser = JSON.parse(currentUserAsString);
     }
 }
+
+
+/**
+ * Open Overlay
+ */
+function openOverlay() {
+    document.getElementsByClassName('modal-container')[0].classList.remove('hidden');
+    document.getElementById('inhalt').classList.remove('hidden');
+    document.getElementById('textaddtask').innerHTML = 'Task wurde in Board geladen ';
+}
+
+/**
+ * Close Overlay
+ */
+function closeOverlay() {
+    document.getElementsByClassName('modal-container')[0].classList.add('hidden');
+}
