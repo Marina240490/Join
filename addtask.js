@@ -105,3 +105,24 @@ function openOverlay() {
 function closeOverlay() {
     document.getElementsByClassName('modal-container')[0].classList.add('hidden');
 }
+
+
+
+//function login(i) { 
+//    let loginSuccessful = false; //Loginverfahren definieren
+//    for (let i = 0; i < user.length; i++) { 
+//        if (username.value == user[i]['name'] && (password.value) == user[i]['password']) { //Wenn Wert des Inputs Name und Inputs Passwort passend, dann....
+//            loginSuccessful = true; //Loginverfahren als erfolgreich deklarieren
+//            
+//            document.getElementById('overlay').classList.remove('d-none');
+//            document.getElementById('overlay').classList.add('overlay');
+//            document.getElementById('main-section').classList.add('d-none');
+//        } 
+//    }
+//    if(loginSuccessful) { //Loginverfahren erfolgreich deklariert
+//        setTimeout(function () {
+//        window.location.href = 'board.html'}, 2000); //Weiterleitung auf die gewünschte Seite (mittels Link)
+//    } else {
+//        alert('Falscher Username oder Passwort!'); //Loginverfahren missglückt
+//    }
+//}

@@ -34,8 +34,11 @@ let users = [
 
 function login(i) { 
     let loginSuccessful = false; //Loginverfahren definieren
-    for (let i = 0; i < users.length; i++) { 
-        if (username.value == users[i]['name'] && (password.value) == users[i]['password']) { //Wenn Wert des Inputs Name und Inputs Passwort passend, dann....
+    for (let i = 0; i < user.length; i++) { 
+        if (username.value == user[i]['name'] && (password.value) == user[i]['password']) { //Wenn Wert des Inputs Name und Inputs Passwort passend, dann....
+
+            localStorage.setItem('currentUser', JSON.stringify(user[i]));
+
             loginSuccessful = true; //Loginverfahren als erfolgreich deklarieren
             
             document.getElementById('overlay').classList.remove('d-none');
@@ -66,27 +69,29 @@ function init() {
  * Show picture of currentUser
  */
 function currentUser() {
-    setTimeout(()=>{
-        console.log("Warten!");
-        console.log(document.getElementById('username').value);
-        if (document.getElementById('username').value == 'Marina') {
-            document.getElementById('currentUserpic').src = users[0]['image'];
-        }
-    
-        if (document.getElementById('username').value == 'Yvonne') {
-            document.getElementById('currentUserpic').src = users[1]['image'];
-        }
-    
-        if (document.getElementById('username').value == 'Steffi') {
-            document.getElementById('currentUserpic').src = users[2]['image'];
-        }
-    
-        if (document.getElementById('username').value == 'Junus') {
-            console.log("JUNUS IST DA");
-            document.getElementById('currentUserpic').src = users[3]['image'];
-        }
-    }, 3000);
-  
+    if (document.getElementById('username').value == 'Marina') {
+        document.getElementById('currentUserpic').src = user[0]['image'];
+    }
+
+    if (document.getElementById('username').value == 'Yvonne') {
+        document.getElementById('currentUserpic').src = user[1]['image'];
+    }
+
+    if (document.getElementById('username').value == 'Steffi') {
+        document.getElementById('currentUserpic').src = user[2]['image'];
+    }
+
+    if (document.getElementById('username').value == 'Junus') {
+        document.getElementById('currentUserpic').src = user[3]['image'];
+    }
+}
+
+/**
+ * Saving the login data of the user that is currently logged in in the local storage.
+ */
+ function saveCurrentUserInLocalStorage() {
+    let currentUserAsString = JSON.stringify(currentUser);
+    localStorage.setItem("currentUser", currentUserAsString);
 }
 
 /**
