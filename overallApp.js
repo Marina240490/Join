@@ -63,13 +63,12 @@ function logout() {
     localStorage.removeItem('currentUser');
 }
 
-window.onload = init;
+//window.onload = init;
 
-function init() {
+function initOverallApp() {
     checkCurrentUser();
     includeHTML();
 }
-
 
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
