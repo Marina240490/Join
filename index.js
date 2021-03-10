@@ -66,23 +66,19 @@ function init() {
  * Show picture of currentUser
  */
 function currentUser() {
-    if (document.getElementById('username').value == ''); {
-        document.getElementById('currentUserpic').innerHTML = ``;
-    }
-
-    if (document.getElementById('username').value = 'Marina'); {
+    if (document.getElementById('username').value == 'Marina') {
         document.getElementById('currentUserpic').src = user[0]['image'];
     }
 
-    if (document.getElementById('username').value = 'Yvonne'); {
+    if (document.getElementById('username').value == 'Yvonne') {
         document.getElementById('currentUserpic').src = user[1]['image'];
     }
 
-    if (document.getElementById('username').value = 'Steffi'); {
+    if (document.getElementById('username').value == 'Steffi') {
         document.getElementById('currentUserpic').src = user[2]['image'];
     }
 
-    if (document.getElementById('username').value = 'Junus'); {
+    if (document.getElementById('username').value == 'Junus') {
         document.getElementById('currentUserpic').src = user[3]['image'];
     }
 }

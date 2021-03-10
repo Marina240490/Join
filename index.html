@@ -24,7 +24,7 @@
 
 </head>
 
-<body onload="init(), currentUser()">
+<body onload="init();">
 
     <script src="./mini_backend.js"></script>
     <script src="addtasks"></script>
@@ -54,11 +54,11 @@
                 <h1 class="h1">Sign in</h1>
 
                 <div class="inputs">
-                    <input class="inputstyle" id="username" type="text" placeholder="Username">
+                    <input class="inputstyle" id="username" onkeyup="currentUser()" type="text" placeholder="Username">
                     <input class="inputstyle" id="password" type="password" placeholder="Password">
                 </div>
 
-                <img class="currentUserPic" id="currentUserpic" src="${user['image']}">
+                <img class="currentUserPic" id="currentUserpic" src="img/user-pic.jpg">
 
                 <button onclick="login()" class="login-btn">Login</button>
 
