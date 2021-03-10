@@ -36,6 +36,9 @@ function login(i) {
     let loginSuccessful = false; //Loginverfahren definieren
     for (let i = 0; i < user.length; i++) { 
         if (username.value == user[i]['name'] && (password.value) == user[i]['password']) { //Wenn Wert des Inputs Name und Inputs Passwort passend, dann....
+
+            localStorage.setItem('currentUser', JSON.stringify(user[i]));
+
             loginSuccessful = true; //Loginverfahren als erfolgreich deklarieren
             
             document.getElementById('overlay').classList.remove('d-none');
