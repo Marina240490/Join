@@ -69,40 +69,13 @@ async function initAddTasks(){
 */
 
 // async function pushBacklog() {
-<<<<<<< HEAD
- 
-=======
   
->>>>>>> be85bf2c1614c647119dc1564140414ec9ee3743
 //     allTasks.push(newTask);
 //     console.log(allTasks);
 
 //     let allTasksAsString = JSON.stringify(allTasks);
 //     await backend.setItem('allTasks', allTasksAsString);
 // }
-<<<<<<< HEAD
-
-/**
-* Loading the data of all signed up users from the local storage and saves them in the users array when the page is loaded.
-*
-*/
-async function loadAllUsers() {
-   await downloadFromServer();
-   users = JSON.parse(backend.getItem('users')) || [];
-}
-
-/**
-* Loading the currently logged in user.
-*/
-function loadCurrentUser() {
-   let currentUserAsString = localStorage.getItem("currentUser");
-
-   if (currentUserAsString) {
-       currentUser = JSON.parse(currentUserAsString);
-   }
-}
-=======
->>>>>>> be85bf2c1614c647119dc1564140414ec9ee3743
 
 /**
 * Open Overlay
@@ -114,12 +87,6 @@ function openOverlay() {
 }
 
 /**
-<<<<<<< HEAD
-* Close Overlay
-*/
-function closeOverlay() {
-   document.getElementsByClassName('modal-container')[0].classList.add('hidden');
-=======
  * Loading the currently logged in user.
  */
 function loadCurrentUser() {
@@ -145,5 +112,4 @@ function openOverlay() {
  */
 function closeOverlay() {
     document.getElementsByClassName('modal-container')[0].classList.add('hidden');
->>>>>>> be85bf2c1614c647119dc1564140414ec9ee3743
 }
