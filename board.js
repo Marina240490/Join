@@ -46,9 +46,10 @@ async function deleteTask(taskIndex) {
 
 /**
  * Open current User Window
+ * @param { numer } userIndex - Index Number of current User
  */
- function loadCurrentUserWindow() {
-    document.getElementById("user-pic").src="${user['image']}";
+ function loadCurrentUserWindow(userIndex) {
+    document.getElementById("user-pic").src=`${users[userIndex]['image']}`;
 }
 
 /*
