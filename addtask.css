@@ -237,8 +237,9 @@ body {
     padding-top: 8px !important;
     padding-bottom: 8px !important;
     height: 50px !important;
-    transition: all ease-in-out 225ms !important;
+    transition: all 225ms ease-in-out !important;
 }
+
 
 /** Overlay Section */
 
@@ -267,8 +268,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 500px;
-    min-height: 150px;
+    min-width: 300px;
+    min-height: 120px;
     padding: 20px;
     border-radius: 10px;
     z-index: 11;
@@ -280,7 +281,7 @@ body {
 }
 
 .text-overlay {
-    font-size: 35px; 
+    font-size: 20px; 
     font-weight: bold; 
     display: flex; 
     align-items: center;

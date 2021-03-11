@@ -7,8 +7,6 @@ async function createTask(){ // Waiting for server response
      /**
   * definition of value of inputfields 
   */
-
-
       let title = document.getElementById('title');
       let date = document.getElementById('date');
       let category = document.getElementById('category');
@@ -21,7 +19,6 @@ async function createTask(){ // Waiting for server response
      /**
      * JSON for inputfields
      */
-
       let newTask =
       {
       'title': title.value,
@@ -63,63 +60,7 @@ async function initAddTasks(){
    await loadAllTasks();
 }
 
-
 /**
-* push tasks to backend for backlog
-*/
-
-// async function pushBacklog() {
-<<<<<<< HEAD
- 
-=======
-  
->>>>>>> be85bf2c1614c647119dc1564140414ec9ee3743
-//     allTasks.push(newTask);
-//     console.log(allTasks);
-
-//     let allTasksAsString = JSON.stringify(allTasks);
-//     await backend.setItem('allTasks', allTasksAsString);
-// }
-<<<<<<< HEAD
-
-/**
-* Loading the data of all signed up users from the local storage and saves them in the users array when the page is loaded.
-*
-*/
-async function loadAllUsers() {
-   await downloadFromServer();
-   users = JSON.parse(backend.getItem('users')) || [];
-}
-
-/**
-* Loading the currently logged in user.
-*/
-function loadCurrentUser() {
-   let currentUserAsString = localStorage.getItem("currentUser");
-
-   if (currentUserAsString) {
-       currentUser = JSON.parse(currentUserAsString);
-   }
-}
-=======
->>>>>>> be85bf2c1614c647119dc1564140414ec9ee3743
-
-/**
-* Open Overlay
-*/
-function openOverlay() {
-   document.getElementsByClassName('modal-container')[0].classList.remove('hidden');
-   document.getElementById('inhalt').classList.remove('hidden');
-   document.getElementById('textaddtask').innerHTML = 'Task wurde in Board geladen ';
-}
-
-/**
-<<<<<<< HEAD
-* Close Overlay
-*/
-function closeOverlay() {
-   document.getElementsByClassName('modal-container')[0].classList.add('hidden');
-=======
  * Loading the currently logged in user.
  */
 function loadCurrentUser() {
@@ -129,7 +70,6 @@ function loadCurrentUser() {
         currentUser = JSON.parse(currentUserAsString);
     }
 }
-
 
 /**
  * Open Overlay
@@ -145,5 +85,39 @@ function openOverlay() {
  */
 function closeOverlay() {
     document.getElementsByClassName('modal-container')[0].classList.add('hidden');
->>>>>>> be85bf2c1614c647119dc1564140414ec9ee3743
 }
+
+
+/**function openOverlay() { 
+    let openOverlaySuccessful = false; // Open Overlay defnieren
+    
+        if (title.value > 0 && date.value > 0 && category.value > 0 && urgency.value > 0 && description.value > 0) { //Wenn Werte in allen Feldern vorhanden
+
+            openOverlaySuccessful = true; // Open Overlay als erfolgreich deklarieren
+            
+            document.getElementsByClassName('modal-container')[0].classList.remove('hidden');
+            document.getElementById('inhalt').classList.remove('hidden');
+            document.getElementById('textaddtask').innerHTML = 'Task wurde in Board geladen';
+        } 
+    
+        else { // Daten fehlen
+            document.getElementsByClassName('modal-container')[0].classList.remove('hidden');
+            document.getElementById('inhalt').classList.remove('hidden');
+            document.getElementById('textaddtask').innerHTML = 'Bitte ergänzen Sie die fehlenden Daten';
+        }
+}*/
+
+
+
+/**
+* push tasks to backend for backlog
+*/
+
+// async function pushBacklog() {
+  
+//     allTasks.push(newTask);
+//     console.log(allTasks);
+
+//     let allTasksAsString = JSON.stringify(allTasks);
+//     await backend.setItem('allTasks', allTasksAsString);
+// }
