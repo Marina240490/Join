@@ -20,10 +20,10 @@
 
 <body onload="initAddTasks(), initOverallApp()">
 
-        <script src="mini_backend.js"></script>
-        <script src="overallApp.js"></script>
-        <script src="addtask.js"></script>
-        
+    <script src="mini_backend.js"></script>
+    <script src="overallApp.js"></script>
+    <script src="addtask.js"></script>
+
     <div class="page">
 
         <div w3-include-html="templates/responsive-menu.html"></div>
@@ -53,89 +53,89 @@
                     <div class="headline">Add Task</div>
                     <div class="headline2">Learning Management System Project</div>
                 </div>
-                
-                <form>
-                <div class="input-section">
-                    <div class="fd-row">
-                        <div>
-                            <div class="headline3">
-                                TITLE
-                            </div>
+
+                <form onsubmit="return createTaskSubmit(event)">
+                    <div class="input-section">
+                        <div class="fd-row">
                             <div>
-                                <input id="title" class="input" required></input>
+                                <div class="headline3">
+                                    TITLE
+                                </div>
+                                <div>
+                                    <input id="title" class="input" required></input>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="headline3">
+                                    DUE DATE
+                                </div>
+                                <div class="due-date">
+                                    <input id="date" type="date" class="input" required></input>
+                                </div>
                             </div>
                         </div>
 
-                        <div>
-                            <div class="headline3">
-                                DUE DATE
+                        <div class="fd-row">
+                            <div>
+                                <div class="headline3">
+                                    CATEGORY
+                                </div>
+                                <div class="category">
+                                    <select id="category" name="Category" size="1" class="input" required>
+                                        <option>Marketing</option>
+                                        <option>Product</option>
+                                        <option>Sale</option>
+                                        <option>Controlling</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="due-date">
-                                <input id="date" type="date" class="input" required></input>
+
+                            <div>
+                                <div class="headline3">
+                                    URGENCY
+                                </div>
+                                <div class="urgency">
+                                    <select id="urgency" name="Urgency" size="1" class="input" required>
+                                        <option>High</option>
+                                        <option>Semi</option>
+                                        <option>Low</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fd-row">
+                            <div>
+                                <div class="headline3">
+                                    DESCRIPTION
+                                </div>
+                                <div>
+                                    <textarea id="description"
+                                        placeholder="Lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                                        class="input-description" required></textarea>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="headline3 assigned-to">
+                                    ASSIGNED TO
+                                </div>
+                                <div class="assigned-to">
+                                    <img id="user-pic" class="user-pic-add-task" src="img/user-pic.jpg">
+                                    <img id="plususer" class="add" src="img/icon plus.png">
+                                </div>
+                                <div>
+                                    <button type="reset"
+                                        class="mdl-button mdl-js-button mdl-button--primary cancel">CANCEL</button>
+                                    <button type="submit"
+                                        class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-task">
+                                        CREATE TASK
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="fd-row">
-                        <div>
-                            <div class="headline3">
-                                CATEGORY
-                            </div>
-                            <div class="category">
-                                <select id="category" name="Category" size="1" class="input" required>
-                                    <option>Marketing</option>
-                                    <option>Product</option>
-                                    <option>Sale</option>
-                                    <option>Controlling</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="headline3">
-                                URGENCY
-                            </div>
-                            <div class="urgency">
-                                <select id="urgency" name="Urgency" size="1" class="input" required>
-                                    <option>High</option>
-                                    <option>Semi</option>
-                                    <option>Low</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="fd-row">
-                        <div>
-                            <div class="headline3">
-                                DESCRIPTION
-                            </div>
-                            <div>
-                                <textarea id="description"
-                                    placeholder="Lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                                    class="input-description" required></textarea>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="headline3 assigned-to">
-                                ASSIGNED TO
-                            </div>
-                            <div class="assigned-to">
-                                <img id="user-pic" class="user-pic-add-task" src="img/user-pic.jpg">
-                                <img id="plususer" class="add" src="img/icon plus.png">
-                            </div>
-                            <div>
-                                <button type="reset"
-                                    class="mdl-button mdl-js-button mdl-button--primary cancel">CANCEL</button>
-                                <button type="reset" onclick="createTask(), openOverlay()"
-                                    class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-task">
-                                    CREATE TASK
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 </form>
             </div>
 
@@ -145,13 +145,13 @@
                     <div id="inhalt" class="hidden">
                         <div class="text-overlay"><span id="textaddtask"></span></div>
                     </div>
-        
+
                     <div class="div-button">
                         <button class="button-close-overlay" onClick="closeOverlay()">X</button>
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>
 </body>
 
 </html>
