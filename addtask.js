@@ -1,7 +1,41 @@
 /**
  * Overall function in order to push to board and to backlog; WORK BITCH
  */
- async function createTask(){ // Waiting for server response
+
+async function createTask(){ // Waiting for server response
+
+     /**
+  * definition of value of inputfields 
+  */
+
+
+      let title = document.getElementById('title');
+      let date = document.getElementById('date');
+      let category = document.getElementById('category');
+      let urgency = document.getElementById('urgency');
+      let author = document.getElementById('user');
+      let description = document.getElementById('description');
+      let plususer = document.getElementById('plususer');
+      
+
+     /**
+     * JSON for inputfields
+     */
+
+      let newTask =
+      {
+      'title': title.value,
+      'date': date.value,
+      'category': category.value,
+      'urgency': urgency.value,
+      'author': author.src,
+      'description': description.value,
+      'plususer' : plususer.src
+      };
+    await saveTask(newTask); // await = very important, otherwise just the second function will be implemented 
+    
+    //await pushBacklog();
+}
 
 /**
  * definition of value of inputfields 
@@ -13,34 +47,13 @@
      let author = document.getElementById('user');
      let description = document.getElementById('description');
      let plususer = document.getElementById('plususer');
+
      
-
-    /**
-    * JSON for inputfields
-    */
-     let newTask =
-     {
-     'title': title.value,
-     'date': date.value,
-     'category': category.value,
-     'urgency': urgency.value,
-     'author': author.src,
-     'description': description.value,
-     'plususer' : plususer.src
-     };
-   await saveTask(newTask); // await = very important, otherwise just the second function will be implemented 
-   
-   //await pushBacklog();
-}
-
-/**
-* push tasks to backend for board WORK ALSO BITCH
-*/
 async function saveTask(task) {
-   allTasks.push(task);
-   //console.log(allTasks);
-   let allTasksAsString = JSON.stringify(allTasks);
-   await backend.setItem('allTasks', allTasksAsString);
+    allTasks.push(task);
+    //console.log(allTasks);
+    let allTasksAsString = JSON.stringify(allTasks);
+    await backend.setItem('allTasks', allTasksAsString);
 }
 
 /**
@@ -56,13 +69,18 @@ async function initAddTasks(){
 */
 
 // async function pushBacklog() {
+<<<<<<< HEAD
  
+=======
+  
+>>>>>>> be85bf2c1614c647119dc1564140414ec9ee3743
 //     allTasks.push(newTask);
 //     console.log(allTasks);
 
 //     let allTasksAsString = JSON.stringify(allTasks);
 //     await backend.setItem('allTasks', allTasksAsString);
 // }
+<<<<<<< HEAD
 
 /**
 * Loading the data of all signed up users from the local storage and saves them in the users array when the page is loaded.
@@ -83,6 +101,8 @@ function loadCurrentUser() {
        currentUser = JSON.parse(currentUserAsString);
    }
 }
+=======
+>>>>>>> be85bf2c1614c647119dc1564140414ec9ee3743
 
 /**
 * Open Overlay
@@ -94,8 +114,36 @@ function openOverlay() {
 }
 
 /**
+<<<<<<< HEAD
 * Close Overlay
 */
 function closeOverlay() {
    document.getElementsByClassName('modal-container')[0].classList.add('hidden');
+=======
+ * Loading the currently logged in user.
+ */
+function loadCurrentUser() {
+    let currentUserAsString = localStorage.getItem("currentUser");
+
+    if (currentUserAsString) {
+        currentUser = JSON.parse(currentUserAsString);
+    }
+}
+
+
+/**
+ * Open Overlay
+ */
+function openOverlay() {
+    document.getElementsByClassName('modal-container')[0].classList.remove('hidden');
+    document.getElementById('inhalt').classList.remove('hidden');
+    document.getElementById('textaddtask').innerHTML = 'Task wurde in Board geladen ';
+}
+
+/**
+ * Close Overlay
+ */
+function closeOverlay() {
+    document.getElementsByClassName('modal-container')[0].classList.add('hidden');
+>>>>>>> be85bf2c1614c647119dc1564140414ec9ee3743
 }

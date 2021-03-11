@@ -18,31 +18,15 @@
 
 </head>
 
-<body onload="initAddTasks()">
+<body onload="initAddTasks(), initOverallApp()">
 
-    <script src="./mini_backend.js"></script>
-        <script src="addtask.js"></script>
-        <script src="backlog.js"></script>
-        <script src="board.js"></script> 
-        <script src="index.js"></script>
+        <script src="mini_backend.js"></script>
         <script src="overallApp.js"></script>
-
+        <script src="addtask.js"></script>
+        
     <div class="page">
-        <div class="responsive-menu">
-            <div class="menu-pic-area">
-                <img src="img/logo.png" class="logo-pic">
-                <img src="img/menu.svg" onclick="showMenu()" class="menu-pic">
-            </div>
-    
-            <div class="mobilemenu" id="res-menu">
-            <a href="board.html">Board</a>
-            <a href="addtask.html">Add Task</a>
-            <a href="backlog.html">Backlog</a>
-            <a href="faq.html">FAQs</a>
-            <a href="impressum.html">Impressum</a>
-            <a class="logout-btn" href="index.html">Logout</a>
-            </div>
-        </div>
+
+        <div w3-include-html="templates/responsive-menu.html"></div>
 
         <div class="main-section">
             <div class="navigation">
@@ -78,7 +62,7 @@
                                 TITLE
                             </div>
                             <div>
-                                <input id="title" class="input"></input>
+                                <input id="title" class="input" required></input>
                             </div>
                         </div>
 
@@ -87,7 +71,7 @@
                                 DUE DATE
                             </div>
                             <div class="due-date">
-                                <input id="date" type="date" class="input"></input>
+                                <input id="date" type="date" class="input" required></input>
                             </div>
                         </div>
                     </div>
@@ -98,7 +82,7 @@
                                 CATEGORY
                             </div>
                             <div class="category">
-                                <select id="category" name="Category" size="1" class="input">
+                                <select id="category" name="Category" size="1" class="input" required>
                                     <option>Marketing</option>
                                     <option>Product</option>
                                     <option>Sale</option>
@@ -112,7 +96,7 @@
                                 URGENCY
                             </div>
                             <div class="urgency">
-                                <select id="urgency" name="Urgency" size="1" class="input">
+                                <select id="urgency" name="Urgency" size="1" class="input" required>
                                     <option>High</option>
                                     <option>Semi</option>
                                     <option>Low</option>
@@ -129,7 +113,7 @@
                             <div>
                                 <textarea id="description"
                                     placeholder="Lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                                    class="input-description"></textarea>
+                                    class="input-description" required></textarea>
                             </div>
                         </div>
 
@@ -144,7 +128,7 @@
                             <div>
                                 <button type="reset"
                                     class="mdl-button mdl-js-button mdl-button--primary cancel">CANCEL</button>
-                                <button type="reset" onclick="createTask()"
+                                <button type="reset" onclick="createTask(), openOverlay()"
                                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored create-task">
                                     CREATE TASK
                                 </button>
@@ -153,6 +137,19 @@
                     </div>
                 </div>
                 </form>
+            </div>
+
+            <div class="modal-container hidden">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div id="inhalt" class="hidden">
+                        <div class="text-overlay"><span id="textaddtask"></span></div>
+                    </div>
+        
+                    <div class="div-button">
+                        <button class="button-close-overlay" onClick="closeOverlay()">X</button>
+                    </div>
+                </div>
             </div>
         </div>     
 </body>

@@ -4,6 +4,7 @@ let BASE_SERVER_URL;
 const backend = {
     setItem: function(key, item) {
         jsonFromServer[key] = item;
+        console.log(jsonFromServer[key]);
         return saveJSONToServer();
     },
     getItem: function(key) {
@@ -23,7 +24,8 @@ const backend = {
 
 async function downloadFromServer() {
     let result = await loadJSONFromServer();
-    jsonFromServer = JSON.parse(result);
+    console.log(result);
+    jsonFromServer =  result? JSON.parse(result) : {};
     console.log('Loaded', result);
 }
 
@@ -54,7 +56,6 @@ function saveJSONToServer() {
         console.log('Posten', jsonFromServer);
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhttp.send(JSON.stringify(jsonFromServer));
-
     });
 }
 
@@ -70,6 +71,7 @@ function saveJSONToServer() {
 
 async function loadJSONFromServer() {
     let response = await fetch(BASE_SERVER_URL + '/nocors.php?json=database&noache=' + (new Date().getTime()));
+    console.log("Response text", response);
     return await response.text();
 
 }
