@@ -17,7 +17,7 @@ function showBoard(){
         document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="dragelement${i}" ondragstart="dragStart(event)">
             <div class="first-row-pin">
                 <p class="p-header">${element['title']}</p>
-                <img src="img/X.svg" class="X-pin" onclick="deleteTask(${i})">
+                <img src="img/X.svg" class="X-pin" onclick="openDeleteWindow(${i})">
             </div>
             
             <div class="second-row-pin">
@@ -35,58 +35,34 @@ function showBoard(){
     }  
 }
 
+
 /**
- * deleting task
+ * asking if you really want to delete the task
+ */
+ function openDeleteWindow() {
+    document.getElementById('deleteWindow').classList.remove('d-none');
+    document.getElementById('deleteWindow').classList.add('deleteWindow');
+    document.getElementById('main-section').classList.add('d-none');
+}
+
+/**
+ * closing the delete Window
+ */
+function closeDeleteWindow() {
+    document.getElementById('deleteWindow').classList.remove('deleteWindow');
+    document.getElementById('deleteWindow').classList.add('d-none');
+    document.getElementById('main-section').classList.remove('d-none');
+    document.getElementById('main-section').classList.add('main-section');
+}
+
+/**
+ * deleting the current task
+ * @param {param} taskIndex  Index of current Task
  */
 async function deleteTask(taskIndex) {
     allTasks.splice(taskIndex, 1);
     await backend.setItem("allTasks", JSON.stringify(allTasks));
     showBoard();
-}
-
-/**
- * Open current User Window
- * @param { numer } userIndex - Index Number of current User
- */
- function loadCurrentUserWindow(userIndex) {
-    document.getElementById("user-pic").src=`${users[userIndex]['image']}`;
-}
-
-/*
-function openDeleteWindow(taskId) {
-    document.getElementById("delete-container-overlay").classList.remove("d-none");
-    document.getElementById("delete-container").classList.remove("d-none");
-    document.getElementById("delete-container").innerHTML = `
-    <div class="delete-window">
-        <span>Möchtest du diesen Pin wirklich löschen?</span>
-            <div class="button-order">
-                <button onclick="deleteTask(${taskId})" class="btn btn-primary">Yes</button>
-                <button onclick="closeDeleteWindow()" class="btn btn-primary">No</button>
-            </div>
-    </div>`;
-}
-
-function closeDeleteWindow() {
-    document.getElementById("delete-container-overlay").classList.add("d-none");
-
-    document.getElementById("delete-container").classList.add("d-none");
-}*/
-
-/**
- * Drag and Drop Function
- */
-let id;
-
-function dropPin(ev) {
-    ev.preventDefault();
-}
-
-function dragStart(ev) {
-    id=ev.target.id;
-}
-
-function drop(ev) {
-    ev.target.append(document.getElementById(id));
 }
 
 /**
@@ -108,3 +84,28 @@ function loadCurrentUser() {
         currentUser = JSON.parse(currentUserAsString);
     }
 }
+
+/**
+ * Open current User Window
+ * @param { numer } userIndex - Index Number of current User
+ */
+ function loadCurrentUserWindow(userIndex) {
+    document.getElementById("user-pic").src=`${users[userIndex]['image']}`;
+}
+
+/**
+ * Drag and Drop Function
+ */
+ let id;
+
+ function dropPin(ev) {
+     ev.preventDefault();
+ }
+ 
+ function dragStart(ev) {
+     id=ev.target.id;
+ }
+ 
+ function drop(ev) {
+     ev.target.append(document.getElementById(id));
+ }

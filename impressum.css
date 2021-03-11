@@ -25,6 +25,15 @@
     transition: all ease-in-out 225ms;
 }
 
+.user-pic {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%; 
+    box-shadow: 10px 5px 5px rgb(23,36,104);
+    transition: all 225ms ease-in-out; 
+}
+
 .logout-btn:hover {
     color: white;
     transition: scale(1.2);
