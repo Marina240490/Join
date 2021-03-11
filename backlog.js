@@ -67,7 +67,6 @@ function showBacklog() {
     }
 }
 
-
 async function deleteBacklog(taskIndex) {
     allTasks.splice(taskIndex, 1);
     await backend.setItem("allTasks", JSON.stringify(allTasks));

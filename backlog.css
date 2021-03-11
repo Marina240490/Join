@@ -66,9 +66,8 @@ body {
     width: 40px;
     height: 40px;
     object-fit: cover;
-    border-radius: 50%; 
-    border-color: black; 
-    border: 3px solid;  
+    border-radius: 50%;  
+    box-shadow: 10px 5px 5px rgb(23,36,104);
     transition: all 225ms ease-in-out; 
 }
 
@@ -391,8 +390,6 @@ body {
     }
 }
 
-
-
 @media(max-width: 950px) {
 
     .backlog-div {
@@ -400,43 +397,41 @@ body {
     }
 
     .assigned-backlog {
-    display: flex;
-    flex-direction: column;
-    width: 46%;
+        display: flex;
+        flex-direction: column;
+        width: 46%;
     }
 
     .category-backlog {
-    display: flex;
-    width: 34%;
-    align-items: center;
-}
+        display: flex;
+        width: 34%;
+        align-items: center;
+    }
 
     .details-backlog {
-    font-family: 'PT Sans', sans-serif;
-    display: flex;
-    align-items: center;
-    width: 51%;
+        font-family: 'PT Sans', sans-serif;
+        display: flex;
+        align-items: center;
+        width: 51%;
+    }
+
+    .p-headings-assigned {
+        width: 48%;
+        padding-left: 10px;
+    }
+
+    .p-headings-category{
+        width: 25%;
+    }  
+
+    .p-headings-details{
+        width: 43%;
+    }
+
+    .whole-backlog-container {
+    margin-left: -22px;
+    }
 }
-
-.p-headings-assigned {
-    width: 48%;
-    padding-left: 10px;
-}
-
-.p-headings-category{
-    width: 25%;
-}  
-
-.p-headings-details{
-    width: 43%;
-}
-
-.whole-backlog-container {
-   margin-left: -22px;
-}
-
-
-
 
 @media(max-width: 900px){
 
@@ -453,25 +448,23 @@ body {
         width: 69%;
     }
 
-.headings-backlog{
-    margin-left: 8px;
+    .headings-backlog{
+        margin-left: 8px;
 
-}
+    }
 
-.p-headings {
-    margin-right: 148px;
-    margin-left: 24px;
-}
+    .p-headings {
+        margin-right: 148px;
+        margin-left: 24px;
+    }
 
-.category {
-margin-left: -47px; 
-}
+    .category {
+    margin-left: -47px; 
+    }
 
-.details-backlog {
-    margin-left: 200px;
-}
-
-
+    .details-backlog {
+        margin-left: 200px;
+    }
 }
 
 @media (max-width: 610px) {
@@ -557,14 +550,14 @@ margin-left: -47px;
         display: none;
     }
 
-.details-text {
-    display: none;
-}
+    .details-text {
+        display: none;
+    }
 
 
-.d-none-details {
-    display: block;
-}
+    .d-none-details {
+        display: block;
+    }
 }
 
 @media (max-width: 321px) {
