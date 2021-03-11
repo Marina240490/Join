@@ -52,6 +52,29 @@ async function loadAllTasks() {
     };
 }
 
+/**
+ * Defining backgroundcolor of Category in backlog-div
+ */
+
+function coloredBacklogdiv(category, index) {
+    if(category == 'Marketing'){
+        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px blue";
+    };
+
+    if(category == 'Product'){
+        document.getElementById(`category${index}`).style.borderInlineStart= "solid 5px green";
+    };
+
+    if(category == 'Sale'){
+        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px yellow";
+    };
+
+    if(category == 'Controlling'){
+        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px red";
+    };
+}
+
+
 function checkCurrentUser() {
     if (localStorage.getItem('currentUser')) { // Check if user exists
         let currentUser = JSON.parse(localStorage.getItem('currentUser'));
