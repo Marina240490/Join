@@ -1,7 +1,7 @@
 /**
  * userinformations
  */
-let user = [
+ let users = [
     {
         'name': 'Marina',
         'password': 'Marina123!',
@@ -34,8 +34,11 @@ let user = [
 
 function login(i) { 
     let loginSuccessful = false; //Loginverfahren definieren
-    for (let i = 0; i < user.length; i++) { 
-        if (username.value == user[i]['name'] && (password.value) == user[i]['password']) { //Wenn Wert des Inputs Name und Inputs Passwort passend, dann....
+    for (let i = 0; i < users.length; i++) { 
+        if (username.value == users[i]['name'] && (password.value) == users[i]['password']) { //Wenn Wert des Inputs Name und Inputs Passwort passend, dann....
+
+            localStorage.setItem('currentUser', JSON.stringify(users[i]));
+
             loginSuccessful = true; //Loginverfahren als erfolgreich deklarieren
             
             document.getElementById('overlay').classList.remove('d-none');
@@ -66,24 +69,20 @@ function init() {
  * Show picture of currentUser
  */
 function currentUser() {
-    if (document.getElementById('username').value = ''); {
-        document.getElementById('currentUserpic').innerHTML = ``;
+    if (document.getElementById('username').value == 'Marina') {
+        document.getElementById('currentUserpic').src = users[0]['image'];
     }
 
-    if (document.getElementById('username').value = 'Marina'); {
-        document.getElementById('currentUserpic').src = user[0]['image'];
+    if (document.getElementById('username').value == 'Yvonne') {
+        document.getElementById('currentUserpic').src = users[1]['image'];
     }
 
-    if (document.getElementById('username').value = 'Yvonne'); {
-        document.getElementById('currentUserpic').src = user[1]['image'];
+    if (document.getElementById('username').value == 'Steffi') {
+        document.getElementById('currentUserpic').src = users[2]['image'];
     }
 
-    if (document.getElementById('username').value = 'Steffi'); {
-        document.getElementById('currentUserpic').src = user[2]['image'];
-    }
-
-    if (document.getElementById('username').value = 'Junus'); {
-        document.getElementById('currentUserpic').src = user[3]['image'];
+    if (document.getElementById('username').value == 'Junus') {
+        document.getElementById('currentUserpic').src = users[3]['image'];
     }
 }
 
@@ -102,6 +101,7 @@ function currentUser() {
 async function loadAllUsers() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
+    console.log(users);
 }
 
 /**
