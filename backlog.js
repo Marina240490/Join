@@ -40,6 +40,7 @@ function showBacklog() {
             element['author'] = 'img/marina.jpg';
         }
         document.getElementById('push-to-backlog').innerHTML += `
+        <div class="backlog-div" id="category${i}"> 
         <div class="assigned-backlog">
             <div class="assigned-person">
                 <div class="img-backlog"> 
@@ -48,12 +49,26 @@ function showBacklog() {
                 <div class="name-backlog"> ${element['author']} <br> </div>
             </div> 
         </div>
-        <div id="category${i}" class="category-backlog"> ${element['category']} </div>
+        <div  class="category-backlog"> ${element['category']} </div>
         <div class="details-backlog"> 
             <p class="details-text"> ${element['details']}</p>
             <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p>
-        </div>`;
-        coloredCategory(element['category'], i);
+        </div>
+        <div class="delete-backlog">
+            <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="deleteBacklog${i}">
+        </div>
+        </div>
+        `;
+        
+        coloredBacklogdiv(element['category'], i); 
+
+        
     }
 }
 
+
+async function deleteBacklog(taskIndex) {
+    allTasks.splice(taskIndex, 1);
+    await backend.setItem("allTasks", JSON.stringify(allTasks));
+    showBacklog();
+}

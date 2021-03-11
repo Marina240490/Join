@@ -17,6 +17,7 @@ body {
     display: none;
 }
 
+/* Navigation  */
 .navigation {
     margin-bottom: -90;
     display: flex;
@@ -24,7 +25,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: rgb(30, 49, 144);
-    width: 13%;
+    width: 17%;
     height: 100vh;
 }
 
@@ -100,38 +101,80 @@ body {
 }
 
 
-   .size {
-    width: 1777px;
-    height: 659px
-}
+/* Beginn of Backlog Section */
 
 .backlog-overall-section {
     margin-left: 10px;
-    margin-right: 10px;
     animation: 1s flyIn ease-out;
+    width: 100%;
+    margin-right: 103px;
 }
 
-.assigned-backlog {
-    display: flex;
-    flex-direction: column;
-    width: 38%;
+/* Main Headings */
+
+.header-backlog {
+    padding: 20px;
+    margin-left: 8px;
+    margin-top: 18px;
+    margin-bottom: 40px;
 }
 
-.assigned-person {
+.title-backlog {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 17px;
+    margin-bottom: -10px;
+    margin-left: -9px;
+}
+
+.p-backlog {
+    font-size: 12px;
+    color: rgb(30, 49, 144);
+    margin-left: -7px;
+    margin-bottom: 10;
+    }
+
+.headings-backlog {
+    width: 100%;
+    padding-left: 32px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-left: -7px;
+    margin-top: 30px;
+    padding-left: 20;
+    color: rgb(30, 49, 144);    
 }
 
-.name-backlog {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
+/* Headings for Backlog containter */
+
+.p-headings-assigned {
+    width: 48%;
+    padding-left: 10px;
 }
 
-.category-backlog {
-    display: flex;
-    width: 38%;
-    align-items: center;
+.p-headings-category {
+    width: 25%;
+}
+
+.p-headings-details {
+    width: 43%;
+}
+
+
+
+/* Delete area */
+
+.delete-pin-bl{
+    height: 72px;
+    width: 30;
+    margin-right: -7px
+}
+
+.delete-backlog {
+    width: 4%;
+    padding-top: 7px;
+    margin-right: 10px;
 }
 
 @keyframes flyIn {
@@ -145,67 +188,37 @@ body {
     }
 }
 
-
-.backlog-section {
-    align-items: center;
-}
-
-.header-backlog {
-padding: 20px;
-    margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.title-backlog {
-    font-size: 20px;
-    font-family: 'PT Sans', sans-serif;
-}
-
-.p-backlog {
-    margin-top: -20px;
-    font-size: 10px;
-    font-family: 'PT Sans', sans-serif;
-    }
-
-.headings-backlog {
-    width: 100%;
-    padding-left: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20;
-    margin-top: 30px;
-    padding-left: 20;
-    color: rgb(30, 49, 144);    
-}
-
-.p-headings-assigned {
-    width: 47%;
-    padding-left: 10px;
-}
-
-.p-headings-category {
-    width: 79%;
-}
-
-.p-headings-details {
-    width: 5%;
+.enclosing-backlog-div {
+    flex-direction: column;
 }
 
 
-.category {
-    margin-left: -99px;
-}
+/* Grey backlog div */
 
 .backlog-div {
     display: flex;
-    background-color: #F4F3FB;
+    background-color: white;
     border-radius: 12px;
     height: 80px;
     width: 100%;
     padding-left: 10px;
-    margin-left: 50px;
+    margin-left: 17px;
+    margin-bottom: 30px;
+    box-shadow:rgba(3, 102, 214, 0.3) 0px 1px 4px;
+}
+
+   
+/* Assigned area */
+
+.assigned-backlog {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.assigned-person {
+    display: flex;
+    align-items: center;
 }
 
 .img-backlog {
@@ -221,24 +234,35 @@ padding: 20px;
 }
 
 .name-backlog {
-    font-family: 'PT Sans', sans-serif;
     display: flex;
-    align-items: center
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+/* Category area */
+
+.category-backlog {
+    display: flex;
+    width: 26%;
+    align-items: center;
 }
 
 
+/* Details area */
 
 .details-backlog {
     font-family: 'PT Sans', sans-serif;
     display: flex;
     align-items: center;
-    width: 35%;
+    width: 41%;
   
 }
 
 .details-text {
     padding-top: 10px;
 }
+
+
 
 /* Dialog */
 
@@ -367,6 +391,8 @@ padding: 20px;
     }
 }
 
+
+
 @media(max-width: 950px) {
 
     .backlog-div {
@@ -393,19 +419,23 @@ padding: 20px;
 }
 
 .p-headings-assigned {
-    width: 57%;
+    width: 48%;
     padding-left: 10px;
 }
 
 .p-headings-category{
-    width: 65%;
+    width: 25%;
 }  
 
 .p-headings-details{
-    width: 53%;
+    width: 43%;
 }
 
+.whole-backlog-container {
+   margin-left: -22px;
 }
+
+
 
 
 @media(max-width: 900px){
