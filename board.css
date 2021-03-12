@@ -178,7 +178,7 @@ body {
     flex-direction: column;
     padding: 10px;
     background-color: white;
-    box-shadow: 6px 6px 3px 1px rgb(0 0 0 / 50%);
+    box-shadow: 8px 6px 7px 1px rgb(215 215 215);
     border-style: ridge;
     border-radius: 10px;
     margin: 10px;
@@ -197,16 +197,19 @@ body {
 }
 
 .p-header {
+    position: relative;
     font-weight: bolder;
     font-size: 20;
     font-family: 'Anton', sans-serif;
     font-weight: lighter;
+    width: 130px;
 }
 
 .x-pin {
+    position: absolute;
     width: 20px;
     height: 20px;
-    margin-left: 80px;
+    margin-left: 125px;
     cursor: pointer;
     transition: all ease-in-out 225ms;
 }
@@ -220,11 +223,18 @@ body {
     flex-direction: column;
 }
 
-.p-pin {
+.p-pin1 {
     margin-bottom: 5px;
     margin-top: -8px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17;
+    font-size: 16;
+}
+
+.p-pin2 {
+    margin-bottom: 5px;
+    margin-top: -8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14;
 }
 
 .picrow-pin {

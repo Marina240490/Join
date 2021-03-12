@@ -21,8 +21,8 @@ function showBoard(taskIndex){
             </div>
             
             <div class="second-row-pin">
-                <p class="p-pin">${element['date']}</p>
-                <p class="p-pin">${element['urgency']}</p>
+                <p class="p-pin1">${element['date']}</p>
+                <p class="p-pin2">${element['urgency']}</p>
                 <div class="picrow-pin">
                     <img src="${element['author']}" class="user-pic-pin">
                     <p class="p-category" id="category${i}">${element['category']}</p>
