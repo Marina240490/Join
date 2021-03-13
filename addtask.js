@@ -103,17 +103,3 @@ function createTaskSubmit(event){
     });
     return false;
 }
-
-
-/**
-* push tasks to backend for backlog
-*/
-
-// async function pushBacklog() {
-  
-//     allTasks.push(newTask);
-//     console.log(allTasks);
-
-//     let allTasksAsString = JSON.stringify(allTasks);
-//     await backend.setItem('allTasks', allTasksAsString);
-// }

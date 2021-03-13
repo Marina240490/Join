@@ -7,6 +7,38 @@ body {
     display: flex;
 }
 
+.deleteWindow {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.deleteh1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30;
+}
+
+.deleteBtnRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteBtn {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    transition: all ease-in-out 225ms;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
+    transform: scale(1.2);
+}
+
 .mobilemenu {
     display: none;
 }
@@ -68,8 +100,7 @@ body {
     height: 40px;
     object-fit: cover;
     border-radius: 50%; 
-    border-color: black; 
-    border: 3px solid; 
+    box-shadow: 10px 5px 5px rgb(23,36,104);
     transition: all 225ms ease-in-out; 
 }
 
@@ -139,6 +170,7 @@ body {
     background-color: rgb(244,243,251);
     height: 600px;
     margin-top: -5px;
+    overflow-y: auto;
 }
 
 .pin {
@@ -146,7 +178,7 @@ body {
     flex-direction: column;
     padding: 10px;
     background-color: white;
-    box-shadow: 6px 6px 3px 1px rgb(0 0 0 / 50%);
+    box-shadow: 8px 6px 7px 1px rgb(215 215 215);
     border-style: ridge;
     border-radius: 10px;
     margin: 10px;
@@ -165,16 +197,19 @@ body {
 }
 
 .p-header {
+    position: relative;
     font-weight: bolder;
     font-size: 20;
     font-family: 'Anton', sans-serif;
     font-weight: lighter;
+    width: 130px;
 }
 
 .x-pin {
+    position: absolute;
     width: 20px;
     height: 20px;
-    margin-left: 80px;
+    margin-left: 125px;
     cursor: pointer;
     transition: all ease-in-out 225ms;
 }
@@ -188,11 +223,18 @@ body {
     flex-direction: column;
 }
 
-.p-pin {
+.p-pin1 {
     margin-bottom: 5px;
     margin-top: -8px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17;
+    font-size: 16;
+}
+
+.p-pin2 {
+    margin-bottom: 5px;
+    margin-top: -8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14;
 }
 
 .picrow-pin {
@@ -202,12 +244,11 @@ body {
 }
 
 .user-pic-pin {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
     border-radius: 50%;
-    border-color: black;
-    border: 3px solid;
+    box-shadow: 1px 2px 20px grey;
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -219,6 +260,13 @@ body {
     border-radius: 50%;
     padding-right: 20px;
     padding-left: 20px;
+}
+
+@media (max-width: 1190px) {
+    .navigation-bar {
+        width: 100px;
+        font-size: 14;
+    }
 }
 
 @media (max-width: 1096px) {

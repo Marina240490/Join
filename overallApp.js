@@ -36,19 +36,19 @@ async function loadAllTasks() {
  */
  function coloredCategory(category, index) {
     if(category == 'Marketing'){
-        document.getElementById(`category${index}`).style.backgroundColor = "blue";
+        document.getElementById(`category${index}`).style.backgroundColor = "rgb(181,228,240)";
     };
 
     if(category == 'Product'){
-        document.getElementById(`category${index}`).style.backgroundColor = "green";
+        document.getElementById(`category${index}`).style.backgroundColor = "rgb(255,251,168)";
     };
 
     if(category == 'Sale'){
-        document.getElementById(`category${index}`).style.backgroundColor = "yellow";
+        document.getElementById(`category${index}`).style.backgroundColor = "rgb(179,244,185)";
     };
 
     if(category == 'Controlling'){
-        document.getElementById(`category${index}`).style.backgroundColor = "red";
+        document.getElementById(`category${index}`).style.backgroundColor = "rgb(192,192,192)";
     };
 }
 
@@ -58,19 +58,19 @@ async function loadAllTasks() {
 
 function coloredBacklogdiv(category, index) {
     if(category == 'Marketing'){
-        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px blue";
+        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px rgb(181,228,240)";
     };
 
     if(category == 'Product'){
-        document.getElementById(`category${index}`).style.borderInlineStart= "solid 5px green";
+        document.getElementById(`category${index}`).style.borderInlineStart= "solid 5px rgb(255,251,168)";
     };
 
     if(category == 'Sale'){
-        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px yellow";
+        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px rgb(179,244,185)";
     };
 
     if(category == 'Controlling'){
-        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px red";
+        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px gb(192,192,192)";
     };
 }
 

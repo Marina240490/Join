@@ -31,7 +31,16 @@
 
     <div w3-include-html="templates/responsive-menu.html"></div>
 
-    <div class="main-section">
+    <div class="d-none" id="deleteWindow">
+            <h1 class="deleteh1">Magst du diesen Pin wirklich löschen?</h1>
+            <div class="deleteBtnRow">
+                <img src="img/loginCheck.svg" onclick="closeDeleteWindow(); deleteTask('${TaskIndex}')" class="deleteBtn">
+                <img src="img/X.svg" onclick="closeDeleteWindow()" class="deleteBtn">
+            </div>
+    </div>
+
+    <div id="main-section" class="main-section">
+
         <div class="navigation">
             <div class="logo">
                 <img class="logo-picture" src="img/logo.png">
@@ -53,24 +62,7 @@
         <div class="second-section">
                 <div class="pushboard-section">
                     <h3 class="header-board">TO-DO</h3>
-                    <div id="to-do-area" class="pushboard">
-                        <!-- <div class="pin" id="dragelement" ondragstart="dragStart(event)">
-                            <div class="first-row-pin">
-                                <p class="p-header">Title</p>
-                                <img src="img/X.svg" class="X-pin" onclick="deleteTask(dragelement)">
-                            </div>
-                            
-                            <div class="second-row-pin">
-                                <p class="p-pin">23.02.2021</p>
-                                <p class="p-pin">Urgency</p>
-                                <div class="picrow-pin">
-                                    <img src="img/user-pic.jpg" class="user-pic-pin">
-                                    <p class="p-category" id="category">Category</p>
-                                </div>
-                            </div>
-                            <div class="pin-color" id="pin-color"></div>
-                        </div>     -->
-                    </div>
+                    <div id="to-do-area" class="pushboard"></div>
                 </div>
 
                 <div class="pushboard-section">

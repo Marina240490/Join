@@ -44,9 +44,10 @@ function showBacklog() {
         <div class="assigned-backlog">
             <div class="assigned-person">
                 <div class="img-backlog"> 
-                    <img src="${element['plususer']}">
+                    <img src="${element['author']}">
                 </div>
-                <div class="name-backlog"> ${element['author']} <br> </div>
+                <div class="name-backlog"> ${element['users']} <br>
+                E-Mail: ${element['users']}</div>
             </div> 
         </div>
         <div  class="category-backlog"> ${element['category']} </div>
@@ -65,7 +66,6 @@ function showBacklog() {
         
     }
 }
-
 
 async function deleteBacklog(taskIndex) {
     allTasks.splice(taskIndex, 1);
