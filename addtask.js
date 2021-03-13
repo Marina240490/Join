@@ -77,7 +77,7 @@ function loadCurrentUser() {
 function openOverlay() {
     document.getElementsByClassName('modal-container')[0].classList.remove('hidden');
     document.getElementById('inhalt').classList.remove('hidden');
-    document.getElementById('textaddtask').innerHTML = 'Task wurde in Board geladen';
+    document.getElementById('textaddtask').innerHTML = 'Task wurde in Board und Backlog geladen';
 }
 
 /**
@@ -103,3 +103,17 @@ function createTaskSubmit(event){
     });
     return false;
 }
+
+
+/**
+* push tasks to backend for backlog
+*/
+
+// async function pushBacklog() {
+  
+//     allTasks.push(newTask);
+//     console.log(allTasks);
+
+//     let allTasksAsString = JSON.stringify(allTasks);
+//     await backend.setItem('allTasks', allTasksAsString);
+// }
