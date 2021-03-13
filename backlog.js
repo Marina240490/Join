@@ -27,6 +27,12 @@ async function initBacklog() {
     showBacklog();
 }
 
+async function loadAllTasks() {
+    await downloadFromServer(); 
+    allTasks = jsonFromServer['allTasks'] ? JSON.parse(jsonFromServer['allTasks']) : [];
+}
+
+
 /**
  * Posting in backlog 
  */
@@ -46,13 +52,13 @@ function showBacklog(taskIndex) {
                 <div class="img-backlog"> 
                     <img src="${element['author']}">
                 </div>
-                <div class="name-backlog"> ${users['name']} <br>
-                E-Mail: ${users['e-mail']}</div>
+                <div class="name-backlog"> ${users[i]['name']} <br>
+                E-Mail: ${users[i]['e-mail']}</div>
             </div> 
         </div>
         <div  class="category-backlog"> ${element['category']} </div>
         <div class="details-backlog"> 
-            <p class="details-text"> ${element['details']}</p>
+            <p class="details-text"> ${element['description']}</p>
             <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p>
         </div>
         <div class="delete-backlog">

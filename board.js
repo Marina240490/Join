@@ -123,3 +123,23 @@ function loadCurrentUser() {
  function drop(ev) {
      ev.target.append(document.getElementById(id));
  }
+
+
+ /**
+  * saving functions in local Storage for drag and drop
+  */
+
+ function LocalSaveUsers() {
+    //setArray('users', users);
+    backend.setItem('currentUser', JSON.stringify(currentUser));
+}
+
+function LocalSaveTasks() {
+    //setArray('alltasks', alltasks);
+    backend.setItem('allTasks', JSON.stringify(allTasks));
+}
+
+function SetLocal() {
+    LocalSaveUsers();
+    LocalSaveTasks();
+ }
