@@ -56,7 +56,7 @@ function showBacklog() {
             <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p>
         </div>
         <div class="delete-backlog">
-            <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="deleteBacklog${i}">
+            <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="deleteBacklog${i}"> 
         </div>
         </div>
         `;
@@ -66,6 +66,8 @@ function showBacklog() {
         
     }
 }
+
+/* ${taskIndex}) */
 
 async function deleteBacklog(taskIndex) {
     allTasks.splice(taskIndex, 1);

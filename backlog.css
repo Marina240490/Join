@@ -153,7 +153,7 @@ body {
 }
 
 .p-headings-category {
-    width: 25%;
+    width: 26%;
 }
 
 .p-headings-details {
@@ -229,7 +229,9 @@ body {
 .img-backlog img{
     width: 50px;
     height: 50px;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 1px 2px 20px grey;
 }
 
 .name-backlog {
@@ -253,7 +255,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     display: flex;
     align-items: center;
-    width: 41%;
+    width: 40%;
   
 }
 
@@ -302,27 +304,6 @@ body {
 /* Responsive Menue */
 
 @media(max-width: 1000px) {
-
-    .navigation {
-       display: none;
-    }
-
-    .p-headings {
-        margin-right: 230px;
-        margin-left: -9px
-    }
-
-    .category {
-        margin-left: -112px;
-    }
-
-    .backlog-div {
-        width: 66%;
-    }
-
-    .category-backlog {
-        margin-left: 108px;
-    }
 
     .mobilemenu {
         display: flex;
@@ -388,49 +369,71 @@ body {
         display: flex;
         justify-content: space-between;
     }
+
+
+    .navigation {
+        display: none;
+     }
+ 
+     .p-headings-assigned {
+        width: 85%;
+        padding-left: 10px;
+     }
+
+       .p-headings-category {
+            width: 61%;
+       }
+
+            .p-headings-details {
+                width: 65%;
+            }
+    .backlog-div {
+        width:105%;
+    }
+
+    .assigned-backlog {
+        width:48%;
+    }
+
+    .category-backlog {
+        width: 34%;
+    }
+
+    .details-backlog {
+        width: 40%;
+    }
 }
 
 @media(max-width: 950px) {
 
+    .p-headings-assigned {
+        width: 39%;
+        padding-left: 10px;
+     }
+
+       .p-headings-category {
+        width: 26%;
+       }
+
+            .p-headings-details {
+                width: 65%;
+            }
     .backlog-div {
-        width: 73%;
+        width:105%;
     }
 
     .assigned-backlog {
-        display: flex;
-        flex-direction: column;
-        width: 46%;
+        width:48%;
     }
 
     .category-backlog {
-        display: flex;
         width: 34%;
-        align-items: center;
     }
 
     .details-backlog {
-        font-family: 'PT Sans', sans-serif;
-        display: flex;
-        align-items: center;
-        width: 51%;
+        width: 40%;
     }
-
-    .p-headings-assigned {
-        width: 48%;
-        padding-left: 10px;
-    }
-
-    .p-headings-category{
-        width: 25%;
-    }  
-
-    .p-headings-details{
-        width: 43%;
-    }
-
-    .whole-backlog-container {
-    margin-left: -22px;
-    }
+    
 }
 
 @media(max-width: 900px){
