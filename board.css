@@ -199,9 +199,8 @@ body {
 .p-header {
     position: relative;
     font-weight: bolder;
-    font-size: 20;
-    font-family: 'Anton', sans-serif;
-    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17;
     width: 130px;
 }
 
