@@ -68,8 +68,23 @@ function loadCurrentUser() {
 
     if (currentUserAsString) {
         currentUser = JSON.parse(currentUserAsString);
+    };
+}
+
+/**
+ * Load User Pic in Add Task Form
+ */
+
+function checkCurrentUserAddTask() {
+    if (localStorage.getItem('currentUser')) { // Check if user exists
+        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        document.getElementById('currentUser').src = currentUser.image;
     }
 }
+
+
+
+
 
 /**
  * Open Overlay
@@ -103,17 +118,3 @@ function createTaskSubmit(event){
     });
     return false;
 }
-
-
-/**
-* push tasks to backend for backlog
-*/
-
-// async function pushBacklog() {
-  
-//     allTasks.push(newTask);
-//     console.log(allTasks);
-
-//     let allTasksAsString = JSON.stringify(allTasks);
-//     await backend.setItem('allTasks', allTasksAsString);
-// }

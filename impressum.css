@@ -3,6 +3,10 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+.impressum-animation {
+    animation: 1s flyIn ease-out;
+}
+
 .mobilemenu {
     display: none;
 }
@@ -26,11 +30,10 @@
 }
 
 .user-pic {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 50%; 
-    box-shadow: 10px 5px 5px rgb(23,36,104);
     transition: all 225ms ease-in-out; 
 }
 

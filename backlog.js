@@ -46,8 +46,8 @@ function showBacklog() {
                 <div class="img-backlog"> 
                     <img src="${element['author']}">
                 </div>
-                <div class="name-backlog"> ${element['users']} <br>
-                E-Mail: ${element['users']}</div>
+                <div class="name-backlog"> ${users['name']} <br>
+                E-Mail: ${users['e-mail']}</div>
             </div> 
         </div>
         <div  class="category-backlog"> ${element['category']} </div>
