@@ -166,7 +166,8 @@ body {
 .delete-pin-bl{
     height: 72px;
     width: 30;
-    margin-right: -7px
+    margin-right: -7px;
+    cursor: pointer;
 }
 
 .delete-backlog {

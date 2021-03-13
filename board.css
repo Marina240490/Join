@@ -9,6 +9,14 @@ body {
     display: flex;
 }
 
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
 
 /** Delete Overlay*/
 
@@ -45,7 +53,8 @@ body {
 }
 
 
-/***/
+/**mobilemenu*/
+
 .mobilemenu {
     display: none;
 }
@@ -54,9 +63,8 @@ body {
     display: none;
 }
 
-.d-none {
-    display: none;
-}
+
+/** Navigationbar*/
 
 .navigation {
     margin-bottom: -90;
@@ -134,9 +142,8 @@ body {
     font-weight: bold;
 }
 
-.d-flex {
-    display: flex;
-}
+
+/**Second-Board Section*/
 
 .second-section {
     display: flex;
@@ -267,6 +274,9 @@ body {
     padding-left: 20px;
 }
 
+
+/**for a nicer view*/
+
 @media (max-width: 1190px) {
     .navigation-bar {
         width: 100px;
@@ -326,6 +336,9 @@ body {
         margin-left: 40px;
     }
 }
+
+
+/**Mobile and tablet view*/
 
 @media (max-width: 870px) {
     .second-section {

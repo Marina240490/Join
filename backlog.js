@@ -31,7 +31,7 @@ async function initBacklog() {
  * Posting in backlog 
  */
 
-function showBacklog() {
+function showBacklog(taskIndex) {
     document.getElementById('push-to-backlog').innerHTML = '';
     for (let i = 0; i < allTasks.length; i++) {
         const element = allTasks[i];
@@ -56,7 +56,7 @@ function showBacklog() {
             <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p>
         </div>
         <div class="delete-backlog">
-            <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="deleteBacklog${i}"> 
+            <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="deleteBacklog(${taskIndex})"> 
         </div>
         </div>
         `;
@@ -66,8 +66,6 @@ function showBacklog() {
         
     }
 }
-
-/* ${taskIndex}) */
 
 async function deleteBacklog(taskIndex) {
     allTasks.splice(taskIndex, 1);
