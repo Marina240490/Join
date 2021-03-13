@@ -68,8 +68,23 @@ function loadCurrentUser() {
 
     if (currentUserAsString) {
         currentUser = JSON.parse(currentUserAsString);
+    };
+}
+
+/**
+ * Load User Pic in Add Task Form
+ */
+
+function checkCurrentUserAddTask() {
+    if (localStorage.getItem('currentUser')) { // Check if user exists
+        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        document.getElementById('currentUser').src = currentUser.image;
     }
 }
+
+
+
+
 
 /**
  * Open Overlay
@@ -77,7 +92,7 @@ function loadCurrentUser() {
 function openOverlay() {
     document.getElementsByClassName('modal-container')[0].classList.remove('hidden');
     document.getElementById('inhalt').classList.remove('hidden');
-    document.getElementById('textaddtask').innerHTML = 'Task wurde in Board geladen ';
+    document.getElementById('textaddtask').innerHTML = 'Task wurde in Board und Backlog geladen';
 }
 
 /**

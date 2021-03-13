@@ -1,3 +1,5 @@
+/**Main Stuff */
+
 body {
     margin: 0px; 
     font-family: 'PT Sans', sans-serif;
@@ -6,6 +8,9 @@ body {
 .main-section {
     display: flex;
 }
+
+
+/** Delete Overlay*/
 
 .deleteWindow {
     display: flex;
@@ -39,6 +44,8 @@ body {
     transform: scale(1.2);
 }
 
+
+/***/
 .mobilemenu {
     display: none;
 }
@@ -96,11 +103,10 @@ body {
 }
 
 .user-pic {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 50%; 
-    box-shadow: 10px 5px 5px rgb(23,36,104);
     transition: all 225ms ease-in-out; 
 }
 

@@ -1,4 +1,4 @@
-/** Navigation Section */
+/**Main Stuff */
 
 body {
     margin: 0px;
@@ -8,6 +8,9 @@ body {
 .main-section {
     display: flex;
 }
+
+
+/** Navigation Section */
 
 .mobilemenu {
     display: none;
@@ -62,11 +65,10 @@ body {
 }
 
 .user-pic {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 50%; 
-    box-shadow: 10px 5px 5px rgb(23,36,104);
     transition: all 225ms ease-in-out; 
 }
 
@@ -93,6 +95,7 @@ body {
     transition: scale(1.2);
     font-weight: bold;
 }
+
 
 /** Add Task Section */
 
@@ -236,7 +239,11 @@ body {
     padding-top: 8px !important;
     padding-bottom: 8px !important;
     height: 50px !important;
-    transition: all 225ms ease-in-out !important;
+}
+
+.mdl-button--raised.mdl-button--colored:hover {
+    background-color: rgb(216, 216, 216) !important;
+    color:rgb(30, 49, 144);
 }
 
 
@@ -300,6 +307,8 @@ body {
     justify-content: center; 
 }
 
+
+/**Mobile Section*/
 
 @media (max-width: 1000px) {
     .fd-row {

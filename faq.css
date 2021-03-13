@@ -60,11 +60,10 @@ body {
 }
 
 .user-pic {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 50%; 
-    box-shadow: 10px 5px 5px rgb(23,36,104);
     transition: all 225ms ease-in-out; 
 }
 
@@ -98,13 +97,16 @@ body {
 
 /* faq Area*/
 
+.faq {
+    animation: 1s flyIn ease-out;
+}
+
 .headline {
     font-size: 30px; 
     font-weight: bold; 
     margin-top: 50px; 
     margin-bottom: 10px; 
     margin-left: 30px; 
-    animation: 1s flyIn ease-out;
 }
 
 @keyframes flyIn {
