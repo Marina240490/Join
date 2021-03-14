@@ -5,6 +5,40 @@ body {
    
 }
 
+/* Overlay for deleting from backlog */
+
+.deleteWindow {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.deleteBtn {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    transition: all ease-in-out 225ms;
+    cursor: pointer;
+}
+
+.deleteBtnRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteh1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30;
+}
+
+.d-none {
+    display: none;
+}
+
 .main-section {
     display: flex;
 }
