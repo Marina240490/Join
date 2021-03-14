@@ -127,7 +127,7 @@ function loadCurrentUser() {
 
  /**
   * saving functions in local Storage for drag and drop
-  */
+*/
 
  function LocalSaveUsers() {
     //setArray('users', users);
