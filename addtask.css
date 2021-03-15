@@ -219,6 +219,7 @@ body {
     width: 40px; 
     height: 40px; 
     object-fit: cover; 
+    cursor: pointer;
 }
 
 .assigned-to {
@@ -231,6 +232,11 @@ body {
     padding-top: 8px !important;
     padding-bottom: 8px !important;
     height: 50px !important;
+    border-radius: 5px !important;
+}
+
+.cancel:hover {
+    background-color: rgb(216, 216, 216)!important;
 }
 
 .create-task {
@@ -240,11 +246,13 @@ body {
     padding-top: 8px !important;
     padding-bottom: 8px !important;
     height: 50px !important;
+    background-color: rgb(30, 49, 144) !important; 
+    color: white !important;    
 }
 
-.mdl-button--raised.mdl-button--colored:hover {
-    background-color: rgb(216, 216, 216) !important;
-    color:rgb(30, 49, 144);
+.create-task:hover {
+    background-color: rgb(216, 216, 216)!important;
+    color: rgb(30, 49, 144) !important;  
 }
 
 
