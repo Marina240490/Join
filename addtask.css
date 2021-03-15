@@ -315,6 +315,11 @@ body {
     justify-content: center; 
 }
 
+.user-picker-row {
+    border-radius: 10px;
+    margin: 12px;
+}
+
 
 /**Mobile Section*/
 

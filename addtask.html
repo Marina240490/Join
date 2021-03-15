@@ -21,7 +21,7 @@
 
 </head>
 
-<body onload="initAddTasks(), initOverallApp()">
+<body onload="displayUsers(), initAddTasks(), initOverallApp()">
 
     <script src="mini_backend.js"></script>
     <script src="overallApp.js"></script>
@@ -126,7 +126,7 @@
                                     ASSIGNED TO
                                 </div>
                                 <div class="assigned-to">
-                                    <img id="currentUser" class="user-pic-add-task" src="img/user-pic.jpg">
+                                    <img id="apfel" class="user-pic-add-task" src="img/user-pic.jpg">
                                     <img id="plususer" class="add" src="./img/icon plus.png" onclick="openaddPerson()">
                                 </div>
                                 <div>
@@ -158,7 +158,7 @@
 
             <div id="addPersonOverlay" class="modal-container hidden">
                 <div class="modal-background"></div>
-                    <div class="modal-content">
+                    <div id="user-picker-container" class="modal-content">
                         <div>
                             <div class="text-overlay">Welchen Nutzer möchtest du der Aufgabe hinzufügen?</div>
                         </div>
