@@ -118,5 +118,15 @@ function createTaskSubmit(event){
 
 
 /**
- * Add Person to Task
+ * Open Overlay Add Person to Task
  */
+ function openaddPerson() {
+    document.getElementById('addPersonOverlay').classList.remove('hidden');
+}
+
+/**
+ * Close Overlay Add Person to Task
+ */
+ function closeaddPerson() {
+    document.getElementById('addPersonOverlay').classList.add('hidden');
+}

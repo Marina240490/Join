@@ -127,7 +127,7 @@
                                 </div>
                                 <div class="assigned-to">
                                     <img id="currentUser" class="user-pic-add-task" src="img/user-pic.jpg">
-                                    <img id="plususer" class="add" src="./img/icon plus.png">
+                                    <img id="plususer" class="add" src="./img/icon plus.png" onclick="openaddPerson()">
                                 </div>
                                 <div>
                                     <button type="reset"
@@ -154,6 +154,18 @@
                         <img src="img/X.svg" class="button-close-overlay" onClick="closeOverlay()">
                     </div>
                 </div>
+            </div>
+
+            <div id="addPersonOverlay" class="modal-container hidden">
+                <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <div>
+                            <div class="text-overlay">Welchen Nutzer möchtest du der Aufgabe hinzufügen?</div>
+                        </div>
+                        <div class="div-button">
+                            <img src="img/X.svg" class="button-close-overlay" onClick="closeaddPerson()">
+                        </div>
+                    </div>
             </div>
         </div>
 </body>
