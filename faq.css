@@ -1,3 +1,5 @@
+/**Main Stuff */
+
 body {
     margin: 0px; 
     font-family: 'PT Sans', sans-serif;
@@ -6,6 +8,9 @@ body {
 .main-section {
     display: flex;
 }
+
+
+/** Navigation Section */
 
 .mobilemenu {
     display: none;
@@ -22,7 +27,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: rgb(30, 49, 144);
-    width: 13%;
+    width: 500px;
     height: 100vh;
 }
 
@@ -95,7 +100,7 @@ body {
     display: flex;
 }
 
-/* faq Area*/
+/* FAQ Section*/
 
 .faq {
     animation: 1s flyIn ease-out;
@@ -127,16 +132,28 @@ body {
 }
 
 .question {
-    margin-top: 30px;
     margin-bottom: 5px; 
-    margin-left: 30px; 
     font-weight: bold; 
 }
 
 .answer {
-    margin-bottom: 10px; 
-    margin-left: 30px; 
+    text-align: justify; 
+    padding-bottom: 30px;
 }
+
+.faq-background {
+    background-color: rgb(244, 243, 251);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px; 
+    border-radius: 5px; 
+    margin-left: 30px; 
+    margin-top: 50px; 
+    margin-right: 13%;
+}
+
+
+/**Mobile Section*/
 
 @media (max-width: 1000px) {
     .mobilemenu {
@@ -206,6 +223,11 @@ body {
     .menu-pic-area {
         display: flex;
         justify-content: space-between;
+    }
+
+    /** Mobile FAQ*/
+    .faq-background {
+        margin-right: 30px; 
     }
 }
 
