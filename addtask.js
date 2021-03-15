@@ -83,9 +83,6 @@ function checkCurrentUserAddTask() {
 }
 
 
-
-
-
 /**
  * Open Overlay
  */
@@ -118,3 +115,8 @@ function createTaskSubmit(event){
     });
     return false;
 }
+
+
+/**
+ * Add Person to Task
+ */
