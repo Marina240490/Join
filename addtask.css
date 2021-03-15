@@ -323,10 +323,40 @@ body {
     justify-content: center; 
 }
 
-.user-picker-row {
+
+/** User Selection Overlay */
+
+.user-selection {
+    display: flex; 
+    flex-direction: column; 
+    overflow-y: auto; 
+    height: 300px;
+    width: 400px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+    padding-top: 20;
+    border-style: ridge;
     border-radius: 10px;
-    margin: 12px;
+    padding: 30px; 
 }
+
+.additional-user {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgb(244, 243, 251); 
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+.h3-user {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: bold; 
+    font-size: 20px; 
+    margin-left: 30px;
+}
+
 
 
 /**Mobile Section*/

@@ -4,7 +4,7 @@ body {
 
 .main-section {
     display: flex;
-    padding-left: 110px;
+    justify-content: center; 
     height: 100%;
     background-image: url(img/teamwork.jpeg);
     background-size: cover; 
@@ -106,7 +106,6 @@ body {
 .login-section {
     display: flex;
     justify-content: center;
-    margin-left: 370px;
     align-items: center;
 }
 

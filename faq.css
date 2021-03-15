@@ -27,7 +27,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: rgb(30, 49, 144);
-    width: 500px;
+    width: 13%;
     height: 100vh;
 }
 
@@ -149,7 +149,8 @@ body {
     border-radius: 5px; 
     margin-left: 30px; 
     margin-top: 50px; 
-    margin-right: 13%;
+    margin-right: 30px; 
+    width: 1000px;
 }
 
 

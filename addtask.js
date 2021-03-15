@@ -1,5 +1,5 @@
 /**
- * Overall function in order to push to board and to backlog; WORK BITCH
+ * Overall function in order to push to board and to backlog;
  */
 
 async function createTask(){ // Waiting for server response
@@ -75,12 +75,12 @@ function loadCurrentUser() {
  * Load User Pic in Add Task Form
  */
 
- function checkCurrentUser() {
-    if (localStorage.getItem('currentUser')) { // Check if user exists
-        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        document.getElementById('apfel').src = currentUser.image;
-    }
-}
+ //function checkCurrentUser() {
+ //   if (localStorage.getItem('currentUser')) { // Check if user exists
+ //       let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+ //       document.getElementById('apfel').src = currentUser.image;
+ //   }
+//}
 
 
 /**
@@ -131,110 +131,20 @@ function createTaskSubmit(event){
     document.getElementById('addPersonOverlay').classList.add('hidden');
 }
 
-
-
-
-
-
-
-
 /**
- * Show all Users in Assigned to 
+ * Picked User in Assigned to 
  */
-async function displayUsers() {
-    await loadAllUsers();
-    checkCurrentUser();
-    let loggedInUser = users.find((e) => e.username == currentUser[0].username);
-    selectedUsers.push(loggedInUser);
-    getUserPicker();
-    displaySelectedUsers();
-    blendCurrentUser();
+function addPerson(i) {
+    localStorage.setItem('currentUser', JSON.stringify(users[i]));
+
+    closeaddPerson();
 }
 
-/**
- * This function is used to generate all users in the user picker.
- */
- function getUserPicker() {
-    document.getElementById("user-picker-container").innerHTML = "";
-    for (let i = 0; i < users.length; i++) {
-        document.getElementById("user-picker-container").innerHTML += `
-        <div id="user-picker-row${i}" class ="user-picker-row" onclick="selectUser(${i})"> 
-        <img src="${users[i]["profilePicture"]}"> 
-        <span>${users[i]["username"]} </span> 
-        </div>`;
-    }
-}
+async function showAddedPerson(i){
+    await localStorage.getItem('currentUser', JSON.parse(users[i]));
 
-/**
- * This function is used to highlight the current user in the user picker.
- */
- function blendCurrentUser() {
-    for (let j = 0; j < users.length; j++) {
-        if (users[j]["username"] == selectedUsers[0]["username"]) {
-            document
-                .getElementById("user-picker-row" + j)
-                .classList.add("user-picker-row-select");
-        }
-    }
-}
-
-/**
- * This function is used to select an user
- *
- *
- * @param {integer} i - defines the row number
- */
-function selectUser(i) {
-    let id = "user-picker-row" + i;
-    checkIfUserIsAlreadySelected(i, id);
-    displaySelectedUsers();
-}
-
-/**
- *
- * This function is used to check if an User is Selected in the user picker.
- *
- * @param {integer} i - defines the postion of the array persons
- * @param {string} id  - defines the row of the selected user
- *
- */
-function checkIfUserIsAlreadySelected(i, id) {
-    let userfound = false;
-    for (let j = 0; j < selectedUsers.length; j++) {
-        if (selectedUsers[j] == users[i]) {
-            userfound = true;
-            document.getElementById(id).classList.remove("user-picker-row-select");
-            selectedUsers.splice(j, 1);
-        }
-    }
-    if (!userfound) {
-        document.getElementById(id).classList.add("user-picker-row-select");
-        selectedUsers.push(users[i]);
-    }
-}
-
-/**
- * This function is used to display the selected users in the add tasks section.
- */
- function displaySelectedUsers() {
-    document.getElementById("assign-person").innerHTML = "";
-    for (let j = 0; j < selectedUsers.length; j++) {
-        document.getElementById("assign-person").innerHTML += `
-        <img id="user" src="${selectedUsers[j]["profilePicture"]}">`;
-    }
-}
-
-/**
- * This function is used to remove all Selected Persons
- *
- */
-function removePerson() {
-    selectedUsers = [];
-
-    for (let i = 0; i < users.length; i++) {
-        let id = "user-picker-row" + i;
-        document.getElementById(id).classList.remove("user-picker-row-select");
-    }
-
-    displayUsers();
+    document.getElementById('assignedTo').innerHTML = `                                
+    <img id="apfel" class="user-pic-add-task" src="img/user-pic.jpg">
+    <img class="user-pic" src="${users['author']}">
+    <img id="plususer" class="add" src="./img/icon plus.png" onclick="openaddPerson()">`;
 }

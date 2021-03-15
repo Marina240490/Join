@@ -62,7 +62,7 @@ function coloredBacklogdiv(category, index) {
     };
 
     if(category == 'Product'){
-        document.getElementById(`category${index}`).style.borderInlineStart= "solid 5px rgb(255,251,168)";
+        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px rgb(255,251,168)";
     };
 
     if(category == 'Sale'){
@@ -70,7 +70,7 @@ function coloredBacklogdiv(category, index) {
     };
 
     if(category == 'Controlling'){
-        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px gb(192,192,192)";
+        document.getElementById(`category${index}`).style.borderInlineStart = "solid 5px rgb(192,192,192)";
     };
 }
 

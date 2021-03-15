@@ -187,6 +187,7 @@ body {
 }
 
 .pin {
+    position: relative; 
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -210,7 +211,6 @@ body {
 }
 
 .p-header {
-    position: relative;
     font-weight: bold;
     font-family: 'PT Sans', sans-serif;
     font-size: 17;
@@ -221,7 +221,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    margin-left: 125px;
+    margin-left: 115px;
     cursor: pointer;
     transition: all ease-in-out 225ms;
 }

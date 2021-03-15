@@ -62,7 +62,7 @@ function showBacklog(taskIndex) {
             <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p>
         </div>
         <div class="delete-backlog">
-            <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="deleteBacklog(${taskIndex})"> 
+            <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="openDeleteWindowBacklog()"> 
         </div>
         </div>
         `;
@@ -76,12 +76,13 @@ function showBacklog(taskIndex) {
 function openDeleteWindowBacklog() {
     document.getElementById('deleteWindow').classList.remove('d-none');
     document.getElementById('deleteWindow').classList.add('deleteWindow');
-    document.getElementById("main-section").classList.add('d-none');
+    document.getElementById('main-section').classList.add('d-none');
 }
 
 function closeDeleteWindowBacklog() {
     document.getElementById('main-section').classList.remove('d-none');
-    document.getElementById('main-section').classList.add('main-section');
+    document.getElementById('main-section').classList.add('main-section size');
+    document.getElementById('deleteWindow').classList.remove('deleteWindow');
     document.getElementById('deleteWindow').classList.add('d-none');
 }
 
@@ -89,6 +90,7 @@ async function deleteBacklog(taskIndex) {
     allTasks.splice(taskIndex, 1);
     await backend.setItem("allTasks", JSON.stringify(allTasks));
     showBacklog();
+    closeDeleteWindowBacklog();
 }
 
 

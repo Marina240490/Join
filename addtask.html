@@ -21,11 +21,12 @@
 
 </head>
 
-<body onload="displayUsers(), initAddTasks(), initOverallApp()">
+<body onload="initAddTasks(), initOverallApp(), showAddedPerson()">
 
     <script src="mini_backend.js"></script>
     <script src="overallApp.js"></script>
     <script src="addtask.js"></script>
+    <script src="index.js"></script>
 
 
     <div class="page">
@@ -125,7 +126,7 @@
                                 <div class="headline3 assigned-to">
                                     ASSIGNED TO
                                 </div>
-                                <div class="assigned-to">
+                                <div class="assigned-to" id="assignedTo">
                                     <img id="apfel" class="user-pic-add-task" src="img/user-pic.jpg">
                                     <img id="plususer" class="add" src="./img/icon plus.png" onclick="openaddPerson()">
                                 </div>
@@ -158,12 +159,30 @@
 
             <div id="addPersonOverlay" class="modal-container hidden">
                 <div class="modal-background"></div>
-                    <div id="user-picker-container" class="modal-content">
+                    <div class="modal-content">
                         <div>
                             <div class="text-overlay">Welchen Nutzer möchtest du der Aufgabe hinzufügen?</div>
                         </div>
+                        <div id="user-selection" class="user-selection">
+                            <div id="additional-user" class="additional-user" onclick="addPerson(1)">
+                                <img src="img/marina.jpg" class="user-pic">
+                                <div class="h3-user">Marina Schwab</div>
+                            </div>
+                            <div id="additional-user" class="additional-user" onclick="addPerson(2)">
+                                <img src="img/yvonne.jpg" class="user-pic">
+                                <div class="h3-user">Yvonne Amann</div>
+                            </div>
+                            <div id="additional-user" class="additional-user" onclick="addPerson(3)">
+                                <img src="img/steffi.jfif" class="user-pic">
+                                <div class="h3-user">Steffi Nader</div>
+                            </div>
+                            <div id="additional-user" class="additional-user" onclick="addPerson(4)">
+                                <img src="img/junus.jfif" class="user-pic">
+                                <div class="h3-user">Junus Ergin</div>
+                            </div>
+                        </div>
                         <div class="div-button">
-                            <img src="img/X.svg" class="button-close-overlay" onClick="closeaddPerson()">
+                            <img src="img/X.svg" class="button-close-overlay" onclick="closeaddPerson()">
                         </div>
                     </div>
             </div>

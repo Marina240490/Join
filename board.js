@@ -12,6 +12,8 @@ async function initBoard(){
  * Posting pin at board
  */
 
+let taskIndex;
+
 function showBoard(taskIndex){
     console.log(allTasks);
     document.getElementById('to-do-area').innerHTML = '';
@@ -20,7 +22,7 @@ function showBoard(taskIndex){
         document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="dragelement${i}" ondragstart="dragStart(event)">
             <div class="first-row-pin">
                 <p class="p-header">${element['title']}</p>
-                <img src="img/X.svg" class="X-pin" onclick="openDeleteWindow(${taskIndex})">
+                <img src="img/X.svg" class="X-pin" onclick="openDeleteWindow(${taskIndex})">  
             </div>
             
             <div class="second-row-pin">
@@ -46,7 +48,7 @@ function showBoard(taskIndex){
  function openDeleteWindow() {
     document.getElementById('deleteWindow').classList.remove('d-none');
     document.getElementById('deleteWindow').classList.add('deleteWindow');
-    document.getElementById("main-section").classList.add('d-none');
+    document.getElementById('main-section').classList.add('d-none');
 }
 
 
@@ -65,10 +67,11 @@ function closeDeleteWindow() {
  * deleting the current task
  */
 
-async function deleteTask(TaskIndex) {
-    allTasks.splice(TaskIndex, 1);
+async function deleteTask(taskIndex) {
+    allTasks.splice(taskIndex, 1);
     await backend.setItem("allTasks", JSON.stringify(allTasks));
     showBoard();
+    closeDeleteWindow();
 }
 
 

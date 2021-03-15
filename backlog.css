@@ -39,6 +39,8 @@ body {
     display: none;
 }
 
+
+/** Main Stuff*/
 .main-section {
     display: flex;
 }
@@ -50,6 +52,7 @@ body {
 .menu-pic-area {
     display: none;
 }
+
 
 /* Navigation  */
 .navigation {
