@@ -1,3 +1,5 @@
+//let currentUserforBacklog = {};
+
 /**
  * Overlay function for details
  */
@@ -37,6 +39,10 @@ async function loadAllTasks() {
  * Posting in backlog 
  */
 
+ let taskIndex;
+
+ let indexTaskToDelete;
+
 function showBacklog() {
     document.getElementById('push-to-backlog').innerHTML = '';
     for (let i = 0; i < allTasks.length; i++) {
@@ -62,18 +68,21 @@ function showBacklog() {
             <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p>
         </div>
         <div class="delete-backlog">
-            <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="openDeleteWindowBacklog()"> 
+            <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="openDeleteWindowBacklog(${i})"> 
         </div>
         </div>
         `;
         
         coloredBacklogdiv(element['category'], i); 
-
-        
     }
 }
 
-function openDeleteWindowBacklog() {
+async function aproveDeletionBacklog(){
+    await deleteTaskBacklog(indexTaskToDelete);
+ }
+
+function openDeleteWindowBacklog(index) {
+    indexTaskToDelete = index;
     document.getElementById('deleteWindow').classList.remove('d-none');
     document.getElementById('deleteWindow').classList.add('deleteWindow');
     document.getElementById('main-section').classList.add('d-none');
@@ -81,17 +90,22 @@ function openDeleteWindowBacklog() {
 
 function closeDeleteWindowBacklog() {
     document.getElementById('main-section').classList.remove('d-none');
-    document.getElementById('main-section').classList.add('main-section size');
-    document.getElementById('deleteWindow').classList.remove('deleteWindow');
+    document.getElementById('main-section').classList.add('main-section');
     document.getElementById('deleteWindow').classList.add('d-none');
 }
 
-async function deleteBacklog(taskIndex) {
-    allTasks.splice(taskIndex, 1);
+async function deleteTaskBacklog(TaskIndex) {
+    allTasks.splice(TaskIndex, 1);
     await backend.setItem("allTasks", JSON.stringify(allTasks));
-    showBacklog();
     closeDeleteWindowBacklog();
+    showBacklog();
 }
 
 
-
+/**
+ * Saving the login data of the user that is currently logged in in the local storage.
+ */
+// function saveCurrentUserInLocalStorage() {
+//    let currentUserAsString = JSON.stringify(currentUser);
+//    localStorage.setItem("currentUser", currentUserAsString);
+//}

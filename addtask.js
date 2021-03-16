@@ -120,12 +120,6 @@ function closeaddPerson() {
     document.getElementById('addPersonOverlay').classList.add('hidden');
 }
 
-
-
-
-
-
-
 /**
  * Picked User in Assigned to 
  */
@@ -133,15 +127,13 @@ function addPerson(i) {
     //localStorage.setItem('currentUser', JSON.stringify(users[i]));
     choosenUsers.push({ name: users[i].name, img: users[i].image });
     closeaddPerson();
-    ShowChoosenUsersList();
+    showChoosenUsersList();
 }
 
-function  showChoosenUsersList(){
-    //get container, then container.innerHTML = '';
+function showChoosenUsersList(){
     document.getElementById('birne').innerHTML = ''; 
     for(let i = 0; i < choosenUsers.length; i++){
         document.getElementById('birne').innerHTML += `
         <img src="${choosenUsers[i]['image']}">`; 
-        //container.innerHTML += ``;
     }
 }

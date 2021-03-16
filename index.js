@@ -1,5 +1,3 @@
-
-
 /**
  * Login function to enter the main page
  */

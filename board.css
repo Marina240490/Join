@@ -197,6 +197,7 @@ body {
     border-radius: 10px;
     margin: 10px;
     margin-bottom: 20px;
+    cursor: all-scroll;
 }
 
 .pin-color {
