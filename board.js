@@ -12,15 +12,11 @@ async function initBoard(){
  * Posting pin at board
  */
 
-<<<<<<< HEAD
-function showBoard(taskIndex){
-=======
 let taskIndex;
 
 let indexTaskToDelete;
 
 function showBoard(){
->>>>>>> 9e638114ebc82c25ba635d35f5290235aad95d13
     console.log(allTasks);
     document.getElementById('to-do-area').innerHTML = '';
     for (let i = 0; i < allTasks.length; i++) {
@@ -28,11 +24,7 @@ function showBoard(){
         document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="dragelement${i}" ondragstart="dragStart(event)">
             <div class="first-row-pin">
                 <p class="p-header">${element['title']}</p>
-<<<<<<< HEAD
-                <img src="img/X.svg" class="X-pin" onclick="openDeleteWindow(${taskIndex})">
-=======
                 <img src="img/X.svg" class="X-pin" onclick="openDeleteWindow(${i})">  
->>>>>>> 9e638114ebc82c25ba635d35f5290235aad95d13
             </div>
             
             <div class="second-row-pin">
@@ -63,14 +55,7 @@ async function aproveDeletion(){
     indexTaskToDelete = index;
     document.getElementById('deleteWindow').classList.remove('d-none');
     document.getElementById('deleteWindow').classList.add('deleteWindow');
-<<<<<<< HEAD
-    document.getElementById("main-section").classList.add('d-none');
-=======
     document.getElementById('main-section').classList.add('d-none');
-
-
-    
->>>>>>> 9e638114ebc82c25ba635d35f5290235aad95d13
 }
 
 
@@ -92,10 +77,7 @@ function closeDeleteWindow() {
 async function deleteTask(TaskIndex) {
     allTasks.splice(TaskIndex, 1);
     await backend.setItem("allTasks", JSON.stringify(allTasks));
-<<<<<<< HEAD
-=======
     closeDeleteWindow();
->>>>>>> 9e638114ebc82c25ba635d35f5290235aad95d13
     showBoard();
 }
 
