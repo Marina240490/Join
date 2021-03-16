@@ -1,6 +1,40 @@
+/** Headings from Backlog*/
+
+.header-backlog {
+    padding: 20px;
+    margin-left: 17px;
+    margin-top: 18px;
+    margin-bottom: -20px;
+}
+
+.title-backlog {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 17px;
+    margin-bottom: -10px;
+    margin-left: -9px;
+}
+
+.p-backlog {
+    font-size: 12px;
+    color: rgb(30, 49, 144);
+    margin-left: -7px;
+    margin-bottom: 10;
+    }
+
+
 .impressum-div {
     margin-left: 50px;
     font-family: 'PT Sans', sans-serif;
+    background-color: rgb(244, 243, 251);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px; 
+    border-radius: 5px; 
+    margin-left: 30px; 
+    margin-top: 40px; 
+    margin-right: 30px; 
+    width: 600px;
 }
 
 .impressum-animation {
@@ -114,6 +148,23 @@
     }
 }
 
+/* 560 px 480 px 430 px 412 px 380 px 321 px 281 */
+
+@media (max-width: 670px) {
+    .impressum-div {
+    font-family: 'PT Sans', sans-serif;
+    background-color: rgb(244, 243, 251);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 26px;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-right: 30px;
+   width: 80%;
+}
+}
+
 @media (max-width: 610px) {
     .show-mobilemenu {
         height: 200px;
@@ -131,6 +182,10 @@
     .show-mobilemenu {
         width: 450px;
     }
+
+    .impressum-div {
+    width: 500px;
+    height: 534px;
 }
 
 @media (max-width: 480px) {
@@ -141,12 +196,18 @@
     .show-mobilemenu {
         width: 350px;
     }
+
+    .impressum-div {
+    width: 77%;
 }
 
 @media (max-width: 430px) {
     .logo-pic {
         margin-right: 280px;
     }
+
+    .impressum-div {
+        width: 67%;
 }
 
 @media (max-width: 412px) {
@@ -157,18 +218,30 @@
     .show-mobilemenu {
         width: 300px;
     }
+
+    .impressum-div {
+        width: 63%;
+}
 }
 
 @media (max-width: 380px) {
     .logo-pic {
         margin-right: 200px;
     }
+
+    .impressum-div {
+        width: 57%;
+}
 }
 
 @media (max-width: 321px) {
     .show-mobilemenu {
         width: 250px;
     }
+
+    .impressum-div {
+        width: 52%;
+}
 }
 
 @media (max-width: 281px) {
