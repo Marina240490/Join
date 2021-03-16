@@ -1,36 +1,6 @@
 
 
 /**
- * userinformations
- */
-let users = [
-    {
-        'name': 'Marina',
-        'password': 'Marina123!',
-        'image': 'img/marina.jpg',
-        'e-mail': 'marina@join.de',
-    },
-    {
-        'name': 'Yvonne',
-        'password': 'Yvonne123!',
-        'image': 'img/yvonne.jpg',
-        'e-mail': 'yvonne@join.de',
-    },
-    {
-        'name': 'Steffi',
-        'password': 'Steffi123!',
-        'image': 'img/steffi.jfif',
-        'e-mail': 'steffi@join.de',
-    },
-    {
-        'name': 'Junus',
-        'password': 'Junus123!',
-        'image': 'img/junus.jfif',
-        'e-mail': 'junus@join.de',
-    }
-];
-
-/**
  * Login function to enter the main page
  */
 

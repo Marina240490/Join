@@ -1,51 +1,55 @@
+let choosenUsers = [];
+
 /**
  * Overall function in order to push to board and to backlog;
  */
 
-async function createTask(){ // Waiting for server response
+async function createTask() { // Waiting for server response
 
-     /**
-  * definition of value of inputfields 
-  */
-      let title = document.getElementById('title');
-      let date = document.getElementById('date');
-      let category = document.getElementById('category');
-      let urgency = document.getElementById('urgency');
-      let author = document.getElementById('user-pic');
-      let description = document.getElementById('description');
-      let plususer = document.getElementById('plususer');
-      
+    /**
+ * definition of value of inputfields 
+ */
+    let title = document.getElementById('title');
+    let date = document.getElementById('date');
+    let category = document.getElementById('category');
+    let urgency = document.getElementById('urgency');
+    let author = document.getElementById('user-pic');
+    let description = document.getElementById('description');
+    let plususer = document.getElementById('plususer');
 
-     /**
-     * JSON for inputfields
-     */
-      let newTask =
-      {
-      'title': title.value,
-      'date': date.value,
-      'category': category.value,
-      'urgency': urgency.value,
-      'author': author.src,
-      'description': description.value,
-      'plususer' : plususer.src
-      };
+
+    /**
+    * JSON for inputfields
+    */
+    let newTask =
+    {
+        'title': title.value,
+        'date': date.value,
+        'category': category.value,
+        'urgency': urgency.value,
+        'author': author.src,
+        'description': description.value,
+        'plususer': plususer.src,
+        'assigne': choosenUsers
+    };
+    choosenUsers = [];
     await saveTask(newTask); // await = very important, otherwise just the second function will be implemented 
-    
+
     //await pushBacklog();
 }
 
 /**
  * definition of value of inputfields 
  */
-     let title = document.getElementById('title');
-     let date = document.getElementById('date');
-     let category = document.getElementById('category');
-     let urgency = document.getElementById('urgency');
-     let author = document.getElementById('user');
-     let description = document.getElementById('description');
-     let plususer = document.getElementById('plususer');
+let title = document.getElementById('title');
+let date = document.getElementById('date');
+let category = document.getElementById('category');
+let urgency = document.getElementById('urgency');
+let author = document.getElementById('user');
+let description = document.getElementById('description');
+let plususer = document.getElementById('plususer');
 
-     
+
 async function saveTask(task) {
     allTasks.push(task);
     //console.log(allTasks);
@@ -56,9 +60,9 @@ async function saveTask(task) {
 /**
 * loading all tasks from backend to the destination you want
 */
-async function initAddTasks(){
-   await loadAllTasks();
-   document.getElementById("apfel").src = currentUserFromLocalStorage.image;
+async function initAddTasks() {
+    await loadAllTasks();
+    document.getElementById("apfel").src = currentUserFromLocalStorage.image;
 }
 
 /**
@@ -76,11 +80,11 @@ function loadCurrentUser() {
  * Load User Pic in Add Task Form
  */
 
- //function checkCurrentUser() {
- //   if (localStorage.getItem('currentUser')) { // Check if user exists
- //       let currentUser = JSON.parse(localStorage.getItem('currentUser'));
- //       document.getElementById('apfel').src = currentUser.image;
- //   }
+//function checkCurrentUser() {
+//   if (localStorage.getItem('currentUser')) { // Check if user exists
+//       let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+//       document.getElementById('apfel').src = currentUser.image;
+//   }
 //}
 
 
@@ -103,17 +107,17 @@ function closeOverlay() {
 /**
  * required and Overlay work together 
  */
-function createTaskSubmit(event){
+function createTaskSubmit(event) {
     event.preventDefault();
     console.log(event);
 
-    createTask().then( () =>{
+    createTask().then(() => {
         openOverlay();
     })
-    .catch( error =>{
-        //handle create task error
-        console.error(new Error(error));
-    });
+        .catch(error => {
+            //handle create task error
+            console.error(new Error(error));
+        });
     return false;
 }
 
@@ -121,14 +125,14 @@ function createTaskSubmit(event){
 /**
  * Open Overlay Add Person in Assigned to 
  */
- function openaddPerson() {
+function openaddPerson() {
     document.getElementById('addPersonOverlay').classList.remove('hidden');
 }
 
 /**
  * Close Overlay Add Person in Assigned to 
  */
- function closeaddPerson() {
+function closeaddPerson() {
     document.getElementById('addPersonOverlay').classList.add('hidden');
 }
 
@@ -136,16 +140,24 @@ function createTaskSubmit(event){
  * Picked User in Assigned to 
  */
 function addPerson(i) {
-    localStorage.setItem('currentUser', JSON.stringify(users[i]));
-
+    //localStorage.setItem('currentUser', JSON.stringify(users[i]));
+    choosenUsers.push({ name: users[i].name, img: users[i].image });
     closeaddPerson();
+    //ShowChoosenUsersList
 }
 
-async function showAddedPerson(i){
+async function showAddedPerson(i) {
     await localStorage.getItem('currentUser', JSON.parse(users[i]));
 
     document.getElementById('assignedTo').innerHTML = `                                
     <img id="apfel" class="user-pic-add-task" src="img/user-pic.jpg">
     <img class="user-pic" src="${users['author']}">
     <img id="plususer" class="add" src="./img/icon plus.png" onclick="openaddPerson()">`;
+}
+
+function  showChoosenUsersList(){
+    //get container, then container.innerHTML = '';
+    for(let i = 0; i < choosenUsers.length; i++){
+        //container.innerHTML += ``;
+    }
 }
