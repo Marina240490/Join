@@ -5,10 +5,9 @@ let choosenUsers = [];
  */
 
 async function createTask() { // Waiting for server response
-
     /**
- * definition of value of inputfields 
- */
+    * definition of value of inputfields 
+    */
     let title = document.getElementById('title');
     let date = document.getElementById('date');
     let category = document.getElementById('category');
@@ -34,8 +33,6 @@ async function createTask() { // Waiting for server response
     };
     choosenUsers = [];
     await saveTask(newTask); // await = very important, otherwise just the second function will be implemented 
-
-    //await pushBacklog();
 }
 
 /**
@@ -48,7 +45,6 @@ let urgency = document.getElementById('urgency');
 let author = document.getElementById('user');
 let description = document.getElementById('description');
 let plususer = document.getElementById('plususer');
-
 
 async function saveTask(task) {
     allTasks.push(task);
@@ -75,17 +71,6 @@ function loadCurrentUser() {
         currentUser = JSON.parse(currentUserAsString);
     };
 }
-
-/**
- * Load User Pic in Add Task Form
- */
-
-//function checkCurrentUser() {
-//   if (localStorage.getItem('currentUser')) { // Check if user exists
-//       let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-//       document.getElementById('apfel').src = currentUser.image;
-//   }
-//}
 
 
 /**
@@ -121,7 +106,6 @@ function createTaskSubmit(event) {
     return false;
 }
 
-
 /**
  * Open Overlay Add Person in Assigned to 
  */
@@ -136,6 +120,12 @@ function closeaddPerson() {
     document.getElementById('addPersonOverlay').classList.add('hidden');
 }
 
+
+
+
+
+
+
 /**
  * Picked User in Assigned to 
  */
@@ -143,21 +133,15 @@ function addPerson(i) {
     //localStorage.setItem('currentUser', JSON.stringify(users[i]));
     choosenUsers.push({ name: users[i].name, img: users[i].image });
     closeaddPerson();
-    //ShowChoosenUsersList
-}
-
-async function showAddedPerson(i) {
-    await localStorage.getItem('currentUser', JSON.parse(users[i]));
-
-    document.getElementById('assignedTo').innerHTML = `                                
-    <img id="apfel" class="user-pic-add-task" src="img/user-pic.jpg">
-    <img class="user-pic" src="${users['author']}">
-    <img id="plususer" class="add" src="./img/icon plus.png" onclick="openaddPerson()">`;
+    ShowChoosenUsersList();
 }
 
 function  showChoosenUsersList(){
     //get container, then container.innerHTML = '';
+    document.getElementById('birne').innerHTML = ''; 
     for(let i = 0; i < choosenUsers.length; i++){
+        document.getElementById('birne').innerHTML += `
+        <img src="${choosenUsers[i]['image']}">`; 
         //container.innerHTML += ``;
     }
 }
