@@ -2,7 +2,7 @@
  * Loading Tasks from AddTask out of the Backend to show it then with showBoard()
  */
 
-async function initBoard(){
+ async function initBoard(){
     await loadAllTasks();
     showBoard();
 }
@@ -56,9 +56,6 @@ async function aproveDeletion(){
     document.getElementById('deleteWindow').classList.remove('d-none');
     document.getElementById('deleteWindow').classList.add('deleteWindow');
     document.getElementById('main-section').classList.add('d-none');
-
-
-    
 }
 
 
