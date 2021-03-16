@@ -31,7 +31,7 @@ body {
 }
 
 .deleteh1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important; 
     font-size: 30;
 }
 
@@ -473,38 +473,34 @@ body {
     
 }
 
-@media(max-width: 900px){
+@media(max-width: 945px){
 
-    .details-text {
-        display: none;
-    }
+    .p-headings-assigned {
+        width: 44%;
+        padding-left: 10px;
+     }
+
+       .p-headings-category {
+        width: 26%;
+       }
+
+            .p-headings-details {
+                width: 41%;
+            }
     
-    
-    .d-none-text {
-        display: block;
+
+    .assigned-backlog {
+        width:48%;
     }
 
-    .backlog-div {
-        width: 69%;
-    }
-
-    .headings-backlog{
-        margin-left: 8px;
-
-    }
-
-    .p-headings {
-        margin-right: 148px;
-        margin-left: 24px;
-    }
-
-    .category {
-    margin-left: -47px; 
+    .category-backlog {
+        width: 28%;
     }
 
     .details-backlog {
-        margin-left: 200px;
+        width: 49%;
     }
+
 }
 
 @media (max-width: 610px) {
@@ -513,15 +509,62 @@ body {
         border-top: 1px solid white;
         width: 500px;
     }
+    .p-headings-assigned {
+        width: 85%;
+        padding-left: 10px;
+     }
+
+       .p-headings-category {
+            width: 61%;
+       }
+
+            .p-headings-details {
+                width: 65%;
+            }
+
+
+            .img-backlog {
+                margin-right: 11px;
+                margin-left: 2px;
+                padding-top: 15px;
+            }
+
+            
+    .backlog-div {
+        width:105%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .assigned-backlog {
+        width:48%;
+    }
+
+    .assigned-person {
+        display: block;
+    }
+
+    .category-backlog {
+        width: 34%;
+    }
+
+    .details-backlog {
+        width: 38%;
+    }
+
+    .delete-backlog {
+    width: 4%;
+    margin-right: 15px;
+    padding-top: 14px;
+    padding-right: 10px;
 }
 
-@media (max-width: 610px) {
-    .show-mobilemenu {
-        height: 200px;
-        border-top: 1px solid white;
-        width: 500px;
+
     }
-}
+
+   
+
+
 
 @media (max-width: 560px) {
     .logo-pic {
@@ -541,6 +584,13 @@ body {
 
     .show-mobilemenu {
         width: 350px;
+    }
+
+        .delete-backlog {
+            width: 4%;
+            margin-right: 15px;
+            padding-top: 24px;
+            padding-right: 10px;
     }
 }
 

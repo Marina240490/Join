@@ -59,7 +59,6 @@ function showBacklog() {
         <div  class="category-backlog"> ${element['category']} </div>
         <div class="details-backlog"> 
             <p class="details-text"> ${element['description']}</p>
-            <p class="d-none-text" onclick="showDetails()"> Click here for more details!</p>
         </div>
         <div class="delete-backlog">
             <img src="img/delete_bin.svg" class="delete-pin-bl" onclick="openDeleteWindowBacklog()"> 
