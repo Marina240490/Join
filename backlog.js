@@ -37,7 +37,7 @@ async function loadAllTasks() {
  * Posting in backlog 
  */
 
-function showBacklog(taskIndex) {
+function showBacklog() {
     document.getElementById('push-to-backlog').innerHTML = '';
     for (let i = 0; i < allTasks.length; i++) {
         const element = allTasks[i];
@@ -52,8 +52,8 @@ function showBacklog(taskIndex) {
                 <div class="img-backlog"> 
                     <img src="${element['author']}">
                 </div>
-                <div class="name-backlog"> ${users[i]['name']} <br>
-                E-Mail: ${users[i]['e-mail']}</div>
+                <div class="name-backlog"> ${currentUserFromLocalStorage['name']} <br>
+                E-Mail: ${currentUserFromLocalStorage['e-mail']}</div>
             </div> 
         </div>
         <div  class="category-backlog"> ${element['category']} </div>

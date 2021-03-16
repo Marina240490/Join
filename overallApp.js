@@ -1,9 +1,40 @@
 setURL('http://marina-schwab.developerakademie.com/smallest_backend_ever'); // Connection to the server
 let allTasks = [];
+let currentUserFromLocalStorage = {};
 /**
  * Function for responsive Menu for all pages! (Never delete!!!!!!)
  */
 let show = false;
+
+/**
+ * userinformations
+ */
+ let users = [
+    {
+        'name': 'Marina',
+        'password': 'Marina123!',
+        'image': 'img/marina.jpg',
+        'e-mail': 'marina@join.de',
+    },
+    {
+        'name': 'Yvonne',
+        'password': 'Yvonne123!',
+        'image': 'img/yvonne.jpg',
+        'e-mail': 'yvonne@join.de',
+    },
+    {
+        'name': 'Steffi',
+        'password': 'Steffi123!',
+        'image': 'img/steffi.jfif',
+        'e-mail': 'steffi@join.de',
+    },
+    {
+        'name': 'Junus',
+        'password': 'Junus123!',
+        'image': 'img/junus.jfif',
+        'e-mail': 'junus@join.de',
+    }
+];
 
 function showMenu() {
 
@@ -77,8 +108,8 @@ function coloredBacklogdiv(category, index) {
 
 function checkCurrentUser() {
     if (localStorage.getItem('currentUser')) { // Check if user exists
-        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        document.getElementById('user-pic').src = currentUser.image;
+        currentUserFromLocalStorage = JSON.parse(localStorage.getItem('currentUser'));
+        document.getElementById('user-pic').src = currentUserFromLocalStorage.image;
     }
 }
 
