@@ -156,6 +156,30 @@ body {
 
 /**Mobile Section*/
 
+@media (max-width: 1300px) {
+    .faq-background {
+        width: 950px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .faq-background {
+        width: 900px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .faq-background {
+        width: 850px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .faq-background {
+        width: 800px;
+    }
+}
+
 @media (max-width: 1000px) {
     .mobilemenu {
         display: flex;
@@ -228,6 +252,7 @@ body {
 
     /** Mobile FAQ*/
     .faq-background {
+        width: 80%;
         margin-right: 30px; 
     }
 }
@@ -237,6 +262,12 @@ body {
         height: 200px;
         border-top: 1px solid white;
         width: 500px;
+    }
+
+    /** Mobile FAQ*/
+    .faq-background {
+        width: 60%;
+        margin-right: 30px; 
     }
 }
 
@@ -286,6 +317,12 @@ body {
 @media (max-width: 321px) {
     .show-mobilemenu {
         width: 250px;
+    }
+
+    /** Mobile FAQ*/
+    .faq-background {
+        width: 50%;
+        margin-right: 30px; 
     }
 }
 
