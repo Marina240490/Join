@@ -58,6 +58,7 @@ async function saveTask(task) {
 */
 async function initAddTasks(){
    await loadAllTasks();
+   document.getElementById("apfel").src = currentUserFromLocalStorage.image;
 }
 
 /**

@@ -79,7 +79,7 @@ function coloredBacklogdiv(category, index) {
 function checkCurrentUser() {
     if (localStorage.getItem('currentUser')) { // Check if user exists
         currentUserFromLocalStorage = JSON.parse(localStorage.getItem('currentUser'));
-        document.getElementById('user-pic').src = currentUser.image;
+        document.getElementById('user-pic').src = currentUserFromLocalStorage.image;
     }
 }
 
