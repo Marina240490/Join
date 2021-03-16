@@ -30,12 +30,10 @@
     <div class="d-none" id="deleteWindow">
         <h1 class="deleteh1">Möchtest du diesen Pin wirklich löschen?</h1>
         <div class="deleteBtnRow">
-            <img src="img/loginCheck.svg" onclick="deleteBacklog('${TaskIndex}')" class="deleteBtn">
+            <img id="deleteTaskBacklog" src="img/loginCheck.svg" onclick="aproveDeletionBacklog()" class="deleteBtn">
             <img src="img/X.svg" onclick="closeDeleteWindowBacklog()" class="deleteBtn">
         </div>
     </div>
-
-
 
     <div class="main-section size" id="main-section">
 

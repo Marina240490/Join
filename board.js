@@ -21,7 +21,7 @@ function showBoard(){
     document.getElementById('to-do-area').innerHTML = '';
     for (let i = 0; i < allTasks.length; i++) {
         const element = allTasks[i];
-        document.getElementById('to-do-area').innerHTML += ` <div class="pin" id="dragelement${i}" ondragstart="dragStart(event)">
+        document.getElementById('to-do-area').innerHTML += `<div class="pin" id="dragelement${i}" ondragstart="dragStart(event)">
             <div class="first-row-pin">
                 <p class="p-header">${element['title']}</p>
                 <img src="img/X.svg" class="X-pin" onclick="openDeleteWindow(${i})">  
@@ -134,6 +134,21 @@ function loadCurrentUser() {
      ev.target.append(document.getElementById(id));
  }
 
+ function drop(ev, taskstatus) {
+    ev.target.append(document.getElementById(id));
+    console.log(id);
+    checkId(id, taskstatus);
+
+}
+
+function checkId(id, taskstatus) {
+    let number = +id.split('-')[1];
+    console.log(number);
+
+    //if(targetobject.contains(id)) {
+    allTasks[number].taskstatus = taskstatus;
+}
+
 
  /**
   * saving functions in local Storage for drag and drop
@@ -153,3 +168,4 @@ function SetLocal() {
     LocalSaveUsers();
     LocalSaveTasks();
  }
+
