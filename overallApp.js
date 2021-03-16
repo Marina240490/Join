@@ -1,5 +1,6 @@
 setURL('http://marina-schwab.developerakademie.com/smallest_backend_ever'); // Connection to the server
 let allTasks = [];
+let currentUserFromLocalStorage = {};
 /**
  * Function for responsive Menu for all pages! (Never delete!!!!!!)
  */
@@ -77,7 +78,7 @@ function coloredBacklogdiv(category, index) {
 
 function checkCurrentUser() {
     if (localStorage.getItem('currentUser')) { // Check if user exists
-        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        currentUserFromLocalStorage = JSON.parse(localStorage.getItem('currentUser'));
         document.getElementById('user-pic').src = currentUser.image;
     }
 }

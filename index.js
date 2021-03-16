@@ -1,3 +1,5 @@
+
+
 /**
  * userinformations
  */
@@ -111,6 +113,6 @@ function loadCurrentUser() {
     let currentUserAsString = localStorage.getItem("currentUser");
 
     if (currentUserAsString) {
-        currentUser = JSON.parse(currentUserAsString);
+        currentUserFromLocalStorage = JSON.parse(currentUserAsString);
     }
 }
