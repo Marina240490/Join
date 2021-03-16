@@ -56,6 +56,9 @@ async function aproveDeletion(){
     document.getElementById('deleteWindow').classList.remove('d-none');
     document.getElementById('deleteWindow').classList.add('deleteWindow');
     document.getElementById('main-section').classList.add('d-none');
+
+
+    
 }
 
 
