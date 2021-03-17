@@ -24,6 +24,7 @@ function login(i) {
     }
 }
 
+
 /**
  * Push Message with "Enter"
  */
@@ -34,6 +35,7 @@ function init() {
     }
     });
 }
+
 
 /**
  * Show picture of currentUser
@@ -56,6 +58,7 @@ function currentUser() {
     }
 }
 
+
 /**
  * Saving the login data of the user that is currently logged in in the local storage.
  */
@@ -63,6 +66,7 @@ function currentUser() {
     let currentUserAsString = JSON.stringify(currentUser);
     localStorage.setItem("currentUser", currentUserAsString);
 }
+
 
 /**
  * Loading the data of all signed up users from the local storage and saves them in the users array when the page is loaded.
@@ -73,6 +77,7 @@ async function loadAllUsers() {
     users = JSON.parse(backend.getItem('users')) || [];
     console.log(users);
 }
+
 
 /**
  * Loading the currently logged in user.

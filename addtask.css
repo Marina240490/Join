@@ -224,6 +224,9 @@ body {
 
 .assigned-to {
     margin-bottom: 50px; 
+    display:flex; 
+    flex-direction: row; 
+    align-items: center;
 }
 
 .cancel {

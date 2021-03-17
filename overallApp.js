@@ -1,10 +1,13 @@
 setURL('http://marina-schwab.developerakademie.com/smallest_backend_ever'); // Connection to the server
 let allTasks = [];
 let currentUserFromLocalStorage = {};
+
+
 /**
  * Function for responsive Menu for all pages! (Never delete!!!!!!)
  */
 let show = false;
+
 
 /**
  * userinformations
@@ -40,6 +43,11 @@ let show = false;
     }
 ];
 
+
+/**
+ * Showing MobileMenu
+ */
+
 function showMenu() {
 
 
@@ -57,9 +65,20 @@ function showMenu() {
 }
 
 
+/**
+ * 
+ * @param {id for selected user} id 
+ * @returns the selected user
+ */
+
 function getUserById(id) {
     return users.find(u => u.id == id);
 }
+
+
+/**
+ * Main Function to load all the tasks
+ */
 
 async function loadAllTasks() {
     await downloadFromServer(); // 1. Function downloadFromServer() -> mini_backend.js / 2. Waiting for server response in order to let the function continue
@@ -71,9 +90,11 @@ async function loadAllTasks() {
     //await pushBoard();
 }
 
+
 /**
  * Defining backgroundcolor of Category
  */
+
  function coloredCategory(category, index) {
     if(category == 'Marketing'){
         document.getElementById(`category${index}`).style.backgroundColor = "rgb(181,228,240)";
@@ -91,6 +112,7 @@ async function loadAllTasks() {
         document.getElementById(`category${index}`).style.backgroundColor = "rgb(192,192,192)";
     };
 }
+
 
 /**
  * Defining backgroundcolor of Category in backlog-div
@@ -115,6 +137,10 @@ function coloredBacklogdiv(category, index) {
 }
 
 
+/**
+ * Checking current user for navigationbar
+ */
+
 function checkCurrentUser() {
     if (localStorage.getItem('currentUser')) { // Check if user exists
         currentUserFromLocalStorage = JSON.parse(localStorage.getItem('currentUser'));
@@ -122,16 +148,29 @@ function checkCurrentUser() {
     }
 }
 
+
+/**
+ * logging out the current user
+ */
+
 function logout() {
     localStorage.removeItem('currentUser');
 }
 
-//window.onload = init;
+
+/**
+ * to init important functions in body onload
+ */
 
 function initOverallApp() {
     checkCurrentUser();
     includeHTML();
 }
+
+
+/**
+ * Function for templates 
+ */
 
 function includeHTML() {
     var z, i, elmnt, file, xhttp;

@@ -59,7 +59,7 @@
                     <div class="headline2">Learning Management System Project</div>
                 </div>
 
-                <form onsubmit="return createTaskSubmit(event)">
+                <form id="myForm" onsubmit="return createTaskSubmit(event)">
                     <div class="input-section">
                         <div class="fd-row">
                             <div>
@@ -128,8 +128,9 @@
                                 </div>
                                 <div class="assigned-to" id="assignedTo">
                                     <img id="apfel" class="user-pic-add-task" src="img/user-pic.jpg">
-                                    <img id="plususer" class="add" src="./img/icon plus.png" onclick="openaddPerson()">
                                     <div id="birne"></div>
+                                    <img id="plususer" class="add" src="./img/icon plus.png" onclick="openaddPerson()">
+
                                 </div>
                                 <div>
                                     <button type="reset"
