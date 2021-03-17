@@ -11,24 +11,28 @@ let show = false;
  */
  let users = [
     {
+        'id': 0,
         'name': 'Marina',
         'password': 'Marina123!',
         'image': 'img/marina.jpg',
         'e-mail': 'marina@join.de',
     },
     {
+        'id': 1,
         'name': 'Yvonne',
         'password': 'Yvonne123!',
         'image': 'img/yvonne.jpg',
         'e-mail': 'yvonne@join.de',
     },
     {
+        'id': 2,
         'name': 'Steffi',
         'password': 'Steffi123!',
         'image': 'img/steffi.jfif',
         'e-mail': 'steffi@join.de',
     },
     {
+        'id': 3,
         'name': 'Junus',
         'password': 'Junus123!',
         'image': 'img/junus.jfif',
@@ -50,6 +54,11 @@ function showMenu() {
         document.getElementById('res-menu').classList.remove('show-mobilemenu');
         show = !show
     }
+}
+
+
+function getUserById(id) {
+    return users.find(u => u.id == id);
 }
 
 async function loadAllTasks() {

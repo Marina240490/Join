@@ -56,9 +56,9 @@ function showBacklog() {
         <div class="assigned-backlog">
             <div class="assigned-person">
                 <div class="img-backlog"> 
-                    <img src="${element['author']}">
+                    <img src="${getUserById(element['author'])['img']}">
                 </div>
-                <div class="name-backlog"> ${currentUserFromLocalStorage['name']} <br>
+                <div class="name-backlog"> ${getUserById(element['author'])['name']} <br>
                 E-Mail: ${currentUserFromLocalStorage['e-mail']}</div>
             </div> 
         </div>

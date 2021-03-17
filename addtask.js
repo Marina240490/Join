@@ -134,6 +134,6 @@ function showChoosenUsersList(){
     document.getElementById('birne').innerHTML = ''; 
     for(let i = 0; i < choosenUsers.length; i++){
         document.getElementById('birne').innerHTML += `
-        <img src="${choosenUsers[i]['image']}">`; 
+        <img src="${choosenUsers[i]['img']}">`;   
     }
 }
