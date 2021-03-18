@@ -66,14 +66,13 @@ function showMenu() {
 
 
 /**
- * 
  * @param {id for selected user} id 
  * @returns the selected user
  */
 
-function getUserById(id) {
-    return users.find(u => u.id == id);
-}
+//function getUserById(id) {
+//    return users.find(u => u.id == id);
+//}
 
 
 /**

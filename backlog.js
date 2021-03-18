@@ -56,9 +56,9 @@ function showBacklog() {
         <div class="assigned-backlog">
             <div class="assigned-person">
                 <div class="img-backlog"> 
-                    <img src="${getUserById(element['author'])['img']}">
+                <img src="${element['author']}">
                 </div>
-                <div class="name-backlog"> ${getUserById(element['author'])['name']} <br>
+                <div class="name-backlog"> ${currentUserFromLocalStorage['name']} <br>
                 E-Mail: ${currentUserFromLocalStorage['e-mail']}</div>
             </div> 
         </div>
@@ -99,12 +99,3 @@ async function deleteTaskBacklog(TaskIndex) {
     closeDeleteWindowBacklog();
     showBacklog();
 }
-
-
-/**
- * Saving the login data of the user that is currently logged in in the local storage.
- */
-// function saveCurrentUserInLocalStorage() {
-//    let currentUserAsString = JSON.stringify(currentUser);
-//    localStorage.setItem("currentUser", currentUserAsString);
-//}
